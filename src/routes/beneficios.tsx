@@ -17,6 +17,7 @@ import imgIkonicMoments from "@/assets/convenio-ikonic-moments.jpg";
 import imgBlancDental from "@/assets/convenio-blanc-dental.jpg";
 import imgTerapiasIntegrales from "@/assets/convenio-terapias-integrales.jpg";
 import imgArantxaGaray from "@/assets/convenio-arantxa-garay.jpg";
+import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 
 const IMAGENES: Record<string, string> = {
   "studio-520": imgStudio520,
@@ -111,12 +112,12 @@ function BeneficiosPage() {
       <Section>
         <div
           id="guias-de-estudio"
-          className="scroll-mt-32 flex flex-col gap-8 border border-primary bg-sand p-8 md:flex-row md:items-center md:p-12"
+          className="scroll-mt-32 grid gap-0 overflow-hidden border border-primary bg-sand md:grid-cols-2"
         >
-          <BookOpen className="size-10 shrink-0 text-primary" strokeWidth={1.3} />
-          <div>
-            <h2 className="text-2xl md:text-3xl">{GUIAS_ESTUDIO.titulo}</h2>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+          <div className="p-8 md:p-12">
+            <BookOpen className="size-10 shrink-0 text-primary" strokeWidth={1.3} />
+            <h2 className="mt-5 text-2xl md:text-3xl">{GUIAS_ESTUDIO.titulo}</h2>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-base">
               {GUIAS_ESTUDIO.texto}
             </p>
             <a
@@ -127,6 +128,14 @@ function BeneficiosPage() {
               {GUIAS_ESTUDIO.llamado}
             </a>
           </div>
+          <img
+            src={guiaEstudioImg}
+            alt="Planeación de estudio con notas adhesivas de colores"
+            width={1200}
+            height={675}
+            loading="lazy"
+            className="min-h-64 w-full object-cover md:order-last"
+          />
         </div>
       </Section>
 

@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CTALink, Eyebrow, PageHero, Pending, Section } from "@/components/site/Bits";
+import { CTALink, Eyebrow, PageHero, Section } from "@/components/site/Bits";
 import { COMITE } from "@/lib/site-data";
-import heroImg from "@/assets/noticia-padre-08.jpg";
+import heroImg from "@/assets/sindicato-equipo.jpg";
+import galaImg from "@/assets/sindicato-gala.jpg";
 
 export const Route = createFileRoute("/sindicato")({
   head: () => ({
@@ -10,7 +11,7 @@ export const Route = createFileRoute("/sindicato")({
       {
         name: "description",
         content:
-          "Quiénes somos, misión, valores, organización y Comité Ejecutivo Nacional de la Unión Nacional de Trabajadores del Poder Judicial.",
+          "Quiénes somos, representación y Comité Ejecutivo Nacional de la Unión Nacional de Trabajadores del Poder Judicial.",
       },
       { property: "og:title", content: "El sindicato — UNTPJ" },
       {
@@ -34,7 +35,7 @@ function Sindicato() {
         title="Una organización que representa tus derechos."
         intro="Somos tu nueva opción de sindicato, un proyecto con personas comprometidas con darte herramientas para mejorar tu carrera, línea abierta de comunicación cuando lo necesites y apoyo hasta el final de cualquier procedimiento."
         image={heroImg}
-        imageAlt="Personas afiliadas a la UNTPJ conviviendo en las instalaciones del Poder Judicial"
+        imageAlt="Equipo de la UNTPJ reunido"
       />
 
       <Section>
@@ -48,28 +49,13 @@ function Sindicato() {
                 </a>
               </li>
               <li>
-                <a href="#historia" className="hover:text-primary">
-                  Nuestra historia
-                </a>
-              </li>
-              <li>
-                <a href="#mision" className="hover:text-primary">
-                  Nuestra misión
-                </a>
-              </li>
-              <li>
-                <a href="#valores" className="hover:text-primary">
-                  Nuestros valores
+                <a href="#representacion" className="hover:text-primary">
+                  Representación
                 </a>
               </li>
               <li>
                 <a href="#organizacion" className="hover:text-primary">
                   Organización
-                </a>
-              </li>
-              <li>
-                <a href="#representacion" className="hover:text-primary">
-                  Representación
                 </a>
               </li>
             </ul>
@@ -99,43 +85,34 @@ function Sindicato() {
               </ul>
             </article>
 
-            <article id="historia" className="scroll-mt-32">
-              <h2 className="text-3xl md:text-4xl">Nuestra historia</h2>
-              <div className="mt-5">
-                <Pending note="Espacio reservado para la historia oficial de la UNTPJ." />
-              </div>
-            </article>
-
-            <article id="mision" className="scroll-mt-32">
-              <h2 className="text-3xl md:text-4xl">Nuestra misión</h2>
-              <p className="mt-5 text-lg text-muted-foreground">
-                Defender tus derechos y acompañarte en cada etapa de tu vida laboral.
-              </p>
-            </article>
-
-            <article id="valores" className="scroll-mt-32">
-              <h2 className="text-3xl md:text-4xl">Nuestros valores</h2>
-              <div className="mt-5">
-                <Pending note="Espacio reservado para la declaración oficial de valores del sindicato." />
-              </div>
-            </article>
-
             <article id="representacion" className="scroll-mt-32">
               <h2 className="text-3xl md:text-4xl">Representación</h2>
-              <p className="mt-5 text-lg text-muted-foreground">
-                Representamos a personas trabajadoras del Poder Judicial de la Federación de base e
-                interinas afiliadas al Sindicato, así como a personal de confianza registrado como
-                invitado en el padrón respectivo.
-              </p>
-              <p className="mt-4 text-muted-foreground">
-                Porque también eres y fuiste una persona trabajadora del Poder Judicial de la
-                Federación, de igual forma tienes derecho de acceder a los bienes y servicios que
-                esta organización sindical ofrece; y que si bien de momento no podemos garantizarte
-                todos, haremos lo posible para que cuentes con los necesarios, ya que TODOS somos
-                PJF.
-              </p>
-              <div className="mt-8">
-                <CTALink to="/contacto">Contacto</CTALink>
+              <div className="mt-6 grid gap-8 sm:grid-cols-[1fr_1.1fr] sm:items-center">
+                <div>
+                  <p className="text-lg text-muted-foreground">
+                    Representamos a personas trabajadoras del Poder Judicial de la Federación de
+                    base e interinas afiliadas al Sindicato, así como a personal de confianza
+                    registrado como invitado en el padrón respectivo.
+                  </p>
+                  <p className="mt-4 text-muted-foreground">
+                    Porque también eres y fuiste una persona trabajadora del Poder Judicial de la
+                    Federación, de igual forma tienes derecho de acceder a los bienes y servicios
+                    que esta organización sindical ofrece; y que si bien de momento no podemos
+                    garantizarte todos, haremos lo posible para que cuentes con los necesarios, ya
+                    que TODOS somos PJF.
+                  </p>
+                  <div className="mt-8">
+                    <CTALink to="/contacto">Contacto</CTALink>
+                  </div>
+                </div>
+                <img
+                  src={galaImg}
+                  alt="Comité y personas afiliadas de la UNTPJ en un evento institucional"
+                  width={1280}
+                  height={791}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
             </article>
           </div>
