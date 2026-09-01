@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Scale, FileText, ShieldCheck, HelpCircle } from "lucide-react";
+import { ArrowRight, Scale, FileText, ShieldCheck, HelpCircle, Users } from "lucide-react";
 import { PageHero, Section, Eyebrow, CTALink } from "@/components/site/Bits";
 import heroImg from "@/assets/derechos-juzgado.jpg";
 
@@ -50,6 +50,13 @@ const CATEGORIAS = [
     title: "Preguntas frecuentes",
     text: "Dudas comunes sobre afiliación, atención urgente, capacitación y beneficios.",
     to: "/derechos/preguntas-frecuentes",
+  },
+  {
+    icon: Users,
+    n: "05",
+    title: "Personal de confianza",
+    text: "Información para quienes, por su puesto, no pueden afiliarse al Sindicato al 100%.",
+    to: "/derechos/personal-de-confianza",
   },
 ] as const;
 

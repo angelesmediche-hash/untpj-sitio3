@@ -1,8 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { CTALink, Eyebrow, PageHero, Section } from "@/components/site/Bits";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Eyebrow, PageHero, Section } from "@/components/site/Bits";
 import { COMITE } from "@/lib/site-data";
 import heroImg from "@/assets/sindicato-equipo.jpg";
-import galaImg from "@/assets/sindicato-gala.jpg";
 
 export const Route = createFileRoute("/sindicato")({
   head: () => ({
@@ -49,14 +48,14 @@ function Sindicato() {
                 </a>
               </li>
               <li>
-                <a href="#representacion" className="hover:text-primary">
-                  Representación
-                </a>
-              </li>
-              <li>
                 <a href="#organizacion" className="hover:text-primary">
                   Organización
                 </a>
+              </li>
+              <li>
+                <Link to="/sindicato/transparencia" className="hover:text-primary">
+                  Transparencia
+                </Link>
               </li>
             </ul>
           </div>
@@ -85,36 +84,6 @@ function Sindicato() {
               </ul>
             </article>
 
-            <article id="representacion" className="scroll-mt-32">
-              <h2 className="text-3xl md:text-4xl">Representación</h2>
-              <div className="mt-6 grid gap-8 sm:grid-cols-[1fr_1.1fr] sm:items-center">
-                <div>
-                  <p className="text-lg text-muted-foreground">
-                    Representamos a personas trabajadoras del Poder Judicial de la Federación de
-                    base e interinas afiliadas al Sindicato, así como a personal de confianza
-                    registrado como invitado en el padrón respectivo.
-                  </p>
-                  <p className="mt-4 text-muted-foreground">
-                    Porque también eres y fuiste una persona trabajadora del Poder Judicial de la
-                    Federación, de igual forma tienes derecho de acceder a los bienes y servicios
-                    que esta organización sindical ofrece; y que si bien de momento no podemos
-                    garantizarte todos, haremos lo posible para que cuentes con los necesarios, ya
-                    que TODOS somos PJF.
-                  </p>
-                  <div className="mt-8">
-                    <CTALink to="/contacto">Contacto</CTALink>
-                  </div>
-                </div>
-                <img
-                  src={galaImg}
-                  alt="Comité y personas afiliadas de la UNTPJ en un evento institucional"
-                  width={1280}
-                  height={791}
-                  loading="lazy"
-                  className="aspect-[4/3] w-full object-cover"
-                />
-              </div>
-            </article>
           </div>
         </div>
       </Section>

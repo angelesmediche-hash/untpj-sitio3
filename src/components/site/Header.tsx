@@ -14,7 +14,7 @@ const NAV: NavItem[] = [
     children: [
       { to: "/sindicato", hash: "quienes-somos", label: "Quiénes somos" },
       { to: "/sindicato", hash: "organizacion", label: "Comité Ejecutivo Nacional" },
-      { to: "/sindicato", hash: "representacion", label: "Representación" },
+      { to: "/sindicato/transparencia", label: "Transparencia" },
     ],
   },
   {
@@ -23,6 +23,7 @@ const NAV: NavItem[] = [
     children: [
       { to: "/derechos/seguridad-social", label: "Seguridad social" },
       { to: "/derechos/preguntas-frecuentes", label: "Preguntas frecuentes" },
+      { to: "/derechos/personal-de-confianza", label: "Personal de confianza" },
     ],
   },
   {

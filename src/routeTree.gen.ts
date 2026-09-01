@@ -19,11 +19,13 @@ import { Route as NoticiasRouteImport } from './routes/noticias'
 import { Route as SindicatoRouteImport } from './routes/sindicato'
 import { Route as DerechosIndexRouteImport } from './routes/derechos.index'
 import { Route as DerechosCondicionesGeneralesRouteImport } from './routes/derechos.condiciones-generales'
+import { Route as DerechosPersonalDeConfianzaRouteImport } from './routes/derechos.personal-de-confianza'
 import { Route as DerechosPreguntasFrecuentesRouteImport } from './routes/derechos.preguntas-frecuentes'
 import { Route as DerechosPrestacionesRouteImport } from './routes/derechos.prestaciones'
 import { Route as DerechosSeguridadSocialRouteImport } from './routes/derechos.seguridad-social'
 import { Route as NoticiasIndexRouteImport } from './routes/noticias.index'
 import { Route as NoticiasSlugRouteImport } from './routes/noticias.$slug'
+import { Route as SindicatoTransparenciaRouteImport } from './routes/sindicato.transparencia'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +78,12 @@ const DerechosCondicionesGeneralesRoute =
     path: '/condiciones-generales',
     getParentRoute: () => DerechosRoute,
   } as any)
+const DerechosPersonalDeConfianzaRoute =
+  DerechosPersonalDeConfianzaRouteImport.update({
+    id: '/personal-de-confianza',
+    path: '/personal-de-confianza',
+    getParentRoute: () => DerechosRoute,
+  } as any)
 const DerechosPreguntasFrecuentesRoute =
   DerechosPreguntasFrecuentesRouteImport.update({
     id: '/preguntas-frecuentes',
@@ -102,6 +110,11 @@ const NoticiasSlugRoute = NoticiasSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => NoticiasRoute,
 } as any)
+const SindicatoTransparenciaRoute = SindicatoTransparenciaRouteImport.update({
+  id: '/transparencia',
+  path: '/transparencia',
+  getParentRoute: () => SindicatoRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -111,12 +124,14 @@ export interface FileRoutesByFullPath {
   '/contacto': typeof ContactoRoute
   '/derechos': typeof DerechosRouteWithChildren
   '/noticias': typeof NoticiasRouteWithChildren
-  '/sindicato': typeof SindicatoRoute
+  '/sindicato': typeof SindicatoRouteWithChildren
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
+  '/derechos/personal-de-confianza': typeof DerechosPersonalDeConfianzaRoute
   '/derechos/preguntas-frecuentes': typeof DerechosPreguntasFrecuentesRoute
   '/derechos/prestaciones': typeof DerechosPrestacionesRoute
   '/derechos/seguridad-social': typeof DerechosSeguridadSocialRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
+  '/sindicato/transparencia': typeof SindicatoTransparenciaRoute
   '/derechos/': typeof DerechosIndexRoute
   '/noticias/': typeof NoticiasIndexRoute
 }
@@ -126,12 +141,14 @@ export interface FileRoutesByTo {
   '/apoyo': typeof ApoyoRoute
   '/beneficios': typeof BeneficiosRoute
   '/contacto': typeof ContactoRoute
-  '/sindicato': typeof SindicatoRoute
+  '/sindicato': typeof SindicatoRouteWithChildren
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
+  '/derechos/personal-de-confianza': typeof DerechosPersonalDeConfianzaRoute
   '/derechos/preguntas-frecuentes': typeof DerechosPreguntasFrecuentesRoute
   '/derechos/prestaciones': typeof DerechosPrestacionesRoute
   '/derechos/seguridad-social': typeof DerechosSeguridadSocialRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
+  '/sindicato/transparencia': typeof SindicatoTransparenciaRoute
   '/derechos': typeof DerechosIndexRoute
   '/noticias': typeof NoticiasIndexRoute
 }
@@ -144,12 +161,14 @@ export interface FileRoutesById {
   '/contacto': typeof ContactoRoute
   '/derechos': typeof DerechosRouteWithChildren
   '/noticias': typeof NoticiasRouteWithChildren
-  '/sindicato': typeof SindicatoRoute
+  '/sindicato': typeof SindicatoRouteWithChildren
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
+  '/derechos/personal-de-confianza': typeof DerechosPersonalDeConfianzaRoute
   '/derechos/preguntas-frecuentes': typeof DerechosPreguntasFrecuentesRoute
   '/derechos/prestaciones': typeof DerechosPrestacionesRoute
   '/derechos/seguridad-social': typeof DerechosSeguridadSocialRoute
   '/noticias/$slug': typeof NoticiasSlugRoute
+  '/sindicato/transparencia': typeof SindicatoTransparenciaRoute
   '/derechos/': typeof DerechosIndexRoute
   '/noticias/': typeof NoticiasIndexRoute
 }
@@ -165,10 +184,12 @@ export interface FileRouteTypes {
     | '/noticias'
     | '/sindicato'
     | '/derechos/condiciones-generales'
+    | '/derechos/personal-de-confianza'
     | '/derechos/preguntas-frecuentes'
     | '/derechos/prestaciones'
     | '/derechos/seguridad-social'
     | '/noticias/$slug'
+    | '/sindicato/transparencia'
     | '/derechos/'
     | '/noticias/'
   fileRoutesByTo: FileRoutesByTo
@@ -180,10 +201,12 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/sindicato'
     | '/derechos/condiciones-generales'
+    | '/derechos/personal-de-confianza'
     | '/derechos/preguntas-frecuentes'
     | '/derechos/prestaciones'
     | '/derechos/seguridad-social'
     | '/noticias/$slug'
+    | '/sindicato/transparencia'
     | '/derechos'
     | '/noticias'
   id:
@@ -197,10 +220,12 @@ export interface FileRouteTypes {
     | '/noticias'
     | '/sindicato'
     | '/derechos/condiciones-generales'
+    | '/derechos/personal-de-confianza'
     | '/derechos/preguntas-frecuentes'
     | '/derechos/prestaciones'
     | '/derechos/seguridad-social'
     | '/noticias/$slug'
+    | '/sindicato/transparencia'
     | '/derechos/'
     | '/noticias/'
   fileRoutesById: FileRoutesById
@@ -213,7 +238,7 @@ export interface RootRouteChildren {
   ContactoRoute: typeof ContactoRoute
   DerechosRoute: typeof DerechosRouteWithChildren
   NoticiasRoute: typeof NoticiasRouteWithChildren
-  SindicatoRoute: typeof SindicatoRoute
+  SindicatoRoute: typeof SindicatoRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -288,6 +313,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DerechosCondicionesGeneralesRouteImport
       parentRoute: typeof DerechosRoute
     }
+    '/derechos/personal-de-confianza': {
+      id: '/derechos/personal-de-confianza'
+      path: '/personal-de-confianza'
+      fullPath: '/derechos/personal-de-confianza'
+      preLoaderRoute: typeof DerechosPersonalDeConfianzaRouteImport
+      parentRoute: typeof DerechosRoute
+    }
     '/derechos/preguntas-frecuentes': {
       id: '/derechos/preguntas-frecuentes'
       path: '/preguntas-frecuentes'
@@ -323,11 +355,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NoticiasSlugRouteImport
       parentRoute: typeof NoticiasRoute
     }
+    '/sindicato/transparencia': {
+      id: '/sindicato/transparencia'
+      path: '/transparencia'
+      fullPath: '/sindicato/transparencia'
+      preLoaderRoute: typeof SindicatoTransparenciaRouteImport
+      parentRoute: typeof SindicatoRoute
+    }
   }
 }
 
 interface DerechosRouteChildren {
   DerechosCondicionesGeneralesRoute: typeof DerechosCondicionesGeneralesRoute
+  DerechosPersonalDeConfianzaRoute: typeof DerechosPersonalDeConfianzaRoute
   DerechosPreguntasFrecuentesRoute: typeof DerechosPreguntasFrecuentesRoute
   DerechosPrestacionesRoute: typeof DerechosPrestacionesRoute
   DerechosSeguridadSocialRoute: typeof DerechosSeguridadSocialRoute
@@ -336,6 +376,7 @@ interface DerechosRouteChildren {
 
 const DerechosRouteChildren: DerechosRouteChildren = {
   DerechosCondicionesGeneralesRoute: DerechosCondicionesGeneralesRoute,
+  DerechosPersonalDeConfianzaRoute: DerechosPersonalDeConfianzaRoute,
   DerechosPreguntasFrecuentesRoute: DerechosPreguntasFrecuentesRoute,
   DerechosPrestacionesRoute: DerechosPrestacionesRoute,
   DerechosSeguridadSocialRoute: DerechosSeguridadSocialRoute,
@@ -360,6 +401,18 @@ const NoticiasRouteWithChildren = NoticiasRoute._addFileChildren(
   NoticiasRouteChildren,
 )
 
+interface SindicatoRouteChildren {
+  SindicatoTransparenciaRoute: typeof SindicatoTransparenciaRoute
+}
+
+const SindicatoRouteChildren: SindicatoRouteChildren = {
+  SindicatoTransparenciaRoute: SindicatoTransparenciaRoute,
+}
+
+const SindicatoRouteWithChildren = SindicatoRoute._addFileChildren(
+  SindicatoRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AfiliacionRoute: AfiliacionRoute,
@@ -368,7 +421,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactoRoute: ContactoRoute,
   DerechosRoute: DerechosRouteWithChildren,
   NoticiasRoute: NoticiasRouteWithChildren,
-  SindicatoRoute: SindicatoRoute,
+  SindicatoRoute: SindicatoRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
