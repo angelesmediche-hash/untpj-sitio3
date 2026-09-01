@@ -12,8 +12,15 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
+import thumbPadre from "@/assets/noticia-padre-09.jpg";
+import thumbNinez from "@/assets/noticia-ninez-02.jpg";
 import { CTALink, Eyebrow, Section } from "@/components/site/Bits";
 import { CONTACTO, NOTA_247, NOTICIAS } from "@/lib/site-data";
+
+const THUMBS: Record<string, string> = {
+  "dia-del-padre": thumbPadre,
+  "dia-de-la-ninez": thumbNinez,
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,7 +59,8 @@ const QUE_HACEMOS = [
     icon: BookOpen,
     title: "Impulsamos tu desarrollo",
     text: "Guías de estudio a tu disposición como persona afiliada, para seguir creciendo profesionalmente.",
-    to: "/beneficios#guias-de-estudio",
+    to: "/beneficios",
+    hash: "guias-de-estudio",
   },
   {
     icon: Tag,
@@ -195,6 +203,7 @@ function Home() {
               <Link
                 key={item.title}
                 to={item.to}
+                hash={"hash" in item ? item.hash : undefined}
                 className="group bg-background p-8 lift hover:lift-hover"
               >
                 <item.icon className="size-7 text-primary" aria-hidden="true" />
@@ -309,24 +318,31 @@ function Home() {
         </div>
         <div className="mt-14 grid gap-8 md:grid-cols-2">
           {NOTICIAS.map((n) => (
-            <article
+            <Link
               key={n.slug}
-              className="border border-line bg-background p-7 lift hover:lift-hover"
+              to="/noticias/$slug"
+              params={{ slug: n.slug }}
+              className="group block overflow-hidden border border-line bg-background lift hover:lift-hover"
             >
-              <p className="eyebrow text-primary">
-                {n.fecha} · {n.autor}
-              </p>
-              <h3 className="mt-4 text-2xl">{n.titulo}</h3>
-              <p className="mt-3 text-sm text-muted-foreground">{n.resumen}</p>
-              <a
-                href={n.urlOriginal}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-flex items-center gap-2 font-display text-[0.7rem] font-extrabold tracking-[0.16em] uppercase"
-              >
-                Leer más <ArrowRight className="size-3.5" />
-              </a>
-            </article>
+              <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
+                <img
+                  src={THUMBS[n.slug]}
+                  alt={n.titulo}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                />
+              </div>
+              <div className="p-7">
+                <p className="eyebrow text-primary">
+                  {n.fecha} · {n.autor}
+                </p>
+                <h3 className="mt-4 text-2xl">{n.titulo}</h3>
+                <p className="mt-3 text-sm text-muted-foreground">{n.resumen}</p>
+                <span className="mt-6 inline-flex items-center gap-2 font-display text-[0.7rem] font-extrabold tracking-[0.16em] uppercase">
+                  Leer más <ArrowRight className="size-3.5" />
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
       </Section>

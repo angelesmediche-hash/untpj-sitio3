@@ -130,7 +130,7 @@ function BeneficiosPage() {
         </div>
       </Section>
 
-      <Section tone="sand">
+      <Section id="convenios" tone="sand">
         <Eyebrow>Convenios vigentes</Eyebrow>
         <h2 className="mt-6 max-w-2xl text-4xl md:text-6xl">
           Descuentos exclusivos para agremiados

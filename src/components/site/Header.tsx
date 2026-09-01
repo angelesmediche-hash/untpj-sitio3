@@ -1,17 +1,42 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { CONTACTO } from "@/lib/site-data";
 import logo from "@/assets/logo-untpj.png";
 
-const NAV = [
-  { to: "/sindicato", label: "El sindicato" },
-  { to: "/derechos", label: "Tus derechos" },
-  { to: "/beneficios", label: "Beneficios" },
+type NavChild = { to: string; hash?: string; label: string };
+type NavItem = { to: string; label: string; children?: NavChild[] };
+
+const NAV: NavItem[] = [
+  {
+    to: "/sindicato",
+    label: "El sindicato",
+    children: [
+      { to: "/sindicato", hash: "quienes-somos", label: "Quiénes somos" },
+      { to: "/sindicato", hash: "organizacion", label: "Comité Ejecutivo Nacional" },
+      { to: "/sindicato", hash: "representacion", label: "Representación" },
+    ],
+  },
+  {
+    to: "/derechos",
+    label: "Tus derechos",
+    children: [
+      { to: "/derechos/seguridad-social", label: "Seguridad social" },
+      { to: "/derechos/preguntas-frecuentes", label: "Preguntas frecuentes" },
+    ],
+  },
+  {
+    to: "/beneficios",
+    label: "Beneficios",
+    children: [
+      { to: "/beneficios", hash: "guias-de-estudio", label: "Guías de estudio" },
+      { to: "/beneficios", hash: "convenios", label: "Convenios" },
+    ],
+  },
   { to: "/apoyo", label: "Apoyo" },
   { to: "/noticias", label: "Noticias" },
   { to: "/contacto", label: "Contacto" },
-] as const;
+];
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -50,16 +75,46 @@ export function Header() {
           </Link>
 
           <nav className="hidden items-center gap-6 xl:flex" aria-label="Principal">
-            {NAV.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="relative py-1 text-sm font-semibold text-foreground/80 transition-colors hover:text-primary data-[status=active]:text-primary"
-                activeProps={{ className: "text-primary" }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV.map((item) =>
+              item.children ? (
+                <div key={item.to} className="group relative">
+                  <Link
+                    to={item.to}
+                    className="relative flex items-center gap-1.5 py-1 text-sm font-semibold text-foreground/80 transition-colors hover:text-primary data-[status=active]:text-primary"
+                    activeProps={{ className: "text-primary" }}
+                  >
+                    {item.label}
+                    <ChevronDown
+                      className="size-3.5 transition-transform duration-200 group-hover:rotate-180"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                  <div className="invisible absolute top-full left-1/2 z-50 w-64 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                    <div className="border border-line bg-background py-2 shadow-lg">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.to + (child.hash ?? "")}
+                          to={child.to}
+                          hash={child.hash}
+                          className="block px-5 py-2.5 text-sm text-foreground/80 transition-colors hover:bg-sand hover:text-primary"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="relative py-1 text-sm font-semibold text-foreground/80 transition-colors hover:text-primary data-[status=active]:text-primary"
+                  activeProps={{ className: "text-primary" }}
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
           </nav>
 
           <div className="flex items-center gap-2">
@@ -85,14 +140,30 @@ export function Header() {
           <nav className="border-t border-line bg-background xl:hidden" aria-label="Móvil">
             <div className="container-x flex flex-col py-2">
               {NAV.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setOpen(false)}
-                  className="border-b border-line/60 py-3 font-display text-lg font-bold tracking-tight"
-                >
-                  {item.label}
-                </Link>
+                <div key={item.to} className="border-b border-line/60 py-3">
+                  <Link
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    className="block font-display text-lg font-bold tracking-tight"
+                  >
+                    {item.label}
+                  </Link>
+                  {item.children ? (
+                    <div className="mt-2 flex flex-col gap-2 border-l border-line pl-4">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.to + (child.hash ?? "")}
+                          to={child.to}
+                          hash={child.hash}
+                          onClick={() => setOpen(false)}
+                          className="text-sm text-muted-foreground hover:text-primary"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
               ))}
               <Link
                 to="/afiliacion"

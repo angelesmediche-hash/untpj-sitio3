@@ -503,9 +503,7 @@ export const BUZON_NOTA =
   "Servicio dirigido únicamente al personal de base o interinas afiliadas al Sindicato y al personal de confianza que haya requisitado su solicitud de invitado al sindicato, previa identificación del servidor público respectivo que envíe mensaje de texto al número de la línea 24/7, y que se encuentre registrado en el padrón de afiliados e invitados.";
 
 /**
- * Noticias reales publicadas en untpj.com/novedades. Las fotografías viven en el
- * sitio oficial (Squarespace) y no se rehospedan aquí; se enlaza a la publicación
- * original para verlas.
+ * Noticias reales publicadas por la UNTPJ, con fotografías propias del evento.
  */
 export type Noticia = {
   slug: string;
@@ -513,8 +511,7 @@ export type Noticia = {
   fecha: string;
   autor: string;
   resumen: string;
-  cuerpo: string;
-  urlOriginal: string;
+  cuerpo: string[];
 };
 
 export const NOTICIAS: Noticia[] = [
@@ -525,9 +522,12 @@ export const NOTICIAS: Noticia[] = [
     autor: "Miguel Vadillo",
     resumen:
       "Compartimos el Decálogo de los Derechos de Paternidad de las Personas Servidoras Públicas del Poder Judicial de la Federación y celebramos a los padres de la institución.",
-    cuerpo:
-      "En el marco del Día del Padre, compartimos el Decálogo de los Derechos de Paternidad de las Personas Servidoras Públicas del Poder Judicial de la Federación, una herramienta que promueve una paternidad activa, responsable y corresponsable, reconociendo la importancia de garantizar condiciones laborales que permitan equilibrar la vida familiar, personal y profesional. Reafirmamos nuestro compromiso con la igualdad, el respeto a los derechos laborales y el fortalecimiento de una cultura de cuidado que contribuya al bienestar de las familias y de nuestra sociedad. Con motivo del Día del Padre, realizamos una convivencia especial para reconocer y celebrar a los padres que forman parte de nuestra institución.",
-    urlOriginal: "https://www.untpj.com/novedades/da-del-padre",
+    cuerpo: [
+      "En el marco del Día del Padre, compartimos el Decálogo de los Derechos de Paternidad de las Personas Servidoras Públicas del Poder Judicial de la Federación, una herramienta que promueve una paternidad activa, responsable y corresponsable, reconociendo la importancia de garantizar condiciones laborales que permitan equilibrar la vida familiar, personal y profesional.",
+      "Reafirmamos nuestro compromiso con la igualdad, el respeto a los derechos laborales y el fortalecimiento de una cultura de cuidado que contribuya al bienestar de las familias y de nuestra sociedad.",
+      "Con motivo del Día del Padre, realizamos una convivencia especial para reconocer y celebrar a los padres que forman parte de nuestra institución. Durante la jornada se llevaron a cabo diversas actividades recreativas —incluido un torneo de fútbol— y momentos de convivencia que permitieron compartir y fortalecer los lazos entre compañeros.",
+      "A todos los padres, les extendemos una sincera felicitación y nuestro reconocimiento por su dedicación, esfuerzo y compromiso.",
+    ],
   },
   {
     slug: "dia-de-la-ninez",
@@ -535,8 +535,9 @@ export const NOTICIAS: Noticia[] = [
     fecha: "30 de abril de 2026",
     autor: "Miguel Vadillo",
     resumen: "Entrega de juguetes a infancias.",
-    cuerpo:
-      "Con motivo de la celebración del 30 de abril, Día de las Infancias, se realizó la entrega de obsequios a las hijas e hijos de las y los trabajadores del Poder Judicial, como una muestra de reconocimiento y aprecio hacia las familias que forman parte de esta institución, promoviendo así espacios de convivencia y celebración para las niñas y los niños.",
-    urlOriginal: "https://www.untpj.com/novedades/blog-post-title-four-lr658-tcthp-wf5mw-kyf57",
+    cuerpo: [
+      "Con motivo de la celebración del 30 de abril, Día de las Infancias, se realizó la entrega de obsequios a las hijas e hijos de las y los trabajadores del Poder Judicial, como una muestra de reconocimiento y aprecio hacia las familias que forman parte de esta institución.",
+      "La jornada incluyó una convivencia con personajes y actividades pensadas para las niñas y los niños, promoviendo así espacios de celebración y esparcimiento junto a sus familias.",
+    ],
   },
 ];

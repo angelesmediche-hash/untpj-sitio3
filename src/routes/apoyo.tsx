@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Mailbox, Phone } from "lucide-react";
 import { CTALink, Eyebrow, PageHero, Section } from "@/components/site/Bits";
 import { BUZONES, BUZON_NOTA, CONTACTO, NOTA_247 } from "@/lib/site-data";
+import heroImg from "@/assets/apoyo.jpg";
 
 export const Route = createFileRoute("/apoyo")({
   head: () => ({
@@ -29,6 +30,8 @@ function ApoyoPage() {
         eyebrow="Apoyo al Trabajador"
         title="Aquí te escuchamos y te acompañamos"
         intro="Línea de atención 24/7 y buzones para dar seguimiento a tu caso."
+        image={heroImg}
+        imageAlt="Persona trabajadora recibiendo orientación y acompañamiento"
       />
 
       <Section>

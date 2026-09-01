@@ -22,6 +22,8 @@ import { Route as DerechosCondicionesGeneralesRouteImport } from './routes/derec
 import { Route as DerechosPreguntasFrecuentesRouteImport } from './routes/derechos.preguntas-frecuentes'
 import { Route as DerechosPrestacionesRouteImport } from './routes/derechos.prestaciones'
 import { Route as DerechosSeguridadSocialRouteImport } from './routes/derechos.seguridad-social'
+import { Route as NoticiasIndexRouteImport } from './routes/noticias.index'
+import { Route as NoticiasSlugRouteImport } from './routes/noticias.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -90,6 +92,16 @@ const DerechosSeguridadSocialRoute = DerechosSeguridadSocialRouteImport.update({
   path: '/seguridad-social',
   getParentRoute: () => DerechosRoute,
 } as any)
+const NoticiasIndexRoute = NoticiasIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => NoticiasRoute,
+} as any)
+const NoticiasSlugRoute = NoticiasSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => NoticiasRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -98,13 +110,15 @@ export interface FileRoutesByFullPath {
   '/beneficios': typeof BeneficiosRoute
   '/contacto': typeof ContactoRoute
   '/derechos': typeof DerechosRouteWithChildren
-  '/noticias': typeof NoticiasRoute
+  '/noticias': typeof NoticiasRouteWithChildren
   '/sindicato': typeof SindicatoRoute
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
   '/derechos/preguntas-frecuentes': typeof DerechosPreguntasFrecuentesRoute
   '/derechos/prestaciones': typeof DerechosPrestacionesRoute
   '/derechos/seguridad-social': typeof DerechosSeguridadSocialRoute
+  '/noticias/$slug': typeof NoticiasSlugRoute
   '/derechos/': typeof DerechosIndexRoute
+  '/noticias/': typeof NoticiasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -112,13 +126,14 @@ export interface FileRoutesByTo {
   '/apoyo': typeof ApoyoRoute
   '/beneficios': typeof BeneficiosRoute
   '/contacto': typeof ContactoRoute
-  '/noticias': typeof NoticiasRoute
   '/sindicato': typeof SindicatoRoute
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
   '/derechos/preguntas-frecuentes': typeof DerechosPreguntasFrecuentesRoute
   '/derechos/prestaciones': typeof DerechosPrestacionesRoute
   '/derechos/seguridad-social': typeof DerechosSeguridadSocialRoute
+  '/noticias/$slug': typeof NoticiasSlugRoute
   '/derechos': typeof DerechosIndexRoute
+  '/noticias': typeof NoticiasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -128,13 +143,15 @@ export interface FileRoutesById {
   '/beneficios': typeof BeneficiosRoute
   '/contacto': typeof ContactoRoute
   '/derechos': typeof DerechosRouteWithChildren
-  '/noticias': typeof NoticiasRoute
+  '/noticias': typeof NoticiasRouteWithChildren
   '/sindicato': typeof SindicatoRoute
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
   '/derechos/preguntas-frecuentes': typeof DerechosPreguntasFrecuentesRoute
   '/derechos/prestaciones': typeof DerechosPrestacionesRoute
   '/derechos/seguridad-social': typeof DerechosSeguridadSocialRoute
+  '/noticias/$slug': typeof NoticiasSlugRoute
   '/derechos/': typeof DerechosIndexRoute
+  '/noticias/': typeof NoticiasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -151,7 +168,9 @@ export interface FileRouteTypes {
     | '/derechos/preguntas-frecuentes'
     | '/derechos/prestaciones'
     | '/derechos/seguridad-social'
+    | '/noticias/$slug'
     | '/derechos/'
+    | '/noticias/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -159,13 +178,14 @@ export interface FileRouteTypes {
     | '/apoyo'
     | '/beneficios'
     | '/contacto'
-    | '/noticias'
     | '/sindicato'
     | '/derechos/condiciones-generales'
     | '/derechos/preguntas-frecuentes'
     | '/derechos/prestaciones'
     | '/derechos/seguridad-social'
+    | '/noticias/$slug'
     | '/derechos'
+    | '/noticias'
   id:
     | '__root__'
     | '/'
@@ -180,7 +200,9 @@ export interface FileRouteTypes {
     | '/derechos/preguntas-frecuentes'
     | '/derechos/prestaciones'
     | '/derechos/seguridad-social'
+    | '/noticias/$slug'
     | '/derechos/'
+    | '/noticias/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -190,7 +212,7 @@ export interface RootRouteChildren {
   BeneficiosRoute: typeof BeneficiosRoute
   ContactoRoute: typeof ContactoRoute
   DerechosRoute: typeof DerechosRouteWithChildren
-  NoticiasRoute: typeof NoticiasRoute
+  NoticiasRoute: typeof NoticiasRouteWithChildren
   SindicatoRoute: typeof SindicatoRoute
 }
 
@@ -287,6 +309,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DerechosSeguridadSocialRouteImport
       parentRoute: typeof DerechosRoute
     }
+    '/noticias/': {
+      id: '/noticias/'
+      path: '/'
+      fullPath: '/noticias/'
+      preLoaderRoute: typeof NoticiasIndexRouteImport
+      parentRoute: typeof NoticiasRoute
+    }
+    '/noticias/$slug': {
+      id: '/noticias/$slug'
+      path: '/$slug'
+      fullPath: '/noticias/$slug'
+      preLoaderRoute: typeof NoticiasSlugRouteImport
+      parentRoute: typeof NoticiasRoute
+    }
   }
 }
 
@@ -310,6 +346,20 @@ const DerechosRouteWithChildren = DerechosRoute._addFileChildren(
   DerechosRouteChildren,
 )
 
+interface NoticiasRouteChildren {
+  NoticiasSlugRoute: typeof NoticiasSlugRoute
+  NoticiasIndexRoute: typeof NoticiasIndexRoute
+}
+
+const NoticiasRouteChildren: NoticiasRouteChildren = {
+  NoticiasSlugRoute: NoticiasSlugRoute,
+  NoticiasIndexRoute: NoticiasIndexRoute,
+}
+
+const NoticiasRouteWithChildren = NoticiasRoute._addFileChildren(
+  NoticiasRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AfiliacionRoute: AfiliacionRoute,
@@ -317,7 +367,7 @@ const rootRouteChildren: RootRouteChildren = {
   BeneficiosRoute: BeneficiosRoute,
   ContactoRoute: ContactoRoute,
   DerechosRoute: DerechosRouteWithChildren,
-  NoticiasRoute: NoticiasRoute,
+  NoticiasRoute: NoticiasRouteWithChildren,
   SindicatoRoute: SindicatoRoute,
 }
 export const routeTree = rootRouteImport
