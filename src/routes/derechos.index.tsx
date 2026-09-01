@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Scale, FileText, ShieldCheck, HelpCircle } from "lucide-react";
 import { PageHero, Section, Eyebrow, CTALink } from "@/components/site/Bits";
+import heroImg from "@/assets/derechos-juzgado.jpg";
 
 export const Route = createFileRoute("/derechos/")({
   head: () => ({
@@ -59,6 +60,8 @@ function DerechosIndex() {
         eyebrow="Tus derechos"
         title="¿Qué estás buscando?"
         intro="Un solo lugar para consultar la información laboral que necesitas como persona trabajadora del Poder Judicial de la Federación."
+        image={heroImg}
+        imageAlt="Personal del Poder Judicial de la Federación trabajando en un juzgado"
       />
 
       <Section>

@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { CONTACTO } from "@/lib/site-data";
-import { Seal } from "@/components/site/Bits";
 
 const COLUMNS: { title: string; links: { to: string; label: string }[] }[] = [
   {
@@ -37,7 +36,6 @@ export function Footer() {
       <div className="container-x py-16">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
-            <Seal size={64} tone="gold" className="mb-5" />
             <p className="font-display text-3xl font-extrabold tracking-tight">UNTPJ</p>
             <p className="mt-2 max-w-xs text-sm text-ink-muted">
               Unión Nacional de Trabajadores del Poder Judicial. Te acompañamos hasta el final.

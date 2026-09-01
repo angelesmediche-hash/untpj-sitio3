@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import logo from "@/assets/logo-untpj.png";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
@@ -41,10 +40,6 @@ export function PageHero({
         <span
           aria-hidden="true"
           className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80"
-        />
-        <Seal
-          size={140}
-          className="absolute top-8 right-6 hidden opacity-90 md:top-10 md:right-10 md:block"
         />
         <div className="relative container-x flex min-h-[46vh] flex-col justify-end py-16 md:min-h-[52vh] md:py-24">
           <div className="rise max-w-3xl">
@@ -159,79 +154,6 @@ export function Gallery({ images }: { images: { src: string; alt: string }[] }) 
           />
         </div>
       ))}
-    </div>
-  );
-}
-
-/**
- * Sello institucional circular: escudo al centro, rodeado de texto en arco.
- * Pensado como detalle decorativo (marca de agua, esquina de sección),
- * no como logotipo funcional del header.
- */
-export function Seal({
-  size = 176,
-  tone = "gold",
-  topText = "UNIÓN NACIONAL DE TRABAJADORES DEL PODER JUDICIAL",
-  bottomText = "PODER JUDICIAL DE LA FEDERACIÓN · MÉXICO ·",
-  className = "",
-}: {
-  size?: number;
-  tone?: "gold" | "ink";
-  topText?: string;
-  bottomText?: string;
-  className?: string;
-}) {
-  const ringColor = tone === "gold" ? "var(--color-gold)" : "currentColor";
-  const uid = topText.slice(0, 4) + bottomText.slice(0, 4) + tone;
-  const r = 46;
-  const cx = 50;
-  const cy = 50;
-
-  return (
-    <div
-      className={`relative shrink-0 ${className}`}
-      style={{ width: size, height: size }}
-      aria-hidden="true"
-    >
-      <svg viewBox="0 0 100 100" className="h-full w-full">
-        <defs>
-          <path id={`seal-top-${uid}`} d={`M ${cx - r},${cy} a ${r},${r} 0 1,1 ${r * 2},0`} />
-          <path id={`seal-bottom-${uid}`} d={`M ${cx + r},${cy} a ${r},${r} 0 1,1 ${-r * 2},0`} />
-        </defs>
-        <circle
-          cx={cx}
-          cy={cy}
-          r={48}
-          fill="none"
-          stroke={ringColor}
-          strokeWidth={0.5}
-          opacity={0.9}
-        />
-        <circle
-          cx={cx}
-          cy={cy}
-          r={34}
-          fill="none"
-          stroke={ringColor}
-          strokeWidth={0.5}
-          opacity={0.6}
-        />
-        <text fontSize={4.1} letterSpacing="0.16em" fill={ringColor} className="font-display">
-          <textPath href={`#seal-top-${uid}`} startOffset="50%" textAnchor="middle">
-            {topText}
-          </textPath>
-        </text>
-        <text fontSize={4.1} letterSpacing="0.16em" fill={ringColor} className="font-display">
-          <textPath href={`#seal-bottom-${uid}`} startOffset="50%" textAnchor="middle">
-            {bottomText}
-          </textPath>
-        </text>
-      </svg>
-      <img
-        src={logo}
-        alt=""
-        className="absolute top-1/2 left-1/2 w-[38%] -translate-x-1/2 -translate-y-1/2 object-contain"
-      />
     </div>
   );
 }
