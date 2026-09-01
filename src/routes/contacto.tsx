@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Eyebrow, PageHero, Section } from "@/components/site/Bits";
 import { CONTACTO } from "@/lib/site-data";
+import contactoHeroImg from "@/assets/contacto-header.jpg";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -58,6 +59,8 @@ function ContactoPage() {
         eyebrow="Contacto"
         title="Hablemos"
         intro="Información general, afiliación, convenios o representación en tu centro de trabajo."
+        image={contactoHeroImg}
+        imageAlt="Escritorio con la insignia de la Unión Nacional de Trabajadores del Poder Judicial"
       />
 
       <Section>

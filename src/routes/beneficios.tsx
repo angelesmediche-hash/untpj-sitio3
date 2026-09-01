@@ -18,6 +18,7 @@ import imgBlancDental from "@/assets/convenio-blanc-dental.jpg";
 import imgTerapiasIntegrales from "@/assets/convenio-terapias-integrales.jpg";
 import imgArantxaGaray from "@/assets/convenio-arantxa-garay.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
+import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
 const IMAGENES: Record<string, string> = {
   "studio-520": imgStudio520,
@@ -107,6 +108,8 @@ function BeneficiosPage() {
         eyebrow="Beneficios"
         title="Convenios que sí se negocian de forma colectiva"
         intro="Cada beneficio se publica con sus condiciones completas. Si un convenio no está aquí, no está vigente."
+        image={beneficiosHeroImg}
+        imageAlt="Escritorio de despacho jurídico con balanza, birrete y libros de derecho"
       />
 
       <Section>
