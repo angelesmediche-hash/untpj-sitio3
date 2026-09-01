@@ -47,6 +47,8 @@
   --color-ink-muted: var(--ink-muted);
   --color-sand: var(--sand);
   --color-line: var(--line);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
 
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
@@ -88,6 +90,10 @@
   --ink-muted: oklch(0.735 0.015 75);
   --sand: oklch(0.935 0.019 80);
   --line: oklch(0.875 0.014 78);
+  /* Dorado institucional: acento decorativo (sellos, filetes, detalles),
+     distinto del ámbar de señalización (--accent) usado en CTAs. */
+  --gold: oklch(0.685 0.115 83);
+  --gold-foreground: oklch(0.22 0.03 60);
 
   --sidebar: oklch(0.965 0.01 84);
   --sidebar-foreground: oklch(0.215 0.018 45);

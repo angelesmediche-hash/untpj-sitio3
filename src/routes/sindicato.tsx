@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CTALink, Eyebrow, PageHero, Section } from "@/components/site/Bits";
+import { CTALink, Eyebrow, PageHero, Seal, Section } from "@/components/site/Bits";
 import { COMITE } from "@/lib/site-data";
 import heroImg from "@/assets/sindicato-equipo.jpg";
 import galaImg from "@/assets/sindicato-gala.jpg";
@@ -121,11 +121,19 @@ function Sindicato() {
 
       <Section tone="sand" className="scroll-mt-32">
         <div id="organizacion" className="scroll-mt-32">
-          <Eyebrow>Organización</Eyebrow>
-          <h2 className="mt-6 max-w-3xl text-4xl md:text-6xl">Comité Ejecutivo Nacional</h2>
+          <div className="flex flex-wrap items-center justify-between gap-8">
+            <div>
+              <Eyebrow>Organización</Eyebrow>
+              <h2 className="mt-6 max-w-3xl text-4xl md:text-6xl">Comité Ejecutivo Nacional</h2>
+            </div>
+            <Seal size={104} tone="gold" className="hidden sm:block" />
+          </div>
           <div className="mt-14 grid gap-px bg-line md:grid-cols-2 xl:grid-cols-3">
             {COMITE.map((m, i) => (
-              <article key={`${m.cargo}-${i}`} className="bg-background p-7 lift hover:bg-card">
+              <article
+                key={`${m.cargo}-${i}`}
+                className="border-t-2 border-t-transparent bg-background p-7 lift hover:border-t-gold hover:bg-card"
+              >
                 <p className="eyebrow text-primary">{m.cargo}</p>
                 <h3 className="mt-4 text-xl">{m.nombre}</h3>
                 <p className="mt-3 text-sm text-muted-foreground">{m.puesto}</p>
