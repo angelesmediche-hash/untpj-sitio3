@@ -70,33 +70,6 @@ const QUE_HACEMOS = [
   },
 ] as const;
 
-const DERECHOS = [
-  {
-    n: "01",
-    title: "Prestaciones legales",
-    text: "Información y recursos sobre las prestaciones que corresponden a las y los trabajadores.",
-    to: "/derechos/prestaciones",
-  },
-  {
-    n: "02",
-    title: "Condiciones Generales de Trabajo",
-    text: "El marco que regula la relación laboral en el Poder Judicial de la Federación.",
-    to: "/derechos/condiciones-generales",
-  },
-  {
-    n: "03",
-    title: "Seguridad social",
-    text: "Ahorro solidario y orientación en materia de seguridad social.",
-    to: "/derechos/seguridad-social",
-  },
-  {
-    n: "04",
-    title: "Preguntas frecuentes",
-    text: "Dudas comunes sobre afiliación, atención y servicios del sindicato.",
-    to: "/derechos/preguntas-frecuentes",
-  },
-] as const;
-
 const BENEFICIOS = [
   {
     icon: FileText,
@@ -219,34 +192,6 @@ function Home() {
         </div>
       </Section>
 
-      {/* TUS DERECHOS */}
-      <Section tone="sand">
-        <Eyebrow>II · Tus derechos</Eyebrow>
-        <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
-          <h2 className="max-w-2xl text-4xl md:text-6xl">¿Qué estás buscando?</h2>
-          <CTALink to="/derechos" variant="outline">
-            Centro de derechos
-          </CTALink>
-        </div>
-        <div className="mt-14 grid gap-px bg-line md:grid-cols-2">
-          {DERECHOS.map((d) => (
-            <Link
-              key={d.n}
-              to={d.to}
-              className="group bg-sand p-8 lift hover:bg-background md:p-10"
-            >
-              <span className="font-display text-sm font-extrabold text-primary">{d.n}</span>
-              <h3 className="mt-4 text-3xl">{d.title}</h3>
-              <p className="mt-3 max-w-md text-sm text-muted-foreground">{d.text}</p>
-              <span className="mt-8 inline-flex items-center gap-2 font-display text-[0.7rem] font-extrabold tracking-[0.16em] uppercase">
-                Explorar
-                <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
       {/* APOYO 24/7 */}
       <section className="bg-ink text-ink-foreground">
         <div className="grid lg:grid-cols-2">
@@ -259,7 +204,7 @@ function Home() {
             className="h-full min-h-[22rem] w-full object-cover"
           />
           <div className="container-x py-20 md:py-28">
-            <p className="eyebrow text-accent">III · Apoyo 24/7</p>
+            <p className="eyebrow text-accent">II · Apoyo 24/7</p>
             <h2 className="mt-6 text-4xl md:text-5xl">
               Cuando el caso es urgente, no lo enfrentas solo.
             </h2>
@@ -289,7 +234,7 @@ function Home() {
 
       {/* PRESTACIONES Y BENEFICIOS */}
       <Section>
-        <Eyebrow>IV · Prestaciones y beneficios</Eyebrow>
+        <Eyebrow>III · Prestaciones y beneficios</Eyebrow>
         <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
           <h2 className="max-w-2xl text-4xl md:text-6xl">Lo que obtienes al formar parte.</h2>
           <CTALink to="/beneficios" variant="outline">
@@ -309,7 +254,7 @@ function Home() {
 
       {/* NOTICIAS */}
       <Section tone="sand">
-        <Eyebrow>V · Noticias y actualidad</Eyebrow>
+        <Eyebrow>IV · Noticias y actualidad</Eyebrow>
         <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
           <h2 className="max-w-2xl text-4xl md:text-6xl">Lo último de la UNTPJ.</h2>
           <CTALink to="/noticias" variant="outline">
