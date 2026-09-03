@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { PageHero, Section } from "@/components/site/Bits";
 import { NOTICIAS } from "@/lib/site-data";
-import heroImg from "@/assets/noticia-padre-06.jpg";
-import thumbPadre from "@/assets/noticia-padre-09.jpg";
+import heroImg from "@/assets/noticia-papa-2026.jpg";
+import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
 
 export const Route = createFileRoute("/noticias/")({
@@ -38,6 +38,7 @@ function NoticiasIndexPage() {
         intro="Lo que hemos vivido en comunidad, con las fotografías de cada evento."
         image={heroImg}
         imageAlt="Convivencia del Día del Padre organizada por la UNTPJ"
+        imagePosition="center 55%"
       />
       <Section>
         <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2">
