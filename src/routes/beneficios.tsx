@@ -17,6 +17,7 @@ import imgIkonicMoments from "@/assets/convenio-ikonic-moments.jpg";
 import imgBlancDental from "@/assets/convenio-blanc-dental.jpg";
 import imgTerapiasIntegrales from "@/assets/convenio-terapias-integrales.jpg";
 import imgArantxaGaray from "@/assets/convenio-arantxa-garay.jpg";
+import imgGoodLife from "@/assets/convenio-good-life.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -34,6 +35,7 @@ const IMAGENES: Record<string, string> = {
   "blanc-dental": imgBlancDental,
   "terapias-integrales": imgTerapiasIntegrales,
   "arantxa-garay": imgArantxaGaray,
+  "good-life": imgGoodLife,
 };
 
 export const Route = createFileRoute("/beneficios")({

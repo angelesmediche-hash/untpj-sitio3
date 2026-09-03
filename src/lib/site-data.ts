@@ -475,6 +475,16 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     contacto: "WhatsApp 55 4543 6588",
     imagen: "arantxa-garay",
   },
+  {
+    id: "good-life",
+    nombre: "Good Life · Aceites esenciales",
+    categoria: "Salud y bienestar",
+    resumen:
+      "Aceites esenciales naturales para bienestar y equilibrio: Natura, Tea Tree, Patchoulli, Eucalipto y más.",
+    descuento: "25% de descuento en toda la gama",
+    contacto: "Escanea el código QR del flyer para más información",
+    imagen: "good-life",
+  },
 ];
 
 /**
