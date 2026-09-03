@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import logoWatermark from "@/assets/logo-untpj.png";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
@@ -16,12 +17,14 @@ export function PageHero({
   intro,
   image,
   imageAlt,
+  imagePosition = "center",
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
   image?: string;
   imageAlt?: string;
+  imagePosition?: string;
 }) {
   if (image) {
     return (
@@ -31,10 +34,11 @@ export function PageHero({
           alt={imageAlt ?? ""}
           width={1920}
           height={1280}
-          className="absolute inset-0 size-full object-cover opacity-45"
+          style={{ objectPosition: imagePosition }}
+          className="absolute inset-0 size-full object-cover opacity-65"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/20"
+          className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/10"
           aria-hidden="true"
         />
         <span
@@ -57,12 +61,12 @@ export function PageHero({
 
   return (
     <section className="relative overflow-hidden border-b border-line bg-ink text-ink-foreground">
-      <span
+      <img
+        src={logoWatermark}
+        alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -top-24 -right-24 font-display text-[16rem] leading-none font-extrabold text-ink-foreground/[0.04] select-none md:text-[22rem]"
-      >
-        {eyebrow.charAt(0)}
-      </span>
+        className="pointer-events-none absolute top-1/2 -right-8 h-[85%] w-auto -translate-y-1/2 object-contain opacity-20 select-none md:-right-4 md:h-[95%] md:opacity-[0.22]"
+      />
       <span
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary"

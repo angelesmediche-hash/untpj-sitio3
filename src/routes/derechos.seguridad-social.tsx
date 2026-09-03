@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
 import { CTALink, PageHero, Section } from "@/components/site/Bits";
+import seguridadSocialHeroImg from "@/assets/seguridad-social-hero.jpg";
 
 export const Route = createFileRoute("/derechos/seguridad-social")({
   head: () => ({
@@ -28,6 +29,9 @@ function SeguridadSocial() {
         eyebrow="Tus derechos · 03"
         title="Seguridad social"
         intro="Acceso y orientación en materia de seguridad social para las personas agremiadas."
+        image={seguridadSocialHeroImg}
+        imageAlt="Integrantes de la UNTPJ en una mesa de trabajo institucional"
+        imagePosition="center 40%"
       />
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
