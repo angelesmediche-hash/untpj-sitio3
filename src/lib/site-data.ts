@@ -519,7 +519,6 @@ export type Noticia = {
   slug: string;
   titulo: string;
   fecha: string;
-  autor: string;
   resumen: string;
   cuerpo: string[];
 };
@@ -529,7 +528,6 @@ export const NOTICIAS: Noticia[] = [
     slug: "dia-del-padre",
     titulo: "Día del Padre",
     fecha: "19 de junio de 2026",
-    autor: "Miguel Vadillo",
     resumen:
       "Compartimos el Decálogo de los Derechos de Paternidad de las Personas Servidoras Públicas del Poder Judicial de la Federación y celebramos a los padres de la institución.",
     cuerpo: [
@@ -543,7 +541,6 @@ export const NOTICIAS: Noticia[] = [
     slug: "dia-de-la-ninez",
     titulo: "Celebrando el Día de la niñez con los hijos de trabajadores",
     fecha: "30 de abril de 2026",
-    autor: "Miguel Vadillo",
     resumen: "Entrega de juguetes a infancias.",
     cuerpo: [
       "Con motivo de la celebración del 30 de abril, Día de las Infancias, se realizó la entrega de obsequios a las hijas e hijos de las y los trabajadores del Poder Judicial, como una muestra de reconocimiento y aprecio hacia las familias que forman parte de esta institución.",

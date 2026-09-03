@@ -76,7 +76,7 @@ function NoticiaDetallePage() {
       <PageHero
         eyebrow="Noticias"
         title={noticia.titulo}
-        intro={`${noticia.fecha} · ${noticia.autor}`}
+        intro={noticia.fecha}
         image={media?.hero}
         imageAlt={noticia.titulo}
       />

@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
-import thumbPadre from "@/assets/noticia-padre-09.jpg";
+import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
 import { CTALink, Eyebrow, Section } from "@/components/site/Bits";
 import { CONTACTO, NOTA_247, NOTICIAS } from "@/lib/site-data";
@@ -278,9 +278,7 @@ function Home() {
                 />
               </div>
               <div className="p-7">
-                <p className="eyebrow text-primary">
-                  {n.fecha} · {n.autor}
-                </p>
+                <p className="eyebrow text-primary">{n.fecha}</p>
                 <h3 className="mt-4 text-2xl">{n.titulo}</h3>
                 <p className="mt-3 text-sm text-muted-foreground">{n.resumen}</p>
                 <span className="mt-6 inline-flex items-center gap-2 font-display text-[0.7rem] font-extrabold tracking-[0.16em] uppercase">

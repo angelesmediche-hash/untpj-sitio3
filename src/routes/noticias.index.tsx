@@ -59,7 +59,7 @@ function NoticiasIndexPage() {
               </div>
               <div className="p-7">
                 <p className="font-display text-xs font-extrabold tracking-[0.16em] text-muted-foreground uppercase">
-                  {n.fecha} · {n.autor}
+                  {n.fecha}
                 </p>
                 <h2 className="mt-3 text-2xl leading-snug">{n.titulo}</h2>
                 <p className="mt-3 text-sm text-muted-foreground">{n.resumen}</p>
