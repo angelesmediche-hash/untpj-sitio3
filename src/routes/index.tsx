@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   PartyPopper,
 } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hero-equipo.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
@@ -100,10 +100,10 @@ function Home() {
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
         <img
           src={heroImg}
-          alt="Trabajadoras y trabajadores del Poder Judicial de la Federación reunidos en un pasillo institucional"
-          width={1920}
-          height={1280}
-          className="absolute inset-0 size-full object-cover opacity-40"
+          alt="Integrantes del Comité Ejecutivo Nacional de la UNTPJ"
+          width={1952}
+          height={1304}
+          className="absolute inset-0 size-full object-cover opacity-55"
         />
         <div
           className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30"

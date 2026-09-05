@@ -480,10 +480,20 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     nombre: "Good Life · Aceites esenciales",
     categoria: "Salud y bienestar",
     resumen:
-      "Aceites esenciales naturales para bienestar y equilibrio: Natura, Tea Tree, Patchoulli, Eucalipto y más.",
-    descuento: "25% de descuento en toda la gama",
-    contacto: "Escanea el código QR del flyer para más información",
+      "Aceites esenciales naturales para bienestar y equilibrio: Natura, Tea Tree, Patchoulli, Eucalipto, Sueño Reparador y más.",
+    descuento: "25% de descuento en todos los productos",
+    contacto: "Escanea el código QR del flyer o síguelos en @mxgoodlife",
     imagen: "good-life",
+  },
+  {
+    id: "gestor-vehicular",
+    nombre: "Gestor · Gestión Vehicular Premium",
+    categoria: "Automotriz y trámites",
+    resumen:
+      "Alta y baja de placas, cambio de propietario, verificación, traslados de vehículos, gestión de multas e infracciones, trámites de vehículos eléctricos, alta de motos, permisos de circulación, seguro de autos, seguro de vida y servicio mecánico automotriz.",
+    descuento: "15% de descuento en servicio de gestión",
+    contacto: "747 133 2359 · Torres Adalid 1006, Del Valle Norte, Alcaldía Benito Juárez, CDMX",
+    imagen: "gestor-vehicular",
   },
 ];
 
