@@ -144,7 +144,7 @@ function Home() {
               </div>
             ))}
           </div>
-          <div className="marquee-slow flex h-1/2 w-max gap-3" aria-hidden="true">
+          <div className="marquee-slow-reverse flex h-1/2 w-max gap-3" aria-hidden="true">
             {Array.from({ length: 2 }).map((_, i) => (
               <div key={i} className="flex h-full w-max flex-none gap-3">
                 {HERO_ROW_BOTTOM.map((src, j) => (
