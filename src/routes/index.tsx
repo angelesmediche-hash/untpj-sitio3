@@ -34,24 +34,11 @@ const THUMBS: Record<string, string> = {
   "dia-de-la-ninez": thumbNinez,
 };
 
-const HERO_ROW_TOP = [
-  tileXochitl,
-  tilePadre08,
-  tileTwoWomen,
-  tileNinez05,
-  tileBanquet,
-  tileSkyline,
-];
+const HERO_ROW_1 = [tileXochitl, tilePadre08, tileTwoWomen, tileBanquet, tileNinez05];
 
-const HERO_ROW_BOTTOM = [
-  tileSergio,
-  tileBenito,
-  tileLeather,
-  tileGroup4,
-  tilePadre04,
-  tileWindowTable,
-  tileNinez03,
-];
+const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04];
+
+const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -130,10 +117,10 @@ function Home() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
         <div className="absolute inset-0 flex flex-col justify-between gap-3 p-3 opacity-55">
-          <div className="marquee-slow-reverse flex h-1/2 w-max gap-3" aria-hidden="true">
+          <div className="marquee-slow-reverse flex h-1/3 w-max gap-3" aria-hidden="true">
             {Array.from({ length: 2 }).map((_, i) => (
               <div key={i} className="flex h-full w-max flex-none gap-3">
-                {HERO_ROW_TOP.map((src, j) => (
+                {HERO_ROW_1.map((src, j) => (
                   <img
                     key={j}
                     src={src}
@@ -144,10 +131,24 @@ function Home() {
               </div>
             ))}
           </div>
-          <div className="marquee-slow-reverse flex h-1/2 w-max gap-3" aria-hidden="true">
+          <div className="marquee-slow-reverse-2 flex h-1/3 w-max gap-3" aria-hidden="true">
             {Array.from({ length: 2 }).map((_, i) => (
               <div key={i} className="flex h-full w-max flex-none gap-3">
-                {HERO_ROW_BOTTOM.map((src, j) => (
+                {HERO_ROW_2.map((src, j) => (
+                  <img
+                    key={j}
+                    src={src}
+                    alt=""
+                    className="h-full w-auto flex-none rounded-2xl object-cover"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="marquee-slow-reverse flex h-1/3 w-max gap-3" aria-hidden="true">
+            {Array.from({ length: 2 }).map((_, i) => (
+              <div key={i} className="flex h-full w-max flex-none gap-3">
+                {HERO_ROW_3.map((src, j) => (
                   <img
                     key={j}
                     src={src}

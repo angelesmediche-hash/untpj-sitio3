@@ -208,3 +208,7 @@
 @utility marquee-slow-reverse {
   animation: untpj-marquee-reverse 150s linear infinite;
 }
+
+@utility marquee-slow-reverse-2 {
+  animation: untpj-marquee-reverse 130s linear infinite;
+}
