@@ -47,9 +47,9 @@ function NoticiasIndexPage() {
               key={n.slug}
               to="/noticias/$slug"
               params={{ slug: n.slug }}
-              className="group block overflow-hidden border border-line bg-background lift hover:lift-hover"
+              className="group block overflow-hidden rounded-2xl border border-line bg-background lift hover:lift-hover"
             >
-              <div className="aspect-[16/10] w-full overflow-hidden bg-muted">
+              <div className="aspect-[16/10] w-full overflow-hidden rounded-t-2xl bg-muted">
                 <img
                   src={THUMBS[n.slug]}
                   alt={n.titulo}

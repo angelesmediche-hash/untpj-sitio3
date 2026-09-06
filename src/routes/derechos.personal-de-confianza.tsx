@@ -55,7 +55,7 @@ function PersonalDeConfianza() {
             width={1582}
             height={1242}
             loading="lazy"
-            className="aspect-[4/3] w-full object-cover"
+            className="aspect-[4/3] w-full rounded-2xl object-cover"
           />
         </div>
       </Section>

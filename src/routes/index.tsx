@@ -10,7 +10,19 @@ import {
   ShieldCheck,
   PartyPopper,
 } from "lucide-react";
-import heroImg from "@/assets/hero-equipo.jpg";
+import tileXochitl from "@/assets/hero-tiles/xochitl.jpg";
+import tileSergio from "@/assets/hero-tiles/sergio.jpg";
+import tileBenito from "@/assets/hero-tiles/benito.jpg";
+import tileTwoWomen from "@/assets/hero-tiles/two-women.jpg";
+import tileLeather from "@/assets/hero-tiles/leather.jpg";
+import tileGroup4 from "@/assets/hero-tiles/group4.jpg";
+import tileBanquet from "@/assets/hero-tiles/banquet.jpg";
+import tileWindowTable from "@/assets/hero-tiles/window-table.jpg";
+import tileSkyline from "@/assets/hero-tiles/skyline.jpg";
+import tilePadre08 from "@/assets/hero-tiles/padre08.jpg";
+import tilePadre04 from "@/assets/hero-tiles/padre04.jpg";
+import tileNinez05 from "@/assets/hero-tiles/ninez05.jpg";
+import tileNinez03 from "@/assets/hero-tiles/ninez03.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
@@ -21,6 +33,25 @@ const THUMBS: Record<string, string> = {
   "dia-del-padre": thumbPadre,
   "dia-de-la-ninez": thumbNinez,
 };
+
+const HERO_ROW_TOP = [
+  tileXochitl,
+  tilePadre08,
+  tileTwoWomen,
+  tileNinez05,
+  tileBanquet,
+  tileSkyline,
+];
+
+const HERO_ROW_BOTTOM = [
+  tileSergio,
+  tileBenito,
+  tileLeather,
+  tileGroup4,
+  tilePadre04,
+  tileWindowTable,
+  tileNinez03,
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -98,13 +129,36 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
-        <img
-          src={heroImg}
-          alt="Integrantes del Comité Ejecutivo Nacional de la UNTPJ"
-          width={1952}
-          height={1304}
-          className="absolute inset-0 size-full object-cover opacity-55"
-        />
+        <div className="absolute inset-0 flex flex-col justify-between gap-3 p-3 opacity-55">
+          <div className="marquee-slow-reverse flex h-1/2 w-max gap-3" aria-hidden="true">
+            {Array.from({ length: 2 }).map((_, i) => (
+              <div key={i} className="flex h-full w-max flex-none gap-3">
+                {HERO_ROW_TOP.map((src, j) => (
+                  <img
+                    key={j}
+                    src={src}
+                    alt=""
+                    className="h-full w-auto flex-none rounded-2xl object-cover"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="marquee-slow flex h-1/2 w-max gap-3" aria-hidden="true">
+            {Array.from({ length: 2 }).map((_, i) => (
+              <div key={i} className="flex h-full w-max flex-none gap-3">
+                {HERO_ROW_BOTTOM.map((src, j) => (
+                  <img
+                    key={j}
+                    src={src}
+                    alt=""
+                    className="h-full w-auto flex-none rounded-2xl object-cover"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
         <div
           className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30"
           aria-hidden="true"
@@ -267,9 +321,9 @@ function Home() {
               key={n.slug}
               to="/noticias/$slug"
               params={{ slug: n.slug }}
-              className="group block overflow-hidden border border-line bg-background lift hover:lift-hover"
+              className="group block overflow-hidden rounded-2xl border border-line bg-background lift hover:lift-hover"
             >
-              <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
+              <div className="aspect-[16/9] w-full overflow-hidden rounded-t-2xl bg-muted">
                 <img
                   src={THUMBS[n.slug]}
                   alt={n.titulo}

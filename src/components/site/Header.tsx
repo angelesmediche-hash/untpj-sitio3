@@ -62,8 +62,8 @@ export function Header() {
       <div className="border-b border-line bg-background/90 backdrop-blur-md">
         <div className="container-x flex items-center justify-between gap-6 py-4">
           <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-            <span className="flex size-11 items-center justify-center bg-background p-1 shadow-sm">
-              <img src={logo} alt="UNTPJ" className="h-full w-full object-contain" />
+            <span className="flex size-11 items-center justify-center rounded-xl bg-background p-1 shadow-sm">
+              <img src={logo} alt="UNTPJ" className="h-full w-full rounded-md object-contain" />
             </span>
             <span className="leading-tight">
               <span className="block font-display text-base font-extrabold tracking-tight">

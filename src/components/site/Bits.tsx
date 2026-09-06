@@ -146,7 +146,7 @@ export function Gallery({ images }: { images: { src: string; alt: string }[] }) 
       {images.map((img, i) => (
         <div
           key={img.src}
-          className={`overflow-hidden bg-muted lift hover:lift-hover ${
+          className={`overflow-hidden rounded-2xl bg-muted lift hover:lift-hover ${
             i === 0 ? "col-span-2 aspect-[16/10] sm:col-span-2" : "aspect-square"
           }`}
         >

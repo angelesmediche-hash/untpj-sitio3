@@ -188,6 +188,23 @@
   }
 }
 
+@keyframes untpj-marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 @utility marquee {
   animation: untpj-marquee 32s linear infinite;
+}
+
+@utility marquee-slow {
+  animation: untpj-marquee 140s linear infinite;
+}
+
+@utility marquee-slow-reverse {
+  animation: untpj-marquee-reverse 150s linear infinite;
 }

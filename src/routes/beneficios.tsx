@@ -66,8 +66,8 @@ const CATEGORIAS = [
 
 function ConvenioCard({ convenio }: { convenio: Convenio }) {
   return (
-    <article className="group flex flex-col overflow-hidden border border-line bg-background lift hover:lift-hover">
-      <div className="aspect-[3/4] w-full overflow-hidden bg-muted">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-background lift hover:lift-hover">
+      <div className="aspect-[3/4] w-full overflow-hidden rounded-t-2xl bg-muted">
         <img
           src={IMAGENES[convenio.imagen]}
           alt={convenio.nombre}
@@ -119,7 +119,7 @@ function BeneficiosPage() {
       <Section>
         <div
           id="guias-de-estudio"
-          className="scroll-mt-32 grid gap-0 overflow-hidden border border-primary bg-sand md:grid-cols-2"
+          className="scroll-mt-32 grid gap-0 overflow-hidden rounded-2xl border border-primary bg-sand md:grid-cols-2"
         >
           <div className="p-8 md:p-12">
             <BookOpen className="size-10 shrink-0 text-primary" strokeWidth={1.3} />
