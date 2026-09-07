@@ -33,185 +33,105 @@ export const REQUISITOS_AFILIACION = [
   "No encontrarte afiliado a otra organización sindical al momento de firmar (o autorizar el cambio, según tu caso).",
 ];
 
-export const COMITE: { nombre: string; cargo: string; puesto: string }[] = [
+export const COMITE: { nombre: string; cargo: string }[] = [
+  { nombre: "Sergio Gustavo Infante López", cargo: "Presidencia" },
+  { nombre: "Manuel Vizcarra Núñez", cargo: "Secretaría General de Difusión Política" },
+  { nombre: "Benito José Vergara Moreno", cargo: "Secretaría General de Asuntos Jurídicos" },
   {
-    nombre: "Sergio Gustavo Infante López",
-    cargo: "Presidente",
-    puesto:
-      "Secretario adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
-  },
-  {
-    nombre: "[CONTENIDO PENDIENTE]",
+    nombre: "Xóchitl Citlali Pineda Pérez",
     cargo: "Secretaría General de Administración y Finanzas",
-    puesto: "[CONTENIDO PENDIENTE]",
-  },
-  {
-    nombre: "Manuel Vizcarra Núñez",
-    cargo: "Secretaría General de Difusión Política",
-    puesto:
-      "Secretario adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
-  },
-  {
-    nombre: "Areli Córdova Valenzuela",
-    cargo: "Secretaría General de Asuntos Jurídicos",
-    puesto:
-      "Secretaria adscrita al Quinto Tribunal Colegiado en Materia Civil del Primer Circuito.",
-  },
-  {
-    nombre: "Miguel Ángel Vadillo Romero",
-    cargo: "Secretaría General de Comunicación Social",
-    puesto:
-      "Secretario adscrito al Tercer Tribunal Colegiado en Materia Civil del Primer Circuito.",
-  },
-  {
-    nombre: "Beuribe Alejandra Lázaro Hernández",
-    cargo: "Secretaría General de Plataformas Digitales",
-    puesto:
-      "Secretaria adscrita al Primer Tribunal Colegiado en Materia de Trabajo del Primer Circuito.",
-  },
-  {
-    nombre: "Beatriz Alcántara Jiménez",
-    cargo: "Secretaría General de Transparencia y Estudio de Normatividad Interna Patronal",
-    puesto:
-      "Secretaria adscrita al Juzgado Décimo Sexto en Materia Administrativa en la Ciudad de México.",
-  },
-  {
-    nombre: "Leslie Laura Sonck Martínez",
-    cargo: "Secretaría General de Programas Sociales",
-    puesto:
-      "Secretaria adscrita al Juzgado Décimo Sexto en Materia Administrativa en la Ciudad de México.",
-  },
-  {
-    nombre: "Viany Guadalupe Enríquez Ricárdez",
-    cargo:
-      "Secretaría General de Análisis Estratégico de Conflictos en los Centros de Trabajo entre los Trabajadores o con algún Titular de Área Administrativa u Órgano Jurisdiccional",
-    puesto:
-      "Secretaria adscrita al Juzgado Segundo de Distrito en Materia Penal en el Estado de Puebla.",
-  },
-  {
-    nombre: "Gloria Estephanie Cadena Vargas",
-    cargo: "Secretaría General de Atención de Casos Relacionados con Hostigamiento y Acoso Sexual",
-    puesto:
-      "Actuaria Judicial “C” adscrita al Juzgado Segundo de Distrito en Materia de Concursos Mercantiles con residencia en la Ciudad de México y jurisdicción a la República Mexicana.",
-  },
-  {
-    nombre: "Mayra Edith Contreras Roséndez",
-    cargo:
-      "Secretaría General de Capacitación Presencial y a Distancia Jurisdiccional y Administrativa en los Centros de Trabajo",
-    puesto:
-      "Actuaria Judicial adscrita al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
   },
   {
     nombre: "María Raquel Cortés Prieto",
-    cargo: "Secretaría General de Tesorería y Control de Gasto",
-    puesto:
-      "Oficial Judicial “A” adscrita al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
+    cargo: "Secretaría General de Tesorería y Control de Gastos",
+  },
+  {
+    nombre: "Beatriz Alcántara Jiménez",
+    cargo: "Secretaría General de Transparencia y Normatividad",
   },
   {
     nombre: "José Francisco Delgado Palomares",
     cargo: "Secretaría General de Contraloría y Vigilancia Sindical",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
   },
   {
-    nombre: "Samuel Flores Castro",
-    cargo: "Secretaría General de Altas de los Miembros de la Agrupación Sindical",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
+    nombre: "Miguel Ángel Vadillo Romero",
+    cargo: "Secretaría General de Comunicación Social",
+  },
+  {
+    nombre: "Beuribe Alejandra Lázaro Hernández",
+    cargo: "Secretaría General de Plataformas Digitales",
+  },
+  { nombre: "Myriam Elizabeth Pérez Soto", cargo: "Secretaría General de Innovación" },
+  {
+    nombre: "Aline Mabel Soto Herrera",
+    cargo:
+      "Secretaría General de Información y Atención de Emergencias Administrativas y Jurisdiccionales",
+  },
+  {
+    nombre: "Viany Guadalupe Enríquez Ricárdez",
+    cargo: "Secretaría General de Planeación y Estrategia Legal",
+  },
+  {
+    nombre: "Ruth Marcos Espinoza",
+    cargo:
+      "Secretaría General de Planeación y Estrategia en Materia de Responsabilidad Administrativa",
+  },
+  {
+    nombre: "Gloria Estephanie Cadena Vargas",
+    cargo: "Secretaría General de Atención de Casos Relacionados con Hostigamiento y Acoso Sexual",
   },
   {
     nombre: "Martha Genoveva Veloz Robles",
     cargo: "Secretaría General de Atención de Casos relacionados con Hostigamiento y Acoso Laboral",
-    puesto:
-      "Oficial Judicial “C” adscrita al Noveno Tribunal Colegiado en Materia Civil del Primer Circuito.",
   },
   {
-    nombre: "Aline Mabel Soto Herrera",
+    nombre: "Christian García Rivera",
+    cargo: "Secretaría General de Planeación y Estrategia en Materia de Conflictos Laborales",
+  },
+  {
+    nombre: "Esteban Omar Jiménez Fernández",
     cargo:
-      "Secretaría General de Atención a Dudas, Manejo de Emergencias en Materia de Protección Civil, Contingencias sobre Casos Urgentes Relacionados con las Actividades Administrativas y Jurisdiccionales en los Centros de Trabajo",
-    puesto:
-      "Oficial Judicial “C” adscrita al Decimoquinto Tribunal Colegiado en Materia de Trabajo del Primer Circuito.",
+      "Secretaría General de Atención de Conflictos Mediante Métodos Alternativos de Solución de Controversias",
+  },
+  { nombre: "Ernesto Solís Ocampo", cargo: "Secretaría General de Organización" },
+  { nombre: "Agustín Piza Vázquez", cargo: "Secretaría General de Actas y Acuerdos" },
+  { nombre: "Samuel Flores Castro", cargo: "Secretaría General de Afiliaciones" },
+  {
+    nombre: "Pablo Omar Cervantes Chimal",
+    cargo: "Secretaría General de Atención al Personal de Confianza e Invitados",
   },
   {
     nombre: "Josué Daza Hurtado",
     cargo:
       "Secretaría General de Organización de Eventos Sociales, Deportivos, Culturales, Turísticos y Recreativos",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
   },
+  { nombre: "Henry Sánchez Luis", cargo: "Secretaría General de Apoyo Litigioso" },
   {
-    nombre: "Myriam Elizabeth Pérez Soto",
+    nombre: "Miriam Moreno García",
     cargo:
-      "Secretaría General de Innovación y Modernización al Interior y Exterior en los Centros de Trabajo",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
+      "Secretaría General de Capacitación Presencial y a Distancia Jurisdiccional y Administrativa en los Centros de Trabajo",
   },
   {
-    nombre: "Ernesto Solís Ocampo",
-    cargo: "Secretaría General de Organización",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
+    nombre: "Ricardo Grabcis Rivas Ordóñez",
+    cargo: "Secretaría General de Licencias, Comisiones, Pensiones Escalafón y Permutas",
   },
+  { nombre: "Leslie Laura Sonck Martínez", cargo: "Secretaría General de Programas Sociales" },
   {
-    nombre: "[CONTENIDO PENDIENTE]",
-    cargo:
-      "Secretaría General de Atención de Conflictos Mediante Métodos Alternativos de Solución de Controversias",
-    puesto: "[CONTENIDO PENDIENTE]",
-  },
-  {
-    nombre: "Agustín Piza Vázquez",
-    cargo: "Secretaría General de Actas y Acuerdos",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
-  },
-  {
-    nombre: "[CONTENIDO PENDIENTE]",
-    cargo: "Secretaría General de Licencias, Comisiones, Pensiones, Escalafón y Permutas",
-    puesto: "[CONTENIDO PENDIENTE]",
-  },
-  {
-    nombre: "Isis Joseline Orante González",
-    cargo: "Secretaría General de Transparencia y Estudio de Normatividad Interna Patronal",
-    puesto:
-      "Oficial Judicial “C” adscrita al Juzgado Noveno de Distrito en el Estado de México, con residencia en Nezahualcóyotl.",
-  },
-  {
-    nombre: "Henry Sánchez Luis",
-    cargo: "Secretaría General de Bajas de los Miembros de ésta y diversa Agrupación Sindical",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
-  },
-  {
-    nombre: "Pablo Omar Cervantes Chimal",
-    cargo: "Secretaría General de Equidad de Género, Igualdad y No Discriminación",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
-  },
-  {
-    nombre: "Christian García Rivera",
-    cargo:
-      "Secretaría General de Planeación y Estrategia en la Defensa de los Derechos de los Trabajadores en Materia de Conflictos Laborales",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Tercero de Distrito en Materia de Trabajo en la Ciudad de México.",
+    nombre: "María Elena Torres García",
+    cargo: "Secretaría General de Asesoría Técnica sobre Prestaciones Legales y Extralegales",
   },
   {
     nombre: "Enrique Pérez Acevedo",
     cargo:
       "Secretaría General de Captación, Propaganda y Convenios de Colaboración Sindical y Empresarial",
-    puesto: "Actuario Judicial adscrito al Juzgado Segundo de Distrito en Materia de Trabajo.",
   },
   {
-    nombre: "Joel Villalva González",
-    cargo: "Secretaría General de Asesoría Técnica sobre Prestaciones Legales y Extralegales",
-    puesto:
-      "Oficial Judicial “C” adscrito al Juzgado Séptimo de Distrito en Materia de Trabajo en la Ciudad de México.",
+    nombre: "Isis Joseline Orante González",
+    cargo: "Secretaría General de Coordinación y Enlace",
   },
   {
-    nombre: "Ruth Marcos Espinoza",
-    cargo:
-      "Secretaría General de Planeación y Estrategia en la Defensa de los Derechos de los Trabajadores en Materia de Responsabilidad Administrativa",
-    puesto:
-      "Oficial Judicial “C” adscrita al Juzgado Segundo de Distrito en Materia de Trabajo en la Ciudad de México.",
+    nombre: "Teresita de Jesús Bejarano Valadez",
+    cargo: "Secretaría General de Seguridad",
   },
 ];
 

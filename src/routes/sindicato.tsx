@@ -101,7 +101,6 @@ function Sindicato() {
               >
                 <p className="eyebrow text-primary">{m.cargo}</p>
                 <h3 className="mt-4 text-xl">{m.nombre}</h3>
-                <p className="mt-3 text-sm text-muted-foreground">{m.puesto}</p>
               </article>
             ))}
           </div>
