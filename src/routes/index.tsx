@@ -23,6 +23,7 @@ import tilePadre08 from "@/assets/hero-tiles/padre08.jpg";
 import tilePadre04 from "@/assets/hero-tiles/padre04.jpg";
 import tileNinez05 from "@/assets/hero-tiles/ninez05.jpg";
 import tileNinez03 from "@/assets/hero-tiles/ninez03.jpg";
+import tileComite from "@/assets/hero-tiles/comite.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
@@ -34,11 +35,11 @@ const THUMBS: Record<string, string> = {
   "dia-de-la-ninez": thumbNinez,
 };
 
-const HERO_ROW_1 = [tileXochitl, tilePadre08, tileTwoWomen, tileBanquet, tileNinez05];
+const HERO_ROW_1 = [tileXochitl, tilePadre08, tileTwoWomen, tileBanquet, tileNinez05, tileComite];
 
-const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04];
+const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileComite];
 
-const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03];
+const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03, tileComite];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -118,7 +119,7 @@ function Home() {
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
         <div className="absolute inset-0 flex flex-col justify-between gap-3 p-3 opacity-55">
           <div className="marquee-slow-reverse flex h-1/3 w-max gap-3" aria-hidden="true">
-            {Array.from({ length: 2 }).map((_, i) => (
+            {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="flex h-full w-max flex-none gap-3">
                 {HERO_ROW_1.map((src, j) => (
                   <img
@@ -132,7 +133,7 @@ function Home() {
             ))}
           </div>
           <div className="marquee-slow-reverse-2 flex h-1/3 w-max gap-3" aria-hidden="true">
-            {Array.from({ length: 2 }).map((_, i) => (
+            {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="flex h-full w-max flex-none gap-3">
                 {HERO_ROW_2.map((src, j) => (
                   <img
@@ -146,7 +147,7 @@ function Home() {
             ))}
           </div>
           <div className="marquee-slow-reverse flex h-1/3 w-max gap-3" aria-hidden="true">
-            {Array.from({ length: 2 }).map((_, i) => (
+            {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="flex h-full w-max flex-none gap-3">
                 {HERO_ROW_3.map((src, j) => (
                   <img

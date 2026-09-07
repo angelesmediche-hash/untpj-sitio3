@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, PageHero, Section } from "@/components/site/Bits";
 import { COMITE } from "@/lib/site-data";
-import heroImg from "@/assets/sindicato-equipo.jpg";
+import heroImg from "@/assets/sindicato-comite-2026.jpg";
 
 export const Route = createFileRoute("/sindicato")({
   head: () => ({
@@ -34,7 +34,8 @@ function Sindicato() {
         title="Una organización que representa tus derechos."
         intro="Somos tu nueva opción de sindicato, un proyecto con personas comprometidas con darte herramientas para mejorar tu carrera, línea abierta de comunicación cuando lo necesites y apoyo hasta el final de cualquier procedimiento."
         image={heroImg}
-        imageAlt="Equipo de la UNTPJ reunido"
+        imageAlt="Comité Ejecutivo Nacional de la UNTPJ reunido"
+        imagePosition="center 30%"
       />
 
       <Section>

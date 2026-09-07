@@ -190,7 +190,7 @@
 
 @keyframes untpj-marquee-reverse {
   from {
-    transform: translateX(-50%);
+    transform: translateX(-33.3334%);
   }
   to {
     transform: translateX(0);
