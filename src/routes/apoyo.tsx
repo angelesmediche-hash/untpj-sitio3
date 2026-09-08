@@ -19,6 +19,7 @@ export const Route = createFileRoute("/apoyo")({
         content: "Línea 24/7 y buzones de necesidades y quejas para personas afiliadas.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/apoyo" }],
   }),
   component: ApoyoPage,
 });

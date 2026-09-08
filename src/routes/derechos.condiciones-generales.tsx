@@ -16,6 +16,7 @@ export const Route = createFileRoute("/derechos/condiciones-generales")({
         content: "Consulta las Condiciones Generales de Trabajo aplicables al PJF.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/derechos/condiciones-generales" }],
   }),
   component: Condiciones,
 });

@@ -6,13 +6,13 @@ import heroImg from "@/assets/sindicato-comite-2026.jpg";
 export const Route = createFileRoute("/sindicato")({
   head: () => ({
     meta: [
-      { title: "El sindicato — UNTPJ" },
+      { title: "El sindicato del Poder Judicial — UNTPJ" },
       {
         name: "description",
         content:
-          "Quiénes somos, representación y Comité Ejecutivo Nacional de la Unión Nacional de Trabajadores del Poder Judicial.",
+          "Conoce al sindicato del Poder Judicial de la Federación: quiénes somos, representación y Comité Ejecutivo Nacional de la UNTPJ.",
       },
-      { property: "og:title", content: "El sindicato — UNTPJ" },
+      { property: "og:title", content: "El sindicato del Poder Judicial — UNTPJ" },
       {
         name: "og:description",
         content: "Conoce la organización, representación y estructura de la UNTPJ.",
@@ -22,6 +22,7 @@ export const Route = createFileRoute("/sindicato")({
         content: "Conoce la organización, representación y estructura de la UNTPJ.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/sindicato" }],
   }),
   component: Sindicato,
 });

@@ -16,6 +16,7 @@ export const Route = createFileRoute("/derechos/prestaciones")({
         content: "Consulta de prestaciones legales para trabajadoras y trabajadores del PJF.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/derechos/prestaciones" }],
   }),
   component: Prestaciones,
 });

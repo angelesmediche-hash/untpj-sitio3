@@ -17,6 +17,7 @@ export const Route = createFileRoute("/derechos/preguntas-frecuentes")({
         content: "Respuestas rápidas con la información oficial disponible de la UNTPJ.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/derechos/preguntas-frecuentes" }],
   }),
   component: Faq,
 });

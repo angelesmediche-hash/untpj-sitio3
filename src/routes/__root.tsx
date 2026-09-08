@@ -80,16 +80,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "UNTPJ — Unión Nacional de Trabajadores del Poder Judicial" },
+      { title: "Sindicato del Poder Judicial — UNTPJ" },
       {
         name: "description",
         content:
-          "Sindicato de trabajadoras y trabajadores del Poder Judicial: defensa laboral, afiliación, convenios y representación.",
+          "UNTPJ, el sindicato del Poder Judicial de la Federación: defensa laboral, afiliación, convenios y representación.",
       },
       { name: "author", content: "UNTPJ" },
       {
         property: "og:title",
-        content: "UNTPJ — Unión Nacional de Trabajadores del Poder Judicial",
+        content: "Sindicato del Poder Judicial — UNTPJ",
       },
       {
         property: "og:description",
@@ -105,6 +105,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        attrs: { type: "application/ld+json" },
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Unión Nacional de Trabajadores del Poder Judicial",
+          alternateName: "UNTPJ",
+          url: "https://www.untpj.com",
+          logo: "https://www.untpj.com/favicon.ico",
+          description:
+            "Sindicato del Poder Judicial de la Federación: defensa laboral, afiliación, convenios y representación para trabajadoras y trabajadores del Poder Judicial.",
+          email: "contacto@untpj.com",
+          telephone: "+525512935538",
+          sameAs: [
+            "https://www.instagram.com/union.nacionaltpj/",
+            "https://www.tiktok.com/@union.nacionaltpj",
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

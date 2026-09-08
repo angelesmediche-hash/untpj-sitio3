@@ -15,6 +15,7 @@ export const Route = createFileRoute("/sindicato/transparencia")({
         content: "Próximamente: información de transparencia de la UNTPJ.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/sindicato/transparencia" }],
   }),
   component: Transparencia,
 });

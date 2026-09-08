@@ -25,6 +25,7 @@ export const Route = createFileRoute("/afiliacion")({
         content: "Selecciona tu caso y descarga el formato de afiliación correcto.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/afiliacion" }],
   }),
   component: AfiliacionPage,
 });

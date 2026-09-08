@@ -22,6 +22,7 @@ export const Route = createFileRoute("/contacto")({
         content: "Canales de contacto del sindicato del Poder Judicial.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/contacto" }],
   }),
   component: ContactoPage,
 });

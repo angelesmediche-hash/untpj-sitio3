@@ -20,6 +20,7 @@ export const Route = createFileRoute("/noticias/")({
         content: "Comunicados y novedades oficiales de la UNTPJ.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/noticias" }],
   }),
   component: NoticiasIndexPage,
 });

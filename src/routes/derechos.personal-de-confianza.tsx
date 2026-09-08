@@ -17,6 +17,7 @@ export const Route = createFileRoute("/derechos/personal-de-confianza")({
         content: "Representación y acceso a beneficios para personal de confianza del PJF.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/derechos/personal-de-confianza" }],
   }),
   component: PersonalDeConfianza,
 });

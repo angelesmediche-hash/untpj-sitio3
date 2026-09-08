@@ -55,6 +55,7 @@ export const Route = createFileRoute("/beneficios")({
         content: "Convenios de salud, belleza, viajes, educación y más para personas afiliadas.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/beneficios" }],
   }),
   component: BeneficiosPage,
 });

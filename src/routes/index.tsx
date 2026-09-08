@@ -44,11 +44,11 @@ const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03, tileC
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "UNTPJ — Unión Nacional de Trabajadores del Poder Judicial" },
+      { title: "Sindicato del Poder Judicial — UNTPJ" },
       {
         name: "description",
         content:
-          "Sindicato que defiende los derechos de las y los trabajadores del Poder Judicial: apoyo permanente, línea 24/7, capacitación, prestaciones y comunidad.",
+          "UNTPJ, el sindicato del Poder Judicial de la Federación: defensa laboral, apoyo permanente, línea 24/7, capacitación, prestaciones y comunidad para trabajadoras y trabajadores.",
       },
       { property: "og:title", content: "UNTPJ — Te acompañamos hasta el final" },
       {
@@ -57,6 +57,7 @@ export const Route = createFileRoute("/")({
           "Defensa laboral, acompañamiento, capacitación y beneficios para trabajadoras y trabajadores del Poder Judicial.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/" }],
   }),
   component: Home,
 });
@@ -167,7 +168,7 @@ function Home() {
         />
         <div className="relative container-x flex min-h-[82vh] flex-col justify-end py-24">
           <div className="rise max-w-3xl">
-            <p className="eyebrow text-accent">Representación laboral · PJF</p>
+            <p className="eyebrow text-accent">Sindicato del Poder Judicial · UNTPJ</p>
             <h1 className="mt-6 text-5xl sm:text-6xl lg:text-8xl">
               Unión Nacional de Trabajadores del Poder Judicial
             </h1>

@@ -63,6 +63,9 @@ export const Route = createFileRoute("/noticias/$slug")({
           { property: "og:description", content: loaderData.resumen },
         ]
       : [],
+    links: loaderData
+      ? [{ rel: "canonical", href: `https://www.untpj.com/noticias/${loaderData.slug}` }]
+      : [],
   }),
   component: NoticiaDetallePage,
 });

@@ -18,6 +18,7 @@ export const Route = createFileRoute("/derechos/seguridad-social")({
         content: "Orientación en materia de seguridad social y ahorro solidario para el PJF.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/derechos/seguridad-social" }],
   }),
   component: SeguridadSocial,
 });

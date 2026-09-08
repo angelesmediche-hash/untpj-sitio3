@@ -18,6 +18,7 @@ export const Route = createFileRoute("/derechos/")({
         content: "Encuentra rápido la información laboral que necesitas como trabajador del PJF.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.untpj.com/derechos" }],
   }),
   component: DerechosIndex,
 });
