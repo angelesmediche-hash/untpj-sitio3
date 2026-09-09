@@ -415,6 +415,16 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     contacto: "747 133 2359 · Torres Adalid 1006, Del Valle Norte, Alcaldía Benito Juárez, CDMX",
     imagen: "gestor-vehicular",
   },
+  {
+    id: "acupuntura-samali",
+    nombre: "Samali González Vicuña · Acupuntura y Rehabilitación",
+    categoria: "Salud y bienestar",
+    resumen:
+      "Acupuntura humana y rehabilitación: diagnóstico en medicina china, electroacupuntura, auriculoterapia, ventosas, digitopunción, terapia de emociones, rehabilitación integral, TENS, ultrasonido, kinesiología, ozono y terapia neural.",
+    descuento: "25% de descuento",
+    contacto: "WhatsApp 55 1016 5827 · consultas con cita previa, miércoles a sábado",
+    imagen: "acupuntura-samali",
+  },
 ];
 
 /**

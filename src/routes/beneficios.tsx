@@ -19,6 +19,7 @@ import imgTerapiasIntegrales from "@/assets/convenio-terapias-integrales.jpg";
 import imgArantxaGaray from "@/assets/convenio-arantxa-garay.jpg";
 import imgGoodLife from "@/assets/convenio-good-life.jpg";
 import imgGestorVehicular from "@/assets/convenio-gestor.jpg";
+import imgAcupunturaSamali from "@/assets/convenio-acupuntura-samali.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -38,6 +39,7 @@ const IMAGENES: Record<string, string> = {
   "arantxa-garay": imgArantxaGaray,
   "good-life": imgGoodLife,
   "gestor-vehicular": imgGestorVehicular,
+  "acupuntura-samali": imgAcupunturaSamali,
 };
 
 export const Route = createFileRoute("/beneficios")({
