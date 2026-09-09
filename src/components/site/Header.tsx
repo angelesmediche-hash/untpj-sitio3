@@ -21,6 +21,8 @@ const NAV: NavItem[] = [
     to: "/derechos",
     label: "Tus derechos",
     children: [
+      { to: "/derechos/prestaciones", label: "Prestaciones legales" },
+      { to: "/derechos/condiciones-generales", label: "Condiciones Generales de Trabajo" },
       { to: "/derechos/seguridad-social", label: "Seguridad social" },
       { to: "/derechos/preguntas-frecuentes", label: "Preguntas frecuentes" },
       { to: "/derechos/personal-de-confianza", label: "Personal de confianza" },
