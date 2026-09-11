@@ -70,7 +70,9 @@ export const Route = createFileRoute("/beneficios")({
 
 const CATEGORIAS = [
   "Todos",
-  ...Array.from(new Set(CONVENIOS_DETALLE.map((c) => c.categoria))),
+  ...Array.from(new Set(CONVENIOS_DETALLE.map((c) => c.categoria))).sort((a, b) =>
+    a.localeCompare(b, "es"),
+  ),
 ] as const;
 
 function ConvenioCard({ convenio }: { convenio: Convenio }) {
