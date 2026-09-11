@@ -5,6 +5,7 @@ import { NOTICIAS } from "@/lib/site-data";
 import heroImg from "@/assets/noticia-papa-2026.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
+import thumbQepdHumberto from "@/assets/noticia-qepd-humberto-orozco.jpg";
 
 export const Route = createFileRoute("/noticias/")({
   head: () => ({
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/noticias/")({
 const THUMBS: Record<string, string> = {
   "dia-del-padre": thumbPadre,
   "dia-de-la-ninez": thumbNinez,
+  "qepd-humberto-orozco-calderon": thumbQepdHumberto,
 };
 
 function NoticiasIndexPage() {

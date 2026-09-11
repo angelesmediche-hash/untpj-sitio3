@@ -21,7 +21,12 @@ import ninez03 from "@/assets/noticia-ninez-03.jpg";
 import ninez04 from "@/assets/noticia-ninez-04.jpg";
 import ninez05 from "@/assets/noticia-ninez-05.jpg";
 
-const MEDIA: Record<string, { hero: string; gallery: { src: string; alt: string }[] }> = {
+import qepdHumbertoImg from "@/assets/noticia-qepd-humberto-orozco.jpg";
+
+const MEDIA: Record<
+  string,
+  { hero?: string; bodyImage?: string; gallery: { src: string; alt: string }[] }
+> = {
   "dia-del-padre": {
     hero: heroPadre,
     gallery: [
@@ -45,6 +50,10 @@ const MEDIA: Record<string, { hero: string; gallery: { src: string; alt: string 
       { src: ninez04, alt: "Celebración del Día de la Niñez" },
       { src: ninez05, alt: "Entrega de obsequios, Día de la Niñez" },
     ],
+  },
+  "qepd-humberto-orozco-calderon": {
+    bodyImage: qepdHumbertoImg,
+    gallery: [],
   },
 };
 
@@ -94,6 +103,15 @@ function NoticiaDetallePage() {
             Todas las noticias
           </Link>
 
+          {media?.bodyImage ? (
+            <img
+              src={media.bodyImage}
+              alt={noticia.titulo}
+              loading="lazy"
+              className="mx-auto mt-8 w-full max-w-md rounded-2xl border border-line"
+            />
+          ) : null}
+
           <div className="mt-8 space-y-5">
             {noticia.cuerpo.map((p, i) => (
               <p key={i} className="text-lg leading-relaxed text-muted-foreground">
@@ -103,7 +121,7 @@ function NoticiaDetallePage() {
           </div>
         </div>
 
-        {media ? (
+        {media && media.gallery.length > 0 ? (
           <div className="mx-auto mt-16 max-w-5xl">
             <p className="eyebrow mb-6 text-primary">Galería</p>
             <Gallery images={media.gallery} />

@@ -515,4 +515,18 @@ export const NOTICIAS: Noticia[] = [
       "La jornada incluyó una convivencia con personajes y actividades pensadas para las niñas y los niños, promoviendo así espacios de celebración y esparcimiento junto a sus familias.",
     ],
   },
+  {
+    slug: "qepd-humberto-orozco-calderon",
+    titulo: "QEPD, Humberto Orozco Calderón",
+    fecha: "11 de septiembre de 2026",
+    resumen:
+      "Desde el UNTPJ, lamentamos profundamente la noticia del fallecimiento de Humberto Orozco Calderón.",
+    cuerpo: [
+      "Desde el UNTPJ, lamentamos profundamente la noticia del fallecimiento de Humberto Orozco Calderón.",
+      "No podemos permanecer indiferentes ante esta noticia, y sentimos la necesidad de expresar públicamente el enorme pesar que nos generan las condiciones en las que sucedió su deceso.",
+      "El Poder Judicial debe ser siempre un espacio donde sus trabajadores tengan la oportunidad de crecer, desenvolverse y alcanzar un desarrollo pleno como profesionales y funcionarios para servir a este país en el mejor ambiente posible.",
+      "Nos unimos al dolor de sus compañeros y familiares, y les deseamos pronta resignación.",
+      "QEPD, Humberto Orozco Calderón.",
+    ],
+  },
 ];

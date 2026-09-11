@@ -27,12 +27,14 @@ import tileComite from "@/assets/hero-tiles/comite.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
+import thumbQepdHumberto from "@/assets/noticia-qepd-humberto-orozco.jpg";
 import { CTALink, Eyebrow, Section } from "@/components/site/Bits";
 import { CONTACTO, NOTA_247, NOTICIAS } from "@/lib/site-data";
 
 const THUMBS: Record<string, string> = {
   "dia-del-padre": thumbPadre,
   "dia-de-la-ninez": thumbNinez,
+  "qepd-humberto-orozco-calderon": thumbQepdHumberto,
 };
 
 const HERO_ROW_1 = [tileXochitl, tilePadre08, tileTwoWomen, tileBanquet, tileNinez05, tileComite];
