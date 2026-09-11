@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { BookOpen, ExternalLink, Mail } from "lucide-react";
+import { BookOpen, ExternalLink, Mail, X, Download, ZoomIn } from "lucide-react";
 import { Eyebrow, PageHero, Section } from "@/components/site/Bits";
 import { CONTACTO, CONVENIOS_DETALLE, GUIAS_ESTUDIO, type Convenio } from "@/lib/site-data";
 
@@ -75,17 +75,37 @@ const CATEGORIAS = [
   ),
 ] as const;
 
-function ConvenioCard({ convenio }: { convenio: Convenio }) {
+function ConvenioCard({
+  convenio,
+  onExpand,
+}: {
+  convenio: Convenio;
+  onExpand: (c: Convenio) => void;
+}) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-background lift hover:lift-hover">
-      <div className="aspect-[3/4] w-full overflow-hidden rounded-t-2xl bg-muted">
+      <button
+        type="button"
+        onClick={() => onExpand(convenio)}
+        aria-label={`Ver convenio completo: ${convenio.nombre}`}
+        className="relative aspect-[3/4] w-full overflow-hidden rounded-t-2xl bg-muted"
+      >
         <img
           src={IMAGENES[convenio.imagen]}
           alt={convenio.nombre}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
         />
-      </div>
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 flex items-center justify-center bg-ink/0 opacity-0 transition-all duration-300 group-hover:bg-ink/40 group-hover:opacity-100"
+        >
+          <span className="flex items-center gap-2 bg-background px-4 py-2 font-display text-[0.68rem] font-extrabold tracking-[0.14em] text-ink uppercase">
+            <ZoomIn className="size-3.5" strokeWidth={1.5} />
+            Ver completo
+          </span>
+        </span>
+      </button>
       <div className="flex flex-1 flex-col p-6">
         <p className="eyebrow text-primary">{convenio.categoria}</p>
         <h3 className="mt-3 text-xl leading-snug">{convenio.nombre}</h3>
@@ -110,8 +130,83 @@ function ConvenioCard({ convenio }: { convenio: Convenio }) {
   );
 }
 
+function ConvenioLightbox({
+  convenio,
+  onClose,
+}: {
+  convenio: Convenio;
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [onClose]);
+
+  const fileName = `${convenio.id}.jpg`;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4 sm:p-8"
+      role="dialog"
+      aria-modal="true"
+      aria-label={convenio.nombre}
+      onClick={onClose}
+    >
+      <div
+        className="relative flex max-h-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-background"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between gap-4 border-b border-line px-5 py-4">
+          <div className="min-w-0">
+            <p className="eyebrow text-primary">{convenio.categoria}</p>
+            <h3 className="truncate text-lg leading-snug">{convenio.nombre}</h3>
+          </div>
+          <div className="flex shrink-0 items-center gap-2">
+            <a
+              href={IMAGENES[convenio.imagen]}
+              download={fileName}
+              className="flex items-center gap-2 border border-line px-3 py-2 font-display text-[0.65rem] font-extrabold tracking-[0.14em] uppercase hover:border-primary hover:text-primary"
+            >
+              <Download className="size-3.5" strokeWidth={1.5} />
+              Descargar
+            </a>
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Cerrar"
+              className="flex size-9 items-center justify-center border border-line hover:border-primary hover:text-primary"
+            >
+              <X className="size-4" strokeWidth={1.5} />
+            </button>
+          </div>
+        </div>
+        <div className="overflow-auto bg-muted">
+          <img
+            src={IMAGENES[convenio.imagen]}
+            alt={convenio.nombre}
+            className="mx-auto max-h-[75vh] w-auto object-contain"
+          />
+        </div>
+        <div className="border-t border-line px-5 py-4">
+          <p className="text-sm font-medium text-primary">{convenio.descuento}</p>
+          <p className="mt-1 text-xs text-muted-foreground">{convenio.contacto}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function BeneficiosPage() {
   const [categoria, setCategoria] = useState<(typeof CATEGORIAS)[number]>("Todos");
+  const [expanded, setExpanded] = useState<Convenio | null>(null);
   const lista = useMemo(
     () => CONVENIOS_DETALLE.filter((c) => categoria === "Todos" || c.categoria === categoria),
     [categoria],
@@ -182,7 +277,7 @@ function BeneficiosPage() {
 
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {lista.map((c) => (
-            <ConvenioCard key={c.id} convenio={c} />
+            <ConvenioCard key={c.id} convenio={c} onExpand={setExpanded} />
           ))}
         </div>
 
@@ -192,6 +287,10 @@ function BeneficiosPage() {
           publicar aquí. Se agregarán en cuanto estén disponibles.
         </p>
       </Section>
+
+      {expanded ? (
+        <ConvenioLightbox convenio={expanded} onClose={() => setExpanded(null)} />
+      ) : null}
     </>
   );
 }
