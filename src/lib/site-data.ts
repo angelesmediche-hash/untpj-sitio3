@@ -308,11 +308,10 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     nombre: "Katia Portillo Aguirre · Psicóloga",
     categoria: "Psicología",
     resumen:
-      "Manejo de ansiedad y estrés, duelos, autoestima, pareja y familia. Sesiones en línea para niñas, niños, adolescentes y adultos.",
+      "Psicóloga con maestría en psicoterapia clínica. Manejo de ansiedad y estrés, superación de duelos, tratamiento de depresión, autoestima, pareja y familia. Sesiones en línea individuales (niñas, niños, adolescentes y adultos), de pareja y familiares.",
     descuento: "20% de descuento",
     contacto: "Tel. 55 5217 7637 · kapopa@hotmail.com",
     imagen: "katia-portillo",
-    pdf: "/convenios/catalogo-katia-portillo.pdf",
   },
   {
     id: "orchid-law",
@@ -380,7 +379,7 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     nombre: "Terapias Integrales & Spa",
     categoria: "Belleza y spa",
     resumen:
-      "Masajes (relajante, descontracturante, drenaje linfático, embarazo y postparto), tratamientos faciales, terapias emocionales (barras de acceso, biodescodificación, flores de Bach, aromaterapia) y rehabilitación (quiropráctica, ciática, dolor e inflamación).",
+      "Masajes (relajante, descontracturante, drenaje linfático, embarazo y postparto), tratamientos faciales, terapias emocionales (barras de acceso, biodescodificación y PNL, alineación de chackras, limpia de aura, flores de Bach, aromaterapia) y rehabilitación (parálisis facial, ciática y lumbalgia, dolor e inflamación, quiropráctica).",
     descuento: "10% de descuento",
     contacto: "WhatsApp 556 370 9316",
     imagen: "terapias-integrales",
@@ -424,6 +423,35 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     descuento: "25% de descuento",
     contacto: "WhatsApp 55 1016 5827 · consultas con cita previa, miércoles a sábado",
     imagen: "acupuntura-samali",
+  },
+  {
+    id: "la-barra",
+    nombre: "La Barra · Cerritos",
+    categoria: "Restaurantes y alimentos",
+    resumen: "Comida real, rica y hecha al momento.",
+    descuento: "10% de descuento en compras mayores a $180",
+    contacto: "WhatsApp 669 161 2450 · Av. Sábalo Cerritos 3171, Mazatlán · @la.barra.salads",
+    imagen: "la-barra",
+  },
+  {
+    id: "reencontrandome-psicologia",
+    nombre: "Reencontrándome · Psicología para tu bienestar",
+    categoria: "Psicología",
+    resumen:
+      "Lic. Paloma Reyes Rojas, psicóloga clínica. Terapia individual, terapia de pareja y manejo emocional (estrés, ansiedad, depresión), en modalidad presencial y en línea.",
+    descuento: "50% de descuento especial (aplica únicamente en servicios seleccionados)",
+    contacto: "Tel. 5530560076 · Medellín 107 A, Col. Roma, Alcaldía Cuauhtémoc",
+    imagen: "reencontrandome-psicologia",
+  },
+  {
+    id: "king-david-tours",
+    nombre: "King David Co. · Tours & Aventuras Mazatlán",
+    categoria: "Viajes",
+    resumen:
+      "Dos paseos con precio preferencial sindical: Jungla de Manglares (transporte, paseo en lancha, show de aves, comida típica y barra libre) e Isla de la Piedra en catamarán (alimento, barra libre de bebidas, transportación y estancia en playa).",
+    descuento: "Precio preferencial sindical: desde $250–$700 por persona según edad y paseo",
+    contacto: "Reservaciones +52 669 165 6925 · www.kingdavid.com.mx · Mazatlán, Sinaloa",
+    imagen: "king-david-tours",
   },
 ];
 

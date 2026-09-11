@@ -10,16 +10,19 @@ import imgSpaCosmedic from "@/assets/convenio-spa-cosmedic.jpg";
 import imgGabrielaGay from "@/assets/convenio-gabriela-gay.jpg";
 import imgKatiaPortillo from "@/assets/convenio-katia-portillo.jpg";
 import imgOrchidLaw from "@/assets/convenio-orchid-law.jpg";
-import imgReencontrandome from "@/assets/convenio-reencontrandome.jpg";
+import imgReencontrandome from "@/assets/convenio-reencontrandome-nutricion.jpg";
 import imgProvidmedic from "@/assets/convenio-providmedic.jpg";
 import imgEleveTravel from "@/assets/convenio-eleve-travel.jpg";
 import imgIkonicMoments from "@/assets/convenio-ikonic-moments.jpg";
 import imgBlancDental from "@/assets/convenio-blanc-dental.jpg";
-import imgTerapiasIntegrales from "@/assets/convenio-terapias-integrales.jpg";
+import imgTerapiasIntegrales from "@/assets/convenio-terapias-spa.jpg";
 import imgArantxaGaray from "@/assets/convenio-arantxa-garay.jpg";
 import imgGoodLife from "@/assets/convenio-good-life.jpg";
 import imgGestorVehicular from "@/assets/convenio-gestor.jpg";
 import imgAcupunturaSamali from "@/assets/convenio-acupuntura-samali.jpg";
+import imgLaBarra from "@/assets/convenio-la-barra.jpg";
+import imgReencontrandomePsicologia from "@/assets/convenio-reencontrandome-psicologia.jpg";
+import imgKingDavid from "@/assets/convenio-king-david.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -40,6 +43,9 @@ const IMAGENES: Record<string, string> = {
   "good-life": imgGoodLife,
   "gestor-vehicular": imgGestorVehicular,
   "acupuntura-samali": imgAcupunturaSamali,
+  "la-barra": imgLaBarra,
+  "reencontrandome-psicologia": imgReencontrandomePsicologia,
+  "king-david-tours": imgKingDavid,
 };
 
 export const Route = createFileRoute("/beneficios")({
