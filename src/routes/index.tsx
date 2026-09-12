@@ -24,6 +24,8 @@ import tilePadre04 from "@/assets/hero-tiles/padre04.jpg";
 import tileNinez05 from "@/assets/hero-tiles/ninez05.jpg";
 import tileNinez03 from "@/assets/hero-tiles/ninez03.jpg";
 import tileComite from "@/assets/hero-tiles/comite.jpg";
+import tileTribunal1 from "@/assets/hero-tiles/tribunal-visita-1.jpg";
+import tileTribunal2 from "@/assets/hero-tiles/tribunal-visita-2.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
@@ -39,9 +41,9 @@ const THUMBS: Record<string, string> = {
 
 const HERO_ROW_1 = [tileXochitl, tilePadre08, tileTwoWomen, tileBanquet, tileNinez05, tileComite];
 
-const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileComite];
+const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileComite, tileTribunal1];
 
-const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03, tileComite];
+const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03, tileComite, tileTribunal2];
 
 export const Route = createFileRoute("/")({
   head: () => ({
