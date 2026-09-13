@@ -41,9 +41,9 @@ const THUMBS: Record<string, string> = {
 
 const HERO_ROW_1 = [tileXochitl, tilePadre08, tileTwoWomen, tileBanquet, tileNinez05, tileComite];
 
-const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileComite, tileTribunal1];
+const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileTribunal1];
 
-const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03, tileComite, tileTribunal2];
+const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03, tileTribunal2];
 
 export const Route = createFileRoute("/")({
   head: () => ({
