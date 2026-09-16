@@ -7,13 +7,13 @@ import heroImg from "@/assets/apoyo.jpg";
 export const Route = createFileRoute("/apoyo")({
   head: () => ({
     meta: [
-      { title: "Apoyo al Trabajador — UNTPJ" },
+      { title: "Línea 24/7 del Poder Judicial: acoso laboral, cese, actas — UNTPJ" },
       {
         name: "description",
         content:
-          "Línea de atención 24/7 y buzones de necesidades y quejas para personas afiliadas a la UNTPJ.",
+          "Línea de atención 24/7 del Poder Judicial de la Federación para casos de acoso laboral o sexual, actas administrativas y cese, más buzones de necesidades y quejas para personas afiliadas a la UNTPJ.",
       },
-      { property: "og:title", content: "Apoyo al Trabajador — UNTPJ" },
+      { property: "og:title", content: "Línea 24/7 del Poder Judicial — UNTPJ" },
       {
         property: "og:description",
         content: "Línea 24/7 y buzones de necesidades y quejas para personas afiliadas.",
@@ -30,7 +30,7 @@ function ApoyoPage() {
       <PageHero
         eyebrow="Apoyo al Trabajador"
         title="Aquí te escuchamos y te acompañamos"
-        intro="Línea de atención 24/7 y buzones para dar seguimiento a tu caso."
+        intro="Línea 24/7 del Poder Judicial para acoso laboral o sexual, actas administrativas y cese, más buzones para dar seguimiento a tu caso."
         image={heroImg}
         imageAlt="Persona trabajadora recibiendo orientación y acompañamiento"
       />

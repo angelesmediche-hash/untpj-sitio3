@@ -4,13 +4,13 @@ import { CTALink, PageHero, Pending, Section } from "@/components/site/Bits";
 export const Route = createFileRoute("/derechos/condiciones-generales")({
   head: () => ({
     meta: [
-      { title: "Condiciones Generales de Trabajo — UNTPJ" },
+      { title: "Condiciones Generales de Trabajo del Poder Judicial — UNTPJ" },
       {
         name: "description",
         content:
-          "Marco que regula la relación laboral entre las y los trabajadores del Poder Judicial y la institución.",
+          "Condiciones Generales de Trabajo del Poder Judicial de la Federación: el marco que regula la relación laboral entre las y los trabajadores y la institución.",
       },
-      { property: "og:title", content: "Condiciones Generales de Trabajo — UNTPJ" },
+      { property: "og:title", content: "Condiciones Generales de Trabajo del PJF — UNTPJ" },
       {
         property: "og:description",
         content: "Consulta las Condiciones Generales de Trabajo aplicables al PJF.",

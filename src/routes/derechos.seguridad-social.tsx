@@ -6,13 +6,13 @@ import seguridadSocialHeroImg from "@/assets/seguridad-social-hero.jpg";
 export const Route = createFileRoute("/derechos/seguridad-social")({
   head: () => ({
     meta: [
-      { title: "Seguridad social y ahorro solidario — UNTPJ" },
+      { title: "Seguridad social del Poder Judicial de la Federación — UNTPJ" },
       {
         name: "description",
         content:
-          "Qué es el ahorro solidario, cómo inscribirte y cómo aumenta tu pensión. Descarga el formato oficial.",
+          "Seguridad social y ahorro solidario del Poder Judicial de la Federación: qué es, cómo inscribirte y cómo aumenta tu pensión. Descarga el formato oficial.",
       },
-      { property: "og:title", content: "Seguridad social — UNTPJ" },
+      { property: "og:title", content: "Seguridad social del Poder Judicial — UNTPJ" },
       {
         property: "og:description",
         content: "Orientación en materia de seguridad social y ahorro solidario para el PJF.",

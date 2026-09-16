@@ -13,13 +13,13 @@ import {
 export const Route = createFileRoute("/afiliacion")({
   head: () => ({
     meta: [
-      { title: "Afíliate — UNTPJ" },
+      { title: "Cómo afiliarme al Sindicato del Poder Judicial — UNTPJ" },
       {
         name: "description",
         content:
-          "Elige tu situación sindical actual y descarga el formato de afiliación correspondiente a la UNTPJ, con instrucciones de envío.",
+          "Cómo afiliarte al sindicato del Poder Judicial de la Federación: elige tu situación sindical actual y descarga el formato de afiliación correspondiente a la UNTPJ, con instrucciones de envío.",
       },
-      { property: "og:title", content: "Afíliate — UNTPJ" },
+      { property: "og:title", content: "Cómo afiliarme al Sindicato del Poder Judicial — UNTPJ" },
       {
         property: "og:description",
         content: "Selecciona tu caso y descarga el formato de afiliación correcto.",
@@ -58,7 +58,7 @@ function AfiliacionPage() {
       <PageHero
         eyebrow="Afíliate"
         title="Elige tu caso y descarga tu formato"
-        intro="Selecciona tu situación sindical actual y el tipo de nombramiento que tienes. Te mostraremos el formato exacto que debes llenar y firmar."
+        intro="Así es como te afilias al sindicato del Poder Judicial de la Federación: selecciona tu situación sindical actual y el tipo de nombramiento que tienes. Te mostraremos el formato exacto que debes llenar y firmar."
       />
 
       <Section>

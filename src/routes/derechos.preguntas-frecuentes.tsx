@@ -1,28 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section, CTALink } from "@/components/site/Bits";
-import { NOTA_247 } from "@/lib/site-data";
+import { NOTA_247, REQUISITOS_AFILIACION } from "@/lib/site-data";
 
 export const Route = createFileRoute("/derechos/preguntas-frecuentes")({
   head: () => ({
     meta: [
-      { title: "Preguntas frecuentes — UNTPJ" },
+      { title: "Preguntas frecuentes sobre el Sindicato del Poder Judicial — UNTPJ" },
       {
         name: "description",
         content:
-          "Dudas frecuentes sobre afiliación, línea 24/7, capacitación, descuentos y servicios de la UNTPJ.",
+          "Preguntas frecuentes sobre el sindicato del Poder Judicial de la Federación: afiliación, línea 24/7, capacitación, descuentos y servicios de la UNTPJ.",
       },
-      { property: "og:title", content: "Preguntas frecuentes — UNTPJ" },
+      { property: "og:title", content: "Preguntas frecuentes sobre el Sindicato — UNTPJ" },
       {
         property: "og:description",
         content: "Respuestas rápidas con la información oficial disponible de la UNTPJ.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.untpj.com/derechos/preguntas-frecuentes" }],
+    scripts: [
+      {
+        attrs: { type: "application/ld+json" },
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQ.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        }),
+      },
+    ],
   }),
   component: Faq,
 });
 
 const FAQ = [
+  {
+    q: "¿Cómo me afilio al sindicato del Poder Judicial de la Federación?",
+    a: `Para afiliarte a la UNTPJ necesitas: ${REQUISITOS_AFILIACION.join(" ")} Envía tus documentos en un solo correo a afiliate@untpj.com.`,
+  },
   {
     q: "¿Quién puede usar la línea 24/7?",
     a: NOTA_247,

@@ -51,13 +51,13 @@ const IMAGENES: Record<string, string> = {
 export const Route = createFileRoute("/beneficios")({
   head: () => ({
     meta: [
-      { title: "Beneficios y convenios — UNTPJ" },
+      { title: "Beneficios del Sindicato del Poder Judicial — UNTPJ" },
       {
         name: "description",
         content:
-          "Guías de estudio y convenios vigentes con descuentos exclusivos para las personas afiliadas a la UNTPJ.",
+          "Beneficios del sindicato del Poder Judicial de la Federación: guías de estudio y convenios vigentes con descuentos exclusivos para las personas afiliadas a la UNTPJ.",
       },
-      { property: "og:title", content: "Beneficios y convenios — UNTPJ" },
+      { property: "og:title", content: "Beneficios del Sindicato del Poder Judicial — UNTPJ" },
       {
         property: "og:description",
         content: "Convenios de salud, belleza, viajes, educación y más para personas afiliadas.",
