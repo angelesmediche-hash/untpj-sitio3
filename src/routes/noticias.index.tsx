@@ -6,6 +6,7 @@ import heroImg from "@/assets/noticia-papa-2026.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
 import thumbQepdHumberto from "@/assets/noticia-qepd-humberto-orozco.jpg";
+import thumbFiestasPatrias from "@/assets/noticia-fiestas-patrias-2026.jpg";
 
 export const Route = createFileRoute("/noticias/")({
   head: () => ({
@@ -30,6 +31,7 @@ const THUMBS: Record<string, string> = {
   "dia-del-padre": thumbPadre,
   "dia-de-la-ninez": thumbNinez,
   "qepd-humberto-orozco-calderon": thumbQepdHumberto,
+  "convivencia-fiestas-patrias-2026": thumbFiestasPatrias,
 };
 
 function NoticiasIndexPage() {

@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "UNTPJ, el sindicato del Poder Judicial de la Federación: defensa laboral, afiliación, convenios y representación.",
+          "UNTPJ, sindicato del Poder Judicial de la Federación en México: defensa laboral, afiliación, convenios y representación.",
       },
       { name: "author", content: "UNTPJ" },
       {
@@ -117,9 +117,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           url: "https://www.untpj.com",
           logo: "https://www.untpj.com/favicon.ico",
           description:
-            "Sindicato del Poder Judicial de la Federación: defensa laboral, afiliación, convenios y representación para trabajadoras y trabajadores del Poder Judicial.",
+            "Sindicato del Poder Judicial de la Federación en México: defensa laboral, afiliación, convenios y representación para trabajadoras y trabajadores del Poder Judicial.",
           email: "contacto@untpj.com",
           telephone: "+525512935538",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "MX",
+            addressLocality: "Ciudad de México",
+          },
+          areaServed: "MX",
           sameAs: [
             "https://www.instagram.com/union.nacionaltpj/",
             "https://www.tiktok.com/@union.nacionaltpj",

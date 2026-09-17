@@ -529,4 +529,19 @@ export const NOTICIAS: Noticia[] = [
       "QEPD, Humberto Orozco Calderón.",
     ],
   },
+  {
+    slug: "convivencia-fiestas-patrias-2026",
+    titulo: "Convivencia de Fiestas Patrias",
+    fecha: "17 de septiembre de 2026",
+    resumen:
+      "El sindicato del Poder Judicial en México, UNTPJ, invita a la Convivencia de Fiestas Patrias: 18 de septiembre, 15:00 hrs, en el Pasillo Manuel Crescencio García Rejón y Alcalá.",
+    cuerpo: [
+      "El SINDICATO Unión Nacional de Trabajadores del Poder Judicial (UNTPJ) —el sindicato del Poder Judicial de la Federación en México que representa a personal de base, interino y de confianza— te invita a su Convivencia de Fiestas Patrias.",
+      "Fecha: 18 de septiembre, a las 15:00 hrs, en el Pasillo Manuel Crescencio García Rejón y Alcalá.",
+      "Te invitamos a convivir, conocernos y resolver dudas de índole laboral en un ambiente cordial y cercano. Habrá tacos de canasta, agua de jamaica y dulces mexicanos.",
+      "Invitamos a todas y todos los compañeros que conforman el Poder Judicial Federal. Más allá de las distintas expresiones sindicales que existen dentro del Poder Judicial de la Federación en México, nos une el servicio a la justicia y el valor de nuestro trabajo.",
+      "Este tipo de convivencias forman parte del trabajo cotidiano del sindicato del Poder Judicial: espacios para acercarnos a las y los trabajadores, escuchar sus dudas laborales y recordar que la UNTPJ está para acompañarlos dentro y fuera de sus centros de trabajo.",
+      "¡No faltes! Por nuestra gente, siempre.",
+    ],
+  },
 ];

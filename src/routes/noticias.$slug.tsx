@@ -22,6 +22,7 @@ import ninez04 from "@/assets/noticia-ninez-04.jpg";
 import ninez05 from "@/assets/noticia-ninez-05.jpg";
 
 import qepdHumbertoImg from "@/assets/noticia-qepd-humberto-orozco.jpg";
+import fiestasPatriasImg from "@/assets/noticia-fiestas-patrias-2026.jpg";
 
 const MEDIA: Record<
   string,
@@ -53,6 +54,10 @@ const MEDIA: Record<
   },
   "qepd-humberto-orozco-calderon": {
     bodyImage: qepdHumbertoImg,
+    gallery: [],
+  },
+  "convivencia-fiestas-patrias-2026": {
+    bodyImage: fiestasPatriasImg,
     gallery: [],
   },
 };

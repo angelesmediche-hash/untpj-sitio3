@@ -30,6 +30,7 @@ import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
 import thumbQepdHumberto from "@/assets/noticia-qepd-humberto-orozco.jpg";
+import thumbFiestasPatrias from "@/assets/noticia-fiestas-patrias-2026.jpg";
 import { CTALink, Eyebrow, Section } from "@/components/site/Bits";
 import { CONTACTO, NOTA_247, NOTICIAS } from "@/lib/site-data";
 
@@ -37,6 +38,7 @@ const THUMBS: Record<string, string> = {
   "dia-del-padre": thumbPadre,
   "dia-de-la-ninez": thumbNinez,
   "qepd-humberto-orozco-calderon": thumbQepdHumberto,
+  "convivencia-fiestas-patrias-2026": thumbFiestasPatrias,
 };
 
 const HERO_ROW_1 = [tileXochitl, tilePadre08, tileTwoWomen, tileBanquet, tileNinez05, tileComite];
@@ -48,13 +50,13 @@ const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03, tileT
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sindicato del Poder Judicial — UNTPJ" },
+      { title: "Sindicato del Poder Judicial en México — UNTPJ" },
       {
         name: "description",
         content:
-          "UNTPJ, el sindicato del Poder Judicial de la Federación: defensa laboral, apoyo permanente, línea 24/7, capacitación, prestaciones y comunidad para trabajadoras y trabajadores.",
+          "UNTPJ, sindicato del Poder Judicial de la Federación en México: defensa laboral, apoyo permanente, línea 24/7, capacitación, prestaciones y comunidad para trabajadoras y trabajadores.",
       },
-      { property: "og:title", content: "UNTPJ — Te acompañamos hasta el final" },
+      { property: "og:title", content: "Sindicato del Poder Judicial en México — UNTPJ" },
       {
         property: "og:description",
         content:
@@ -172,7 +174,7 @@ function Home() {
         />
         <div className="relative container-x flex min-h-[82vh] flex-col justify-end py-24">
           <div className="rise max-w-3xl">
-            <p className="eyebrow text-accent">Sindicato del Poder Judicial · UNTPJ</p>
+            <p className="eyebrow text-accent">Sindicato del Poder Judicial en México · UNTPJ</p>
             <h1 className="mt-6 text-5xl sm:text-6xl lg:text-8xl">
               Unión Nacional de Trabajadores del Poder Judicial
             </h1>
