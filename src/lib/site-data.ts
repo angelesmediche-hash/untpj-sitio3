@@ -491,7 +491,7 @@ export type Noticia = {
   cuerpo: string[];
 };
 
-export const NOTICIAS: Noticia[] = [
+export const NOTICIAS_RAW: Noticia[] = [
   {
     slug: "dia-del-padre",
     titulo: "Día del Padre",
@@ -545,3 +545,33 @@ export const NOTICIAS: Noticia[] = [
     ],
   },
 ];
+
+const MESES_ES: Record<string, number> = {
+  enero: 0,
+  febrero: 1,
+  marzo: 2,
+  abril: 3,
+  mayo: 4,
+  junio: 5,
+  julio: 6,
+  agosto: 7,
+  septiembre: 8,
+  octubre: 9,
+  noviembre: 10,
+  diciembre: 11,
+};
+
+function parseFechaEs(fecha: string): number {
+  // Espera el formato "D de mes de AAAA"
+  const match = fecha.match(/(\d{1,2}) de ([a-záéíóúñ]+) de (\d{4})/i);
+  if (!match) return 0;
+  const [, dia, mesTexto, anio] = match;
+  const mes = MESES_ES[mesTexto.toLowerCase()] ?? 0;
+  return new Date(Number(anio), mes, Number(dia)).getTime();
+}
+
+// Noticias ordenadas de la más reciente a la más antigua, sin importar el
+// orden en que se hayan agregado arriba.
+export const NOTICIAS: Noticia[] = [...NOTICIAS_RAW].sort(
+  (a, b) => parseFechaEs(b.fecha) - parseFechaEs(a.fecha),
+);
