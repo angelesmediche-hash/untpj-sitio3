@@ -544,6 +544,20 @@ export const NOTICIAS_RAW: Noticia[] = [
       "¡No faltes! Por nuestra gente, siempre.",
     ],
   },
+  {
+    slug: "celebracion-fiestas-patrias-2026",
+    titulo: "Así vivimos la Convivencia de Fiestas Patrias 2026",
+    fecha: "18 de septiembre de 2026",
+    resumen:
+      "El sindicato del Poder Judicial en México, UNTPJ, celebró su Convivencia de Fiestas Patrias: fueron muchas las personas trabajadoras del Poder Judicial de la Federación que nos acompañaron.",
+    cuerpo: [
+      "El pasado 16 de septiembre, la Unión Nacional de Trabajadores del Poder Judicial (UNTPJ) —sindicato del Poder Judicial de la Federación en México— realizó su Convivencia de Fiestas Patrias, y la respuesta superó nuestras expectativas.",
+      "Fueron muchas las personas trabajadoras del Poder Judicial que se acercaron a convivir con nosotros: compartimos tacos de canasta, agua de jamaica y dulces mexicanos en un ambiente cordial, con la bandera y los colores patrios como protagonistas.",
+      "Además de convivir, tuvimos la oportunidad de compartir de cerca el trabajo que hacemos día a día como sindicato: resolver dudas laborales, acompañar a nuestras y nuestros agremiados, y recordar que, más allá de las distintas expresiones sindicales que existen dentro del Poder Judicial de la Federación, nos une el servicio a la justicia.",
+      "Fue un gran día para la comunidad del Poder Judicial en México, y agradecemos profundamente la participación de todas y todos los que se acercaron a saludarnos, platicar y disfrutar juntos esta fecha tan importante para nuestro país.",
+      "Gracias por acompañarnos. Este tipo de espacios son los que nos recuerdan por qué existimos como sindicato del Poder Judicial: para estar cerca de ti en cada etapa.",
+    ],
+  },
 ];
 
 const MESES_ES: Record<string, number> = {

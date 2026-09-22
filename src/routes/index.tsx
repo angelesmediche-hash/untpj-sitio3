@@ -26,11 +26,14 @@ import tileNinez03 from "@/assets/hero-tiles/ninez03.jpg";
 import tileComite from "@/assets/hero-tiles/comite.jpg";
 import tileTribunal1 from "@/assets/hero-tiles/tribunal-visita-1.jpg";
 import tileTribunal2 from "@/assets/hero-tiles/tribunal-visita-2.jpg";
+import tileFiestasGrupal from "@/assets/hero-tiles/fiestas-grupal.jpg";
+import tileFiestasCuatro from "@/assets/hero-tiles/fiestas-cuatro.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
 import thumbQepdHumberto from "@/assets/noticia-qepd-humberto-orozco.jpg";
 import thumbFiestasPatrias from "@/assets/noticia-fiestas-patrias-2026.jpg";
+import thumbCelebracionFiestas from "@/assets/noticia-fiestas-patrias-grupal.jpg";
 import { CTALink, Eyebrow, Section } from "@/components/site/Bits";
 import { CONTACTO, NOTA_247, NOTICIAS } from "@/lib/site-data";
 
@@ -39,13 +42,35 @@ const THUMBS: Record<string, string> = {
   "dia-de-la-ninez": thumbNinez,
   "qepd-humberto-orozco-calderon": thumbQepdHumberto,
   "convivencia-fiestas-patrias-2026": thumbFiestasPatrias,
+  "celebracion-fiestas-patrias-2026": thumbCelebracionFiestas,
 };
 
-const HERO_ROW_1 = [tileXochitl, tilePadre08, tileTwoWomen, tileBanquet, tileNinez05, tileComite];
+// En el home solo mostramos las noticias públicas (sin invitaciones a eventos
+// ya pasados) y limitamos a las 4 más recientes, para que quepan en una fila.
+const NOTICIAS_HOME = NOTICIAS.filter(
+  (n) => n.slug !== "convivencia-fiestas-patrias-2026",
+).slice(0, 4);
+
+const HERO_ROW_1 = [
+  tileXochitl,
+  tilePadre08,
+  tileTwoWomen,
+  tileBanquet,
+  tileNinez05,
+  tileComite,
+  tileFiestasGrupal,
+];
 
 const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileTribunal1];
 
-const HERO_ROW_3 = [tileGroup4, tileWindowTable, tileSkyline, tileNinez03, tileTribunal2];
+const HERO_ROW_3 = [
+  tileGroup4,
+  tileWindowTable,
+  tileSkyline,
+  tileNinez03,
+  tileTribunal2,
+  tileFiestasCuatro,
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -255,6 +280,44 @@ function Home() {
         </div>
       </Section>
 
+      {/* NOTICIAS */}
+      <Section tone="sand">
+        <Eyebrow>II · Noticias y actualidad</Eyebrow>
+        <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
+          <h2 className="max-w-2xl text-4xl md:text-6xl">Lo último de la UNTPJ.</h2>
+          <CTALink to="/noticias" variant="outline">
+            Ver todo
+          </CTALink>
+        </div>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {NOTICIAS_HOME.map((n) => (
+            <Link
+              key={n.slug}
+              to="/noticias/$slug"
+              params={{ slug: n.slug }}
+              className="group block overflow-hidden rounded-2xl border border-line bg-background lift hover:lift-hover"
+            >
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-2xl bg-muted">
+                <img
+                  src={THUMBS[n.slug]}
+                  alt={n.titulo}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                />
+              </div>
+              <div className="p-5">
+                <p className="eyebrow text-primary text-[0.65rem]">{n.fecha}</p>
+                <h3 className="mt-3 text-lg leading-snug">{n.titulo}</h3>
+                <p className="mt-2 line-clamp-3 text-xs text-muted-foreground">{n.resumen}</p>
+                <span className="mt-4 inline-flex items-center gap-2 font-display text-[0.65rem] font-extrabold tracking-[0.16em] uppercase">
+                  Leer más <ArrowRight className="size-3" />
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       {/* APOYO 24/7 */}
       <section className="bg-ink text-ink-foreground">
         <div className="grid lg:grid-cols-2">
@@ -267,7 +330,7 @@ function Home() {
             className="h-full min-h-[22rem] w-full object-cover"
           />
           <div className="container-x py-20 md:py-28">
-            <p className="eyebrow text-accent">II · Apoyo 24/7</p>
+            <p className="eyebrow text-accent">III · Apoyo 24/7</p>
             <h2 className="mt-6 text-4xl md:text-5xl">
               Cuando el caso es urgente, no lo enfrentas solo.
             </h2>
@@ -297,7 +360,7 @@ function Home() {
 
       {/* PRESTACIONES Y BENEFICIOS */}
       <Section>
-        <Eyebrow>III · Prestaciones y beneficios</Eyebrow>
+        <Eyebrow>IV · Prestaciones y beneficios</Eyebrow>
         <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
           <h2 className="max-w-2xl text-4xl md:text-6xl">Lo que obtienes al formar parte.</h2>
           <CTALink to="/beneficios" variant="outline">
@@ -315,48 +378,10 @@ function Home() {
         </div>
       </Section>
 
-      {/* NOTICIAS */}
-      <Section tone="sand">
-        <Eyebrow>IV · Noticias y actualidad</Eyebrow>
-        <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
-          <h2 className="max-w-2xl text-4xl md:text-6xl">Lo último de la UNTPJ.</h2>
-          <CTALink to="/noticias" variant="outline">
-            Ver todo
-          </CTALink>
-        </div>
-        <div className="mt-14 grid gap-8 md:grid-cols-2">
-          {NOTICIAS.map((n) => (
-            <Link
-              key={n.slug}
-              to="/noticias/$slug"
-              params={{ slug: n.slug }}
-              className="group block overflow-hidden rounded-2xl border border-line bg-background lift hover:lift-hover"
-            >
-              <div className="aspect-[16/9] w-full overflow-hidden rounded-t-2xl bg-muted">
-                <img
-                  src={THUMBS[n.slug]}
-                  alt={n.titulo}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
-                />
-              </div>
-              <div className="p-7">
-                <p className="eyebrow text-primary">{n.fecha}</p>
-                <h3 className="mt-4 text-2xl">{n.titulo}</h3>
-                <p className="mt-3 text-sm text-muted-foreground">{n.resumen}</p>
-                <span className="mt-6 inline-flex items-center gap-2 font-display text-[0.7rem] font-extrabold tracking-[0.16em] uppercase">
-                  Leer más <ArrowRight className="size-3.5" />
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
       {/* AFÍLIATE */}
       <section className="bg-primary text-primary-foreground">
         <div className="container-x py-24 text-center md:py-32">
-          <p className="eyebrow text-primary-foreground/70">VI · Afiliación</p>
+          <p className="eyebrow text-primary-foreground/70">V · Afiliación</p>
           <h2 className="mx-auto mt-6 max-w-4xl text-5xl md:text-7xl">Forma parte de la UNTPJ.</h2>
           <p className="mx-auto mt-6 max-w-xl text-primary-foreground/80">
             Súmate a una organización que defiende tus derechos y te acompaña en cada etapa de tu

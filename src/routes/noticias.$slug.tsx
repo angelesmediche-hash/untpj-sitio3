@@ -23,6 +23,11 @@ import ninez05 from "@/assets/noticia-ninez-05.jpg";
 
 import qepdHumbertoImg from "@/assets/noticia-qepd-humberto-orozco.jpg";
 import fiestasPatriasImg from "@/assets/noticia-fiestas-patrias-2026.jpg";
+import fiestasGrupalImg from "@/assets/noticia-fiestas-patrias-grupal.jpg";
+import fiestasCuatroImg from "@/assets/noticia-fiestas-patrias-cuatro-personas.jpg";
+import fiestasPanoramicaImg from "@/assets/noticia-fiestas-patrias-panoramica.jpg";
+import fiestasMesaImg from "@/assets/noticia-fiestas-patrias-mesa.jpg";
+import fiestasPlaticandoImg from "@/assets/noticia-fiestas-patrias-platicando.jpg";
 
 const MEDIA: Record<
   string,
@@ -59,6 +64,15 @@ const MEDIA: Record<
   "convivencia-fiestas-patrias-2026": {
     bodyImage: fiestasPatriasImg,
     gallery: [],
+  },
+  "celebracion-fiestas-patrias-2026": {
+    bodyImage: fiestasGrupalImg,
+    gallery: [
+      { src: fiestasCuatroImg, alt: "Convivencia de Fiestas Patrias, plática entre compañeros" },
+      { src: fiestasPanoramicaImg, alt: "Convivencia de Fiestas Patrias, vista de los toldos" },
+      { src: fiestasMesaImg, alt: "Convivencia de Fiestas Patrias, mesa con antojitos mexicanos" },
+      { src: fiestasPlaticandoImg, alt: "Convivencia de Fiestas Patrias, compañeros conviviendo" },
+    ],
   },
 };
 
