@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { CONTACTO } from "@/lib/site-data";
 import logo from "@/assets/logo-untpj.png";
@@ -41,11 +41,59 @@ const NAV: NavItem[] = [
   { to: "/contacto", label: "Contacto" },
 ];
 
+// TODO: quitar este aviso después de octubre (mes de sensibilización sobre el
+// cáncer de mama). Se puede cerrar y recuerda la elección en este navegador.
+const CANCER_MAMA_DISMISS_KEY = "untpj-aviso-cancer-mama-2026";
+
+function CancerMamaBanner() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const dismissed = window.localStorage.getItem(CANCER_MAMA_DISMISS_KEY);
+    if (!dismissed) setVisible(true);
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <div className="bg-gradient-to-r from-pink-600 to-rose-500 text-white">
+      <div className="container-x flex items-center justify-between gap-3 py-2 text-[0.72rem]">
+        <Link
+          to="/beneficios"
+          hash="convenios"
+          className="flex min-w-0 items-center gap-2 font-semibold hover:underline"
+        >
+          <span aria-hidden="true">🎗️</span>
+          <span className="hidden truncate sm:inline">
+            Octubre, mes de sensibilización sobre el cáncer de mama — conoce el convenio de Check
+            Up Ginecológico
+          </span>
+          <span className="truncate sm:hidden">
+            Octubre: prevención contra el cáncer de mama →
+          </span>
+        </Link>
+        <button
+          type="button"
+          onClick={() => {
+            window.localStorage.setItem(CANCER_MAMA_DISMISS_KEY, "1");
+            setVisible(false);
+          }}
+          aria-label="Cerrar aviso"
+          className="shrink-0 opacity-80 hover:opacity-100"
+        >
+          <X className="size-3.5" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50">
+      <CancerMamaBanner />
       <div className="bg-ink text-ink-foreground">
         <div className="container-x flex flex-wrap items-center justify-between gap-2 py-2 text-[0.72rem]">
           <p className="text-ink-muted">

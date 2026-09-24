@@ -199,6 +199,13 @@ function Home() {
         />
         <div className="relative container-x flex min-h-[82vh] flex-col justify-end py-24">
           <div className="rise max-w-3xl">
+            <Link
+              to="/beneficios"
+              hash="convenios"
+              className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-pink-500/15 px-4 py-1.5 text-xs font-semibold text-pink-300 ring-1 ring-pink-400/30 transition-colors hover:bg-pink-500/25"
+            >
+              🎗️ Octubre: mes de sensibilización sobre el cáncer de mama
+            </Link>
             <p className="eyebrow text-accent">Sindicato del Poder Judicial en México · UNTPJ</p>
             <h1 className="mt-6 text-5xl sm:text-6xl lg:text-8xl">
               Unión Nacional de Trabajadores del Poder Judicial
