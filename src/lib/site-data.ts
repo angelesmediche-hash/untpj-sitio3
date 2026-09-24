@@ -453,6 +453,37 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     contacto: "Reservaciones +52 669 165 6925 · www.kingdavid.com.mx · Mazatlán, Sinaloa",
     imagen: "king-david-tours",
   },
+  {
+    id: "checkup-ginecologico-completo-dr-carlos-soto",
+    nombre: "Dr. Carlos E. Soto · Check Up Ginecológico Completo",
+    categoria: "Salud y bienestar",
+    resumen:
+      "Check up ginecológico de prevención contra el cáncer: Papanicolaou, colposcopia, revisión de mama, rastreo por ultrasonido transvaginal, mastografía, ultrasonido de mama y consulta.",
+    descuento: "$1,200, precio especial para agremiados",
+    contacto: "Asesora Montserrat Monroy · WhatsApp 56 5157 9693",
+    imagen: "checkup-ginecologico",
+  },
+  {
+    id: "checkup-ginecologico-basico-dr-carlos-soto",
+    nombre: "Dr. Carlos E. Soto · Check Up Ginecológico Básico",
+    categoria: "Salud y bienestar",
+    resumen:
+      "Check up ginecológico de prevención contra el cáncer: Papanicolaou, colposcopia, revisión de mama, rastreo por ultrasonido transvaginal y consulta.",
+    descuento: "$400, precio especial para agremiados",
+    contacto: "Asesora Montserrat Monroy · WhatsApp 56 5157 9693",
+    imagen: "checkup-ginecologico-basico",
+  },
+  {
+    id: "caramac-motors",
+    nombre: "Caramac Motors",
+    categoria: "Automotriz y trámites",
+    resumen:
+      "Mantenimiento preventivo y reparaciones correctivas para tu vehículo, con servicio de recolección y entrega sin costo dentro de Puebla y área conurbada. También comisión preferente si consignas tu auto en venta con ellos.",
+    descuento:
+      "10% de descuento en mano de obra · Recolección y entrega sin costo · 7.5% de comisión preferente en consignación de venta",
+    contacto: "222 516 3092 · Puebla y área conurbada · presenta tu credencial sindical",
+    imagen: "caramac-motors",
+  },
 ];
 
 /**
@@ -551,7 +582,7 @@ export const NOTICIAS_RAW: Noticia[] = [
     resumen:
       "El sindicato del Poder Judicial en México, UNTPJ, celebró su Convivencia de Fiestas Patrias: fueron muchas las personas trabajadoras del Poder Judicial de la Federación que nos acompañaron.",
     cuerpo: [
-      "El pasado 16 de septiembre, la Unión Nacional de Trabajadores del Poder Judicial (UNTPJ) —sindicato del Poder Judicial de la Federación en México— realizó su Convivencia de Fiestas Patrias, y la respuesta superó nuestras expectativas.",
+      "El pasado 18 de septiembre, la Unión Nacional de Trabajadores del Poder Judicial (UNTPJ) —sindicato del Poder Judicial de la Federación en México— realizó su Convivencia de Fiestas Patrias para celebrar el 16 de septiembre, y la respuesta superó nuestras expectativas.",
       "Fueron muchas las personas trabajadoras del Poder Judicial que se acercaron a convivir con nosotros: compartimos tacos de canasta, agua de jamaica y dulces mexicanos en un ambiente cordial, con la bandera y los colores patrios como protagonistas.",
       "Además de convivir, tuvimos la oportunidad de compartir de cerca el trabajo que hacemos día a día como sindicato: resolver dudas laborales, acompañar a nuestras y nuestros agremiados, y recordar que, más allá de las distintas expresiones sindicales que existen dentro del Poder Judicial de la Federación, nos une el servicio a la justicia.",
       "Fue un gran día para la comunidad del Poder Judicial en México, y agradecemos profundamente la participación de todas y todos los que se acercaron a saludarnos, platicar y disfrutar juntos esta fecha tan importante para nuestro país.",

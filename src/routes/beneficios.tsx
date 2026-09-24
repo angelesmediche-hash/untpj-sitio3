@@ -23,6 +23,9 @@ import imgAcupunturaSamali from "@/assets/convenio-acupuntura-samali.jpg";
 import imgLaBarra from "@/assets/convenio-la-barra.jpg";
 import imgReencontrandomePsicologia from "@/assets/convenio-reencontrandome-psicologia.jpg";
 import imgKingDavid from "@/assets/convenio-king-david.jpg";
+import imgCheckupGinecologico from "@/assets/convenio-checkup-ginecologico.jpg";
+import imgCheckupGinecologicoBasico from "@/assets/convenio-checkup-ginecologico-basico.jpg";
+import imgCaramacMotors from "@/assets/convenio-caramac-motors.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -46,6 +49,9 @@ const IMAGENES: Record<string, string> = {
   "la-barra": imgLaBarra,
   "reencontrandome-psicologia": imgReencontrandomePsicologia,
   "king-david-tours": imgKingDavid,
+  "checkup-ginecologico": imgCheckupGinecologico,
+  "checkup-ginecologico-basico": imgCheckupGinecologicoBasico,
+  "caramac-motors": imgCaramacMotors,
 };
 
 export const Route = createFileRoute("/beneficios")({
