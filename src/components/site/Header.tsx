@@ -63,6 +63,12 @@ function CancerMamaBanner() {
           hash="convenios"
           className="flex min-w-0 items-center gap-2 font-semibold hover:underline"
         >
+          <img
+            src={logo}
+            alt=""
+            aria-hidden="true"
+            className="size-4 shrink-0 rounded-sm object-contain"
+          />
           <span aria-hidden="true">🎗️</span>
           <span className="hidden truncate sm:inline">
             Octubre, mes de sensibilización sobre el cáncer de mama — conoce el convenio de Check
