@@ -484,6 +484,46 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     contacto: "222 516 3092 · Puebla y área conurbada · presenta tu credencial sindical",
     imagen: "caramac-motors",
   },
+  {
+    id: "terraza-cholula",
+    nombre: "Terraza Cholula · Bocado & Trago",
+    categoria: "Restaurantes y alimentos",
+    resumen:
+      "Restaurante y bar en Cholula, Puebla, con vista a la iglesia de los Remedios. También ofrecen servicios de catering y organización de eventos.",
+    descuento: "10% en consumo general · 10% en servicios de catering y organización de eventos",
+    contacto: "221 434 7571 · presenta tu credencial sindical",
+    imagen: "terraza-cholula",
+  },
+  {
+    id: "dafne-events",
+    nombre: "Dafne Events",
+    categoria: "Eventos",
+    resumen:
+      "Decoración y organización de eventos sociales: backdrops decorativos, pasteles personalizados, decoración con globos, renta de loza y mobiliario, mamparas y escenarios temáticos, montajes y centros de mesa.",
+    descuento: "10% de descuento sobre tu total global",
+    contacto: "Cel. 222 764 3109 · Instagram @dafne_events",
+    imagen: "dafne-events",
+  },
+  {
+    id: "xpress-tintoreria",
+    nombre: "Xpress · Planchado, Tintorería y Lavandería Premium",
+    categoria: "Hogar y servicios",
+    resumen:
+      "Tintorería, lavandería, planchado de camisas por docena, costura básica, lavado de tenis y teñidos. Recolección y entrega sin costo en las sedes del Poder Judicial de San Lázaro y Boulevard Adolfo López Mateos 1950.",
+    descuento: "20% de descuento al personal afiliado al sindicato",
+    contacto: "WhatsApp 55 6713 0863",
+    imagen: "xpress-tintoreria",
+  },
+  {
+    id: "roxana-pinon-cheng",
+    nombre: "Psic. Roxana Piñón Cheng · Psicoterapia Individual",
+    categoria: "Psicología",
+    resumen:
+      "Acompañamiento psicológico en modalidad online y presencial, además de impartición de talleres, pláticas y conferencias.",
+    descuento: "25% de descuento sobre el precio de la consulta",
+    contacto: "222 277 1695 · Calle Tepeyahualco No. 29, Col. La Paz, Puebla",
+    imagen: "roxana-pinon-cheng",
+  },
 ];
 
 /**

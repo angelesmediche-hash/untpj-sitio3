@@ -26,6 +26,10 @@ import imgKingDavid from "@/assets/convenio-king-david.jpg";
 import imgCheckupGinecologico from "@/assets/convenio-checkup-ginecologico.jpg";
 import imgCheckupGinecologicoBasico from "@/assets/convenio-checkup-ginecologico-basico.jpg";
 import imgCaramacMotors from "@/assets/convenio-caramac-motors.jpg";
+import imgTerrazaCholula from "@/assets/convenio-terraza-cholula.jpg";
+import imgDafneEvents from "@/assets/convenio-dafne-events.jpg";
+import imgXpressTintoreria from "@/assets/convenio-xpress-tintoreria.jpg";
+import imgRoxanaPinonCheng from "@/assets/convenio-roxana-pinon-cheng.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -52,6 +56,10 @@ const IMAGENES: Record<string, string> = {
   "checkup-ginecologico": imgCheckupGinecologico,
   "checkup-ginecologico-basico": imgCheckupGinecologicoBasico,
   "caramac-motors": imgCaramacMotors,
+  "terraza-cholula": imgTerrazaCholula,
+  "dafne-events": imgDafneEvents,
+  "xpress-tintoreria": imgXpressTintoreria,
+  "roxana-pinon-cheng": imgRoxanaPinonCheng,
 };
 
 export const Route = createFileRoute("/beneficios")({
