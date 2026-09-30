@@ -30,6 +30,9 @@ import imgTerrazaCholula from "@/assets/convenio-terraza-cholula.jpg";
 import imgDafneEvents from "@/assets/convenio-dafne-events.jpg";
 import imgXpressTintoreria from "@/assets/convenio-xpress-tintoreria.jpg";
 import imgRoxanaPinonCheng from "@/assets/convenio-roxana-pinon-cheng.jpg";
+import imgArquetipoSeguroMedico from "@/assets/convenio-arquetipo-seguro-medico.jpg";
+import imgArquetipoSeguroHogar from "@/assets/convenio-arquetipo-seguro-hogar.jpg";
+import imgArquetipoSeguroMascotas from "@/assets/convenio-arquetipo-seguro-mascotas.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -60,6 +63,9 @@ const IMAGENES: Record<string, string> = {
   "dafne-events": imgDafneEvents,
   "xpress-tintoreria": imgXpressTintoreria,
   "roxana-pinon-cheng": imgRoxanaPinonCheng,
+  "arquetipo-seguro-medico": imgArquetipoSeguroMedico,
+  "arquetipo-seguro-hogar": imgArquetipoSeguroHogar,
+  "arquetipo-seguro-mascotas": imgArquetipoSeguroMascotas,
 };
 
 export const Route = createFileRoute("/beneficios")({

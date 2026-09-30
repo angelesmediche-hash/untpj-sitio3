@@ -524,6 +524,36 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     contacto: "222 277 1695 · Calle Tepeyahualco No. 29, Col. La Paz, Puebla",
     imagen: "roxana-pinon-cheng",
   },
+  {
+    id: "arquetipo-seguro-medico",
+    nombre: "Arquetipo · Seguro de Gastos Médicos Menores (AXA | Keralty)",
+    categoria: "Salud y bienestar",
+    resumen:
+      "Protege tu bienestar y el de tu familia directa (pareja, hijos, nietos, padres, abuelos y hermanos) con un seguro de gastos médicos menores: check-up médico, consultas de medicina general ilimitadas, consultas con especialistas y servicio de ambulancia. Planes desde $144 mensuales, con 3, 6, 9 y 12 meses sin intereses en tarjetas participantes.",
+    descuento: "10% de descuento al contratar tu seguro",
+    contacto: "Asesor Edgar Echeverría · 55 1830 6698",
+    imagen: "arquetipo-seguro-medico",
+  },
+  {
+    id: "arquetipo-seguro-hogar",
+    nombre: "Arquetipo · Asegura tu Hogar",
+    categoria: "Hogar y servicios",
+    resumen:
+      "Protección para tu hogar contra incendios, desastres naturales y robo, además de asistencia para emergencias eléctricas, de plomería y pequeñas remodelaciones.",
+    descuento: "10% de descuento al contratar tu seguro",
+    contacto: "Asesor Edgar Echeverría · 55 1830 6698",
+    imagen: "arquetipo-seguro-hogar",
+  },
+  {
+    id: "arquetipo-seguro-mascotas",
+    nombre: "Arquetipo · Seguro de Mascotas",
+    categoria: "Mascotas",
+    resumen:
+      "Protege a tu perro o gato, sin importar su raza: reembolso por gastos veterinarios, protección por daños a terceros y asistencias para su cuidado.",
+    descuento: "10% de descuento al contratar tu seguro",
+    contacto: "Asesor Edgar Echeverría · 55 1830 6698",
+    imagen: "arquetipo-seguro-mascotas",
+  },
 ];
 
 /**
