@@ -49,8 +49,14 @@ function CancerMamaBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const dismissed = window.localStorage.getItem(CANCER_MAMA_DISMISS_KEY);
-    if (!dismissed) setVisible(true);
+    try {
+      if (window.localStorage.getItem(CANCER_MAMA_DISMISS_KEY)) return;
+    } catch {
+      // Algunos navegadores (modo privado, navegadores dentro de apps como
+      // Instagram o WhatsApp) bloquean localStorage. En ese caso mostramos el
+      // aviso de todas formas.
+    }
+    setVisible(true);
   }, []);
 
   if (!visible) return null;
@@ -81,7 +87,11 @@ function CancerMamaBanner() {
         <button
           type="button"
           onClick={() => {
-            window.localStorage.setItem(CANCER_MAMA_DISMISS_KEY, "1");
+            try {
+              window.localStorage.setItem(CANCER_MAMA_DISMISS_KEY, "1");
+            } catch {
+              // Si no se puede guardar, igual lo cerramos en esta visita.
+            }
             setVisible(false);
           }}
           aria-label="Cerrar aviso"

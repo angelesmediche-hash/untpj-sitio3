@@ -28,6 +28,8 @@ import tileTribunal1 from "@/assets/hero-tiles/tribunal-visita-1.jpg";
 import tileTribunal2 from "@/assets/hero-tiles/tribunal-visita-2.jpg";
 import tileFiestasGrupal from "@/assets/hero-tiles/fiestas-grupal.jpg";
 import tileFiestasCuatro from "@/assets/hero-tiles/fiestas-cuatro.jpg";
+import tileCdiKits from "@/assets/hero-tiles/cdi-kits.jpg";
+import tileCredencial from "@/assets/hero-tiles/credencial-afiliado.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
@@ -61,7 +63,7 @@ const HERO_ROW_1 = [
   tileFiestasGrupal,
 ];
 
-const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileTribunal1];
+const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileTribunal1, tileCdiKits];
 
 const HERO_ROW_3 = [
   tileGroup4,
@@ -70,6 +72,7 @@ const HERO_ROW_3 = [
   tileNinez03,
   tileTribunal2,
   tileFiestasCuatro,
+  tileCredencial,
 ];
 
 export const Route = createFileRoute("/")({
