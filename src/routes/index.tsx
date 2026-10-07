@@ -30,12 +30,18 @@ import tileFiestasGrupal from "@/assets/hero-tiles/fiestas-grupal.jpg";
 import tileFiestasCuatro from "@/assets/hero-tiles/fiestas-cuatro.jpg";
 import tileCdiKits from "@/assets/hero-tiles/cdi-kits.jpg";
 import tileCredencial from "@/assets/hero-tiles/credencial-afiliado.jpg";
+import tileVisita1 from "@/assets/hero-tiles/visita-juzgado-1.jpg";
+import tileVisita2 from "@/assets/hero-tiles/visita-juzgado-2.jpg";
+import tileColegiado1 from "@/assets/hero-tiles/tribunal-colegiado-1.jpg";
+import tileColegiado2 from "@/assets/hero-tiles/tribunal-colegiado-2.jpg";
 import apoyoImg from "@/assets/apoyo.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
 import thumbNinez from "@/assets/noticia-ninez-02.jpg";
 import thumbQepdHumberto from "@/assets/noticia-qepd-humberto-orozco.jpg";
 import thumbFiestasPatrias from "@/assets/noticia-fiestas-patrias-2026.jpg";
 import thumbCelebracionFiestas from "@/assets/noticia-fiestas-patrias-grupal.jpg";
+import thumbVisitaJuzgado from "@/assets/noticia-visita-juzgado-principal.jpg";
+import thumbVisitaTribunal from "@/assets/noticia-visita-tribunal-principal.jpg";
 import { CTALink, Eyebrow, Section } from "@/components/site/Bits";
 import { CONTACTO, NOTA_247, NOTICIAS } from "@/lib/site-data";
 
@@ -45,6 +51,8 @@ const THUMBS: Record<string, string> = {
   "qepd-humberto-orozco-calderon": thumbQepdHumberto,
   "convivencia-fiestas-patrias-2026": thumbFiestasPatrias,
   "celebracion-fiestas-patrias-2026": thumbCelebracionFiestas,
+  "visita-tercer-tribunal-colegiado-trabajo-san-lazaro": thumbVisitaTribunal,
+  "visita-juzgado-segundo-distrito-civil-san-lazaro": thumbVisitaJuzgado,
 };
 
 // En el home solo mostramos las noticias públicas (sin invitaciones a eventos
@@ -61,9 +69,20 @@ const HERO_ROW_1 = [
   tileNinez05,
   tileComite,
   tileFiestasGrupal,
+  tileVisita1,
+  tileColegiado1,
 ];
 
-const HERO_ROW_2 = [tileSergio, tileBenito, tileLeather, tilePadre04, tileTribunal1, tileCdiKits];
+const HERO_ROW_2 = [
+  tileSergio,
+  tileBenito,
+  tileLeather,
+  tilePadre04,
+  tileTribunal1,
+  tileCdiKits,
+  tileVisita2,
+  tileColegiado2,
+];
 
 const HERO_ROW_3 = [
   tileGroup4,

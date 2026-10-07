@@ -28,6 +28,18 @@ import fiestasCuatroImg from "@/assets/noticia-fiestas-patrias-cuatro-personas.j
 import fiestasPanoramicaImg from "@/assets/noticia-fiestas-patrias-panoramica.jpg";
 import fiestasMesaImg from "@/assets/noticia-fiestas-patrias-mesa.jpg";
 import fiestasPlaticandoImg from "@/assets/noticia-fiestas-patrias-platicando.jpg";
+import visitaPrincipalImg from "@/assets/noticia-visita-juzgado-principal.jpg";
+import visitaAudienciaImg from "@/assets/noticia-visita-juzgado-audiencia.jpg";
+import visitaOradorImg from "@/assets/noticia-visita-juzgado-orador.jpg";
+import visitaSalaImg from "@/assets/noticia-visita-juzgado-sala.jpg";
+import visitaMostradorImg from "@/assets/noticia-visita-juzgado-mostrador.jpg";
+import visitaPanoramicaImg from "@/assets/noticia-visita-juzgado-panoramica.jpg";
+import tribunalPrincipalImg from "@/assets/noticia-visita-tribunal-principal.jpg";
+import tribunalPasilloImg from "@/assets/noticia-visita-tribunal-pasillo.jpg";
+import tribunalOradoresImg from "@/assets/noticia-visita-tribunal-oradores.jpg";
+import tribunalVertical1Img from "@/assets/noticia-visita-tribunal-vertical-1.jpg";
+import tribunalVertical2Img from "@/assets/noticia-visita-tribunal-vertical-2.jpg";
+import tribunalVertical3Img from "@/assets/noticia-visita-tribunal-vertical-3.jpg";
 
 const MEDIA: Record<
   string,
@@ -72,6 +84,56 @@ const MEDIA: Record<
       { src: fiestasPanoramicaImg, alt: "Convivencia de Fiestas Patrias, vista de los toldos" },
       { src: fiestasMesaImg, alt: "Convivencia de Fiestas Patrias, mesa con antojitos mexicanos" },
       { src: fiestasPlaticandoImg, alt: "Convivencia de Fiestas Patrias, compañeros conviviendo" },
+    ],
+  },
+  "visita-tercer-tribunal-colegiado-trabajo-san-lazaro": {
+    bodyImage: tribunalPrincipalImg,
+    gallery: [
+      {
+        src: tribunalPasilloImg,
+        alt: "Representantes de la UNTPJ platicando con trabajadoras y trabajadores en el pasillo del Tercer Tribunal Colegiado en Materia de Trabajo",
+      },
+      {
+        src: tribunalOradoresImg,
+        alt: "Sindicato del Poder Judicial presentando sus propuestas en el Tercer Tribunal Colegiado en Materia de Trabajo del Primer Circuito",
+      },
+      {
+        src: tribunalVertical1Img,
+        alt: "Visita del sindicato UNTPJ al Tercer Tribunal Colegiado en Materia de Trabajo, sede San Lázaro",
+      },
+      {
+        src: tribunalVertical2Img,
+        alt: "Trabajadoras y trabajadores del Poder Judicial escuchando al sindicato durante la visita al tribunal colegiado",
+      },
+      {
+        src: tribunalVertical3Img,
+        alt: "Compañeras y compañeros del Poder Judicial recibiendo información del sindicato en el Tercer Tribunal Colegiado",
+      },
+    ],
+  },
+  "visita-juzgado-segundo-distrito-civil-san-lazaro": {
+    bodyImage: visitaPrincipalImg,
+    gallery: [
+      {
+        src: visitaAudienciaImg,
+        alt: "Trabajadoras y trabajadores del Poder Judicial escuchando al sindicato en el Juzgado Segundo de Distrito en Materia Civil",
+      },
+      {
+        src: visitaOradorImg,
+        alt: "Representante del sindicato del Poder Judicial presentando sus propuestas en un juzgado de distrito",
+      },
+      {
+        src: visitaSalaImg,
+        alt: "Visita del sindicato UNTPJ al Juzgado Segundo de Distrito en Materia Civil, sede San Lázaro",
+      },
+      {
+        src: visitaMostradorImg,
+        alt: "Compañeras y compañeros del Poder Judicial leyendo información del sindicato en el mostrador del juzgado",
+      },
+      {
+        src: visitaPanoramicaImg,
+        alt: "Vista del juzgado durante la visita del sindicato del Poder Judicial en la Ciudad de México",
+      },
     ],
   },
 };

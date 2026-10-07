@@ -42,18 +42,38 @@ const NAV: NavItem[] = [
 ];
 
 // TODO: quitar este aviso después de octubre (mes de sensibilización sobre el
-// cáncer de mama). Se puede cerrar y recuerda la elección en este navegador.
+// cáncer de mama). Se puede cerrar, pero solo durante la visita actual (usa
+// sessionStorage), así que vuelve a aparecer en la siguiente visita.
 const CANCER_MAMA_DISMISS_KEY = "untpj-aviso-cancer-mama-2026";
+
+// Listón de la campaña (dibujado, no emoji: el emoji sale amarillo en algunos
+// dispositivos y el símbolo del cáncer de mama es el listón rosa).
+function RibbonIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M6 22 L12 14 C14.5 10.5 16.5 8.5 16.5 6.5 A4.5 4.5 0 0 0 7.5 6.5 C7.5 8.5 9.5 10.5 12 14 L18 22" />
+    </svg>
+  );
+}
 
 function CancerMamaBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     try {
-      if (window.localStorage.getItem(CANCER_MAMA_DISMISS_KEY)) return;
+      if (window.sessionStorage.getItem(CANCER_MAMA_DISMISS_KEY)) return;
     } catch {
       // Algunos navegadores (modo privado, navegadores dentro de apps como
-      // Instagram o WhatsApp) bloquean localStorage. En ese caso mostramos el
+      // Instagram o WhatsApp) bloquean el almacenamiento. En ese caso mostramos el
       // aviso de todas formas.
     }
     setVisible(true);
@@ -75,7 +95,7 @@ function CancerMamaBanner() {
             aria-hidden="true"
             className="size-4 shrink-0 rounded-sm object-contain"
           />
-          <span aria-hidden="true">🎗️</span>
+          <RibbonIcon className="size-4 shrink-0" />
           <span className="hidden truncate sm:inline">
             Octubre, mes de sensibilización sobre el cáncer de mama — conoce el convenio de Check
             Up Ginecológico
@@ -88,7 +108,7 @@ function CancerMamaBanner() {
           type="button"
           onClick={() => {
             try {
-              window.localStorage.setItem(CANCER_MAMA_DISMISS_KEY, "1");
+              window.sessionStorage.setItem(CANCER_MAMA_DISMISS_KEY, "1");
             } catch {
               // Si no se puede guardar, igual lo cerramos en esta visita.
             }

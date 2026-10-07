@@ -91,6 +91,16 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.untpj.com/noticias/visita-juzgado-segundo-distrito-civil-san-lazaro</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.untpj.com/noticias/visita-tercer-tribunal-colegiado-trabajo-san-lazaro</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.untpj.com/contacto</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

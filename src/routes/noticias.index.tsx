@@ -8,6 +8,8 @@ import thumbNinez from "@/assets/noticia-ninez-02.jpg";
 import thumbQepdHumberto from "@/assets/noticia-qepd-humberto-orozco.jpg";
 import thumbFiestasPatrias from "@/assets/noticia-fiestas-patrias-2026.jpg";
 import thumbCelebracionFiestas from "@/assets/noticia-fiestas-patrias-grupal.jpg";
+import thumbVisitaJuzgado from "@/assets/noticia-visita-juzgado-principal.jpg";
+import thumbVisitaTribunal from "@/assets/noticia-visita-tribunal-principal.jpg";
 
 export const Route = createFileRoute("/noticias/")({
   head: () => ({
@@ -34,6 +36,8 @@ const THUMBS: Record<string, string> = {
   "qepd-humberto-orozco-calderon": thumbQepdHumberto,
   "convivencia-fiestas-patrias-2026": thumbFiestasPatrias,
   "celebracion-fiestas-patrias-2026": thumbCelebracionFiestas,
+  "visita-tercer-tribunal-colegiado-trabajo-san-lazaro": thumbVisitaTribunal,
+  "visita-juzgado-segundo-distrito-civil-san-lazaro": thumbVisitaJuzgado,
 };
 
 function NoticiasIndexPage() {

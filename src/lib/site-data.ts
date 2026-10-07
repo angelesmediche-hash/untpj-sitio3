@@ -554,6 +554,28 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     contacto: "Asesor Edgar Echeverría · 55 1830 6698",
     imagen: "arquetipo-seguro-mascotas",
   },
+  {
+    id: "moka-otono",
+    nombre: "MoKA Hair & Beauty Studio · Promoción de otoño",
+    categoria: "Belleza y spa",
+    resumen:
+      "Promoción de otoño en manicura y pedicura Detox Citrus con gelish, y diseño y perfilado de ceja con henna. Precios de la promoción: pedicura $500, manicura $400 y diseño y perfilado de ceja con henna $350.",
+    descuento: "10% de descuento",
+    contacto:
+      "WhatsApp 222 327 2535 · 222 162 1892 · Av. Central 95B, Concepción Guadalupe, 72833 San Bernardino Tlaxcalancingo, Pue. (atrás del Restaurant Cabo San Lucas, por Palmas Plaza)",
+    imagen: "moka-otono",
+  },
+  {
+    id: "moka-encerado-vainilla",
+    nombre: "MoKA Hair & Beauty Studio · Encerado de Vainilla",
+    categoria: "Belleza y spa",
+    resumen:
+      "Tratamiento para eliminar el frizz que mantiene tu cabello suave, brillante y manejable por hasta 3 a 4 meses, además de hidratar, nutrir y ayudar a reestructurar la fibra capilar. Precios según largo: corto $1,550, mediano $1,650, largo $1,750 y extra largo $1,850.",
+    descuento: "10% de descuento",
+    contacto:
+      "WhatsApp 222 327 2535 · 222 162 1892 · Av. Central 95B, Concepción Guadalupe, 72833 San Bernardino Tlaxcalancingo, Pue. (atrás del Restaurant Cabo San Lucas, por Palmas Plaza)",
+    imagen: "moka-encerado",
+  },
 ];
 
 /**
@@ -657,6 +679,34 @@ export const NOTICIAS_RAW: Noticia[] = [
       "Además de convivir, tuvimos la oportunidad de compartir de cerca el trabajo que hacemos día a día como sindicato: resolver dudas laborales, acompañar a nuestras y nuestros agremiados, y recordar que, más allá de las distintas expresiones sindicales que existen dentro del Poder Judicial de la Federación, nos une el servicio a la justicia.",
       "Fue un gran día para la comunidad del Poder Judicial en México, y agradecemos profundamente la participación de todas y todos los que se acercaron a saludarnos, platicar y disfrutar juntos esta fecha tan importante para nuestro país.",
       "Gracias por acompañarnos. Este tipo de espacios son los que nos recuerdan por qué existimos como sindicato del Poder Judicial: para estar cerca de ti en cada etapa.",
+    ],
+  },
+  {
+    slug: "visita-tercer-tribunal-colegiado-trabajo-san-lazaro",
+    titulo: "Visitamos el Tercer Tribunal Colegiado en Materia de Trabajo del Primer Circuito",
+    fecha: "6 de octubre de 2026",
+    resumen:
+      "Un día después de su visita al Juzgado Segundo de Distrito en Materia Civil, la UNTPJ, el sindicato del Poder Judicial en México, acudió al Tercer Tribunal Colegiado en Materia de Trabajo del Primer Circuito, en la Ciudad de México, sede San Lázaro.",
+    cuerpo: [
+      "El martes 29 de septiembre, un día después de su visita al Juzgado Segundo de Distrito en Materia Civil, la Unión Nacional de Trabajadores del Poder Judicial (UNTPJ), sindicato del Poder Judicial de la Federación en México, visitó el Tercer Tribunal Colegiado en Materia de Trabajo del Primer Circuito, en la Ciudad de México, sede San Lázaro.",
+      "Platicamos con las y los trabajadores del tribunal en su propio espacio de trabajo, para presentarnos, compartir nuestras propuestas y entregarles información del sindicato directamente a las compañeras y los compañeros.",
+      "Como sindicato del Poder Judicial, creemos que la mejor forma de representar a las personas trabajadoras es estar cerca de ellas: ir a los juzgados y tribunales, explicar quiénes somos, escuchar sus dudas laborales y dar a conocer cómo acompañamos a nuestras y nuestros agremiados, con defensa laboral, línea de atención 24/7, capacitación y convenios con descuentos.",
+      "Agradecemos al personal del Tercer Tribunal Colegiado en Materia de Trabajo por el tiempo y la atención que nos dedicaron durante la visita.",
+      "Si trabajas en el Poder Judicial de la Federación y quieres saber cómo afiliarte al sindicato, consulta la sección Afíliate de este sitio. Seguimos cerca de ti en cada etapa.",
+    ],
+  },
+  {
+    slug: "visita-juzgado-segundo-distrito-civil-san-lazaro",
+    titulo: "Visitamos el Juzgado Segundo de Distrito en Materia Civil",
+    fecha: "6 de octubre de 2026",
+    resumen:
+      "UNTPJ, el sindicato del Poder Judicial en México, visitó dos órganos del Poder Judicial de la Federación, entre ellos el Juzgado Segundo de Distrito en Materia Civil en la Ciudad de México, sede San Lázaro, para presentarse y compartir sus propuestas.",
+    cuerpo: [
+      "El lunes 28 de septiembre, la Unión Nacional de Trabajadores del Poder Judicial (UNTPJ), sindicato del Poder Judicial de la Federación en México, visitó dos órganos del Poder Judicial para presentarse y compartir sus propuestas directamente con las compañeras y los compañeros.",
+      "Uno de ellos fue el Juzgado Segundo de Distrito en Materia Civil en la Ciudad de México, sede San Lázaro, donde platicamos con las y los trabajadores en sus propios espacios de trabajo, entre expedientes y archiveros, en el día a día de quienes hacen funcionar la impartición de justicia.",
+      "Como sindicato del Poder Judicial, creemos que la mejor forma de representar a las personas trabajadoras es estar cerca de ellas: ir a los juzgados y tribunales, explicar quiénes somos, escuchar sus dudas laborales y dar a conocer cómo acompañamos a nuestras y nuestros agremiados, con defensa laboral, línea de atención 24/7, capacitación y convenios con descuentos.",
+      "Agradecemos a quienes nos dedicaron unos minutos de su jornada para escucharnos y recibir la información que llevamos.",
+      "Si trabajas en el Poder Judicial de la Federación y quieres saber cómo afiliarte al sindicato, consulta la sección Afíliate de este sitio. Seguimos cerca de ti en cada etapa.",
     ],
   },
 ];
