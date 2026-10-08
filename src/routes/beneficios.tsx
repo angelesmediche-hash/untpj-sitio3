@@ -35,6 +35,8 @@ import imgArquetipoSeguroHogar from "@/assets/convenio-arquetipo-seguro-hogar.jp
 import imgArquetipoSeguroMascotas from "@/assets/convenio-arquetipo-seguro-mascotas.jpg";
 import imgMokaOtono from "@/assets/convenio-moka-otono.jpg";
 import imgMokaEncerado from "@/assets/convenio-moka-encerado.jpg";
+import imgKarelRetrato from "@/assets/convenio-karel-del-angel-retrato.jpg";
+import imgKarelFiestas from "@/assets/convenio-karel-del-angel-fiestas.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -70,6 +72,8 @@ const IMAGENES: Record<string, string> = {
   "arquetipo-seguro-mascotas": imgArquetipoSeguroMascotas,
   "moka-otono": imgMokaOtono,
   "moka-encerado": imgMokaEncerado,
+  "karel-del-angel-retrato": imgKarelRetrato,
+  "karel-del-angel-fiestas": imgKarelFiestas,
 };
 
 export const Route = createFileRoute("/beneficios")({

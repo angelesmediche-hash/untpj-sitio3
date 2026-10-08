@@ -576,6 +576,28 @@ export const CONVENIOS_DETALLE: Convenio[] = [
       "WhatsApp 222 327 2535 · 222 162 1892 · Av. Central 95B, Concepción Guadalupe, 72833 San Bernardino Tlaxcalancingo, Pue. (atrás del Restaurant Cabo San Lucas, por Palmas Plaza)",
     imagen: "moka-encerado",
   },
+  {
+    id: "karel-del-angel-retrato-xv-bodas",
+    nombre: "Karel del Angel Fotografía · Retrato familiar, XV años, bodas y editorial",
+    categoria: "Eventos",
+    resumen:
+      "Fotografía profesional de retrato familiar, XV años, bodas y editorial. Reserva tu fecha en la ciudad de Puebla.",
+    descuento: "10% de descuento",
+    contacto:
+      "WhatsApp 222 588 8832 · Instagram @kareldelangel · kareldelangel.com",
+    imagen: "karel-del-angel-retrato",
+  },
+  {
+    id: "karel-del-angel-fiestas-bautizos-mascotas",
+    nombre: "Karel del Angel Fotografía · Fiestas infantiles, bautizos, primera comunión y mascotas",
+    categoria: "Eventos",
+    resumen:
+      "Fotografía profesional de fiestas infantiles, bautizos, primera comunión y mascotas. Reserva tu fecha en la ciudad de Puebla.",
+    descuento: "10% de descuento",
+    contacto:
+      "WhatsApp 222 588 8832 · Instagram @kareldelangel · kareldelangel.com",
+    imagen: "karel-del-angel-fiestas",
+  },
 ];
 
 /**
