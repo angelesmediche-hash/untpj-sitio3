@@ -68,7 +68,7 @@ export const COMITE: { nombre: string; cargo: string }[] = [
       "Secretaría General de Información y Atención de Emergencias Administrativas y Jurisdiccionales",
   },
   {
-    nombre: "Viany Guadalupe Enríquez Ricárdez",
+    nombre: "Puesto vacante",
     cargo: "Secretaría General de Planeación y Estrategia Legal",
   },
   {
@@ -292,16 +292,6 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     descuento: "35% en servicios seleccionados",
     contacto: "Informes: 54 40 48 37 · Sucursal del Valle y Sucursal Oriente",
     imagen: "spa-cosmedic",
-  },
-  {
-    id: "gabriela-gay",
-    nombre: "Gabriela Gay · Psicoterapeuta",
-    categoria: "Psicología",
-    resumen:
-      "Terapia individual y de pareja, constelaciones familiares, tanatología y salud sexual.",
-    descuento: "25% de descuento",
-    contacto: "WhatsApp 553 500 9619",
-    imagen: "gabriela-gay",
   },
   {
     id: "katia-portillo",

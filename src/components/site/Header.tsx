@@ -207,7 +207,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <Link
               to="/afiliacion"
-              className="hidden bg-primary px-5 py-3 font-display text-xs font-extrabold tracking-[0.14em] text-primary-foreground uppercase lift hover:bg-ink sm:inline-flex"
+              className="hidden bg-cta px-5 py-3 font-display text-xs font-extrabold tracking-[0.14em] text-cta-foreground uppercase lift hover:bg-ink sm:inline-flex"
             >
               Afíliate
             </Link>
@@ -255,7 +255,7 @@ export function Header() {
               <Link
                 to="/afiliacion"
                 onClick={() => setOpen(false)}
-                className="mt-4 mb-4 bg-primary px-5 py-4 text-center font-display text-xs font-extrabold tracking-[0.14em] text-primary-foreground uppercase"
+                className="mt-4 mb-4 bg-cta px-5 py-4 text-center font-display text-xs font-extrabold tracking-[0.14em] text-cta-foreground uppercase"
               >
                 Afíliate a UNTPJ
               </Link>

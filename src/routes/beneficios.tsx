@@ -7,7 +7,6 @@ import { CONTACTO, CONVENIOS_DETALLE, GUIAS_ESTUDIO, type Convenio } from "@/lib
 import imgStudio520 from "@/assets/convenio-studio-520.jpg";
 import imgGerelVet from "@/assets/convenio-gerel-vet-1.jpg";
 import imgSpaCosmedic from "@/assets/convenio-spa-cosmedic.jpg";
-import imgGabrielaGay from "@/assets/convenio-gabriela-gay.jpg";
 import imgKatiaPortillo from "@/assets/convenio-katia-portillo.jpg";
 import imgOrchidLaw from "@/assets/convenio-orchid-law.jpg";
 import imgReencontrandome from "@/assets/convenio-reencontrandome-nutricion.jpg";
@@ -44,7 +43,6 @@ const IMAGENES: Record<string, string> = {
   "studio-520": imgStudio520,
   "gerel-vet-1": imgGerelVet,
   "spa-cosmedic": imgSpaCosmedic,
-  "gabriela-gay": imgGabrielaGay,
   "katia-portillo": imgKatiaPortillo,
   "orchid-law": imgOrchidLaw,
   reencontrandome: imgReencontrandome,

@@ -67,7 +67,7 @@ function SeguridadSocial() {
               href="https://www.untpj.com/s/FORMATO-DE-AHORRO-SOLIDARIO.pdf"
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 bg-primary px-6 py-4 font-display text-xs font-extrabold tracking-[0.14em] text-primary-foreground uppercase lift hover:bg-ink"
+              className="mt-6 inline-flex items-center gap-2 bg-cta px-6 py-4 font-display text-xs font-extrabold tracking-[0.14em] text-cta-foreground uppercase lift hover:bg-ink"
             >
               <Download className="size-4" aria-hidden="true" />
               Descargar formato

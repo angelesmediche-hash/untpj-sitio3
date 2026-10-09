@@ -5,7 +5,7 @@ import logoWatermark from "@/assets/logo-untpj.png";
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
     <p className="eyebrow flex items-center gap-3 text-primary">
-      <span className="inline-block h-px w-8 bg-primary" aria-hidden="true" />
+      <span className="inline-block h-px w-8 bg-gold" aria-hidden="true" />
       {children}
     </p>
   );
@@ -121,7 +121,7 @@ export function CTALink({
       ? "border border-current text-current hover:bg-foreground hover:text-background"
       : variant === "accent"
         ? "bg-accent text-accent-foreground hover:opacity-90"
-        : "bg-primary text-primary-foreground hover:bg-ink";
+        : "bg-cta text-cta-foreground hover:bg-ink";
   return (
     <Link to={to} className={`${base} ${styles}`}>
       {children}

@@ -48,6 +48,8 @@
   --color-sand: var(--sand);
   --color-line: var(--line);
   --color-gold: var(--gold);
+  --color-cta: var(--cta);
+  --color-cta-foreground: var(--cta-foreground);
   --color-gold-foreground: var(--gold-foreground);
 
   --color-sidebar: var(--sidebar);
@@ -63,46 +65,48 @@
 :root {
   --radius: 0.25rem;
 
-  --background: oklch(0.973 0.008 85);
-  --foreground: oklch(0.215 0.018 45);
-  --card: oklch(0.992 0.004 90);
-  --card-foreground: oklch(0.215 0.018 45);
-  --popover: oklch(0.992 0.004 90);
-  --popover-foreground: oklch(0.215 0.018 45);
+  --background: oklch(0.944 0.030 90.3); /* #F4ECD6 */
+  --foreground: oklch(0.178 0.000 89.9); /* #111111 */
+  --card: oklch(0.972 0.019 93.7); /* #FAF6E8 */
+  --card-foreground: oklch(0.178 0.000 89.9); /* #111111 */
+  --popover: oklch(0.972 0.019 93.7); /* #FAF6E8 */
+  --popover-foreground: oklch(0.178 0.000 89.9); /* #111111 */
 
-  --primary: oklch(0.398 0.121 18.5);
-  --primary-foreground: oklch(0.98 0.008 85);
-  --secondary: oklch(0.93 0.014 82);
-  --secondary-foreground: oklch(0.28 0.02 40);
-  --muted: oklch(0.945 0.011 84);
-  --muted-foreground: oklch(0.49 0.017 50);
-  --accent: oklch(0.775 0.146 71);
-  --accent-foreground: oklch(0.235 0.03 55);
-  --destructive: oklch(0.55 0.2 27);
-  --destructive-foreground: oklch(0.98 0.008 85);
+  --primary: oklch(0.286 0.004 286.2); /* #2A2A2C */
+  --primary-foreground: oklch(0.951 0.021 106.8); /* #F0F0E0 */
+  --secondary: oklch(0.904 0.042 92.2); /* #E9DFC0 */
+  --secondary-foreground: oklch(0.286 0.004 286.2); /* #2A2A2C */
+  --muted: oklch(0.925 0.037 91.7); /* #EFE6CB */
+  --muted-foreground: oklch(0.457 0.012 87.5); /* #5A5750 */
+  --accent: oklch(0.682 0.131 82.9); /* #C09020 */
+  --accent-foreground: oklch(0.178 0.000 89.9); /* #111111 */
+  --destructive: oklch(0.514 0.202 25.5); /* #C01020 */
+  --destructive-foreground: oklch(0.951 0.021 106.8); /* #F0F0E0 */
 
-  --border: oklch(0.885 0.012 80);
-  --input: oklch(0.885 0.012 80);
-  --ring: oklch(0.398 0.121 18.5);
+  --border: oklch(0.849 0.051 92.2); /* #D9CDA8 */
+  --input: oklch(0.849 0.051 92.2); /* #D9CDA8 */
+  --ring: oklch(0.682 0.131 82.9); /* #C09020 */
 
-  --ink: oklch(0.205 0.019 42);
-  --ink-foreground: oklch(0.965 0.01 84);
-  --ink-muted: oklch(0.735 0.015 75);
-  --sand: oklch(0.935 0.019 80);
-  --line: oklch(0.875 0.014 78);
+  --ink: oklch(0.178 0.000 89.9); /* #111111 */
+  --ink-foreground: oklch(0.951 0.021 106.8); /* #F0F0E0 */
+  --ink-muted: oklch(0.772 0.024 96.0); /* #B9B5A4 */
+  --sand: oklch(0.904 0.042 92.2); /* #E9DFC0 */
+  --line: oklch(0.849 0.051 92.2); /* #D9CDA8 */
   /* Dorado institucional: acento decorativo (sellos, filetes, detalles),
      distinto del ámbar de señalización (--accent) usado en CTAs. */
-  --gold: oklch(0.685 0.115 83);
-  --gold-foreground: oklch(0.22 0.03 60);
+  --gold: oklch(0.682 0.131 82.9); /* #C09020 */
+  --cta: oklch(0.514 0.202 25.5); /* #C01020 */
+  --cta-foreground: oklch(0.951 0.021 106.8); /* #F0F0E0 */
+  --gold-foreground: oklch(0.178 0.000 89.9); /* #111111 */
 
-  --sidebar: oklch(0.965 0.01 84);
-  --sidebar-foreground: oklch(0.215 0.018 45);
-  --sidebar-primary: oklch(0.398 0.121 18.5);
-  --sidebar-primary-foreground: oklch(0.98 0.008 85);
-  --sidebar-accent: oklch(0.93 0.014 82);
-  --sidebar-accent-foreground: oklch(0.28 0.02 40);
-  --sidebar-border: oklch(0.885 0.012 80);
-  --sidebar-ring: oklch(0.398 0.121 18.5);
+  --sidebar: oklch(0.925 0.037 91.7); /* #EFE6CB */
+  --sidebar-foreground: oklch(0.178 0.000 89.9); /* #111111 */
+  --sidebar-primary: oklch(0.286 0.004 286.2); /* #2A2A2C */
+  --sidebar-primary-foreground: oklch(0.951 0.021 106.8); /* #F0F0E0 */
+  --sidebar-accent: oklch(0.904 0.042 92.2); /* #E9DFC0 */
+  --sidebar-accent-foreground: oklch(0.286 0.004 286.2); /* #2A2A2C */
+  --sidebar-border: oklch(0.849 0.051 92.2); /* #D9CDA8 */
+  --sidebar-ring: oklch(0.682 0.131 82.9); /* #C09020 */
 }
 
 @layer base {

@@ -177,7 +177,7 @@ function ContactoPage() {
             </div>
             <button
               type="submit"
-              className="h-11 w-full bg-primary font-display text-xs font-extrabold tracking-[0.14em] text-primary-foreground uppercase lift hover:bg-ink"
+              className="h-11 w-full bg-cta font-display text-xs font-extrabold tracking-[0.14em] text-cta-foreground uppercase lift hover:bg-ink"
             >
               Enviar mensaje
             </button>
