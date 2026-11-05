@@ -11,6 +11,16 @@ export function Eyebrow({ children }: { children: ReactNode }) {
   );
 }
 
+/** Etiqueta sobre la miniatura de una noticia (por ejemplo "Comunicado"). El contenedor debe ser `relative`. */
+export function TipoBadge({ tipo }: { tipo?: string | undefined }) {
+  if (!tipo) return null;
+  return (
+    <span className="absolute top-3 left-3 bg-primary px-3 py-1.5 font-display text-[0.62rem] font-extrabold tracking-[0.16em] text-primary-foreground uppercase shadow-sm">
+      {tipo}
+    </span>
+  );
+}
+
 export function PageHero({
   eyebrow,
   title,

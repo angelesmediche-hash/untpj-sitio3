@@ -42,7 +42,8 @@ import thumbFiestasPatrias from "@/assets/noticia-fiestas-patrias-2026.jpg";
 import thumbCelebracionFiestas from "@/assets/noticia-fiestas-patrias-grupal.jpg";
 import thumbVisitaJuzgado from "@/assets/noticia-visita-juzgado-principal.jpg";
 import thumbVisitaTribunal from "@/assets/noticia-visita-tribunal-principal.jpg";
-import { CTALink, Eyebrow, Section } from "@/components/site/Bits";
+import thumbComunicadoEvaluacion from "@/assets/noticia-comunicado-evaluacion-carrera-judicial.jpg";
+import { CTALink, Eyebrow, Section, TipoBadge } from "@/components/site/Bits";
 import { CONTACTO, NOTA_247, NOTICIAS } from "@/lib/site-data";
 
 const THUMBS: Record<string, string> = {
@@ -53,6 +54,7 @@ const THUMBS: Record<string, string> = {
   "celebracion-fiestas-patrias-2026": thumbCelebracionFiestas,
   "visita-tercer-tribunal-colegiado-trabajo-san-lazaro": thumbVisitaTribunal,
   "visita-juzgado-segundo-distrito-civil-san-lazaro": thumbVisitaJuzgado,
+  "postura-evaluacion-personal-carrera-judicial": thumbComunicadoEvaluacion,
 };
 
 // En el home solo mostramos las noticias públicas (sin invitaciones a eventos
@@ -319,13 +321,14 @@ function Home() {
               params={{ slug: n.slug }}
               className="group block overflow-hidden rounded-2xl border border-line bg-background lift hover:lift-hover"
             >
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-t-2xl bg-muted">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-2xl bg-muted">
                 <img
                   src={THUMBS[n.slug]}
                   alt={n.titulo}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                 />
+                <TipoBadge tipo={n.tipo} />
               </div>
               <div className="p-5">
                 <p className="eyebrow text-primary text-[0.65rem]">{n.fecha}</p>

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { PageHero, Section } from "@/components/site/Bits";
+import { PageHero, Section, TipoBadge } from "@/components/site/Bits";
 import { NOTICIAS } from "@/lib/site-data";
 import heroImg from "@/assets/noticia-papa-2026.jpg";
 import thumbPadre from "@/assets/noticia-papa-2026.jpg";
@@ -10,6 +10,7 @@ import thumbFiestasPatrias from "@/assets/noticia-fiestas-patrias-2026.jpg";
 import thumbCelebracionFiestas from "@/assets/noticia-fiestas-patrias-grupal.jpg";
 import thumbVisitaJuzgado from "@/assets/noticia-visita-juzgado-principal.jpg";
 import thumbVisitaTribunal from "@/assets/noticia-visita-tribunal-principal.jpg";
+import thumbComunicadoEvaluacion from "@/assets/noticia-comunicado-evaluacion-carrera-judicial.jpg";
 
 export const Route = createFileRoute("/noticias/")({
   head: () => ({
@@ -38,6 +39,7 @@ const THUMBS: Record<string, string> = {
   "celebracion-fiestas-patrias-2026": thumbCelebracionFiestas,
   "visita-tercer-tribunal-colegiado-trabajo-san-lazaro": thumbVisitaTribunal,
   "visita-juzgado-segundo-distrito-civil-san-lazaro": thumbVisitaJuzgado,
+  "postura-evaluacion-personal-carrera-judicial": thumbComunicadoEvaluacion,
 };
 
 function NoticiasIndexPage() {
@@ -60,13 +62,14 @@ function NoticiasIndexPage() {
               params={{ slug: n.slug }}
               className="group block overflow-hidden rounded-2xl border border-line bg-background lift hover:lift-hover"
             >
-              <div className="aspect-[16/10] w-full overflow-hidden rounded-t-2xl bg-muted">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl bg-muted">
                 <img
                   src={THUMBS[n.slug]}
                   alt={n.titulo}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                 />
+                <TipoBadge tipo={n.tipo} />
               </div>
               <div className="p-7">
                 <p className="font-display text-xs font-extrabold tracking-[0.16em] text-muted-foreground uppercase">

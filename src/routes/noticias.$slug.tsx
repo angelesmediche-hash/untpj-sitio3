@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Download, ExternalLink, FileText } from "lucide-react";
 import { Gallery, PageHero, Section } from "@/components/site/Bits";
 import { NOTICIAS } from "@/lib/site-data";
 
@@ -167,7 +167,7 @@ function NoticiaDetallePage() {
   return (
     <>
       <PageHero
-        eyebrow="Noticias"
+        eyebrow={noticia.tipo ?? "Noticias"}
         title={noticia.titulo}
         intro={noticia.fecha}
         image={media?.hero}
@@ -200,6 +200,50 @@ function NoticiaDetallePage() {
               </p>
             ))}
           </div>
+
+          {noticia.pdf ? (
+            <div className="mt-14">
+              <p className="eyebrow mb-4 text-primary">Comunicado íntegro</p>
+
+              {/* En computadora y tableta grande se lee directamente en la página. En
+                  celular los navegadores no muestran bien un PDF incrustado, así que
+                  se ofrece abrirlo o descargarlo. */}
+              <div className="overflow-hidden rounded-2xl border border-line bg-muted">
+                <iframe
+                  src={noticia.pdf}
+                  title={`${noticia.titulo} (PDF)`}
+                  loading="lazy"
+                  className="hidden h-[80vh] min-h-[32rem] w-full md:block"
+                />
+                <div className="flex items-center gap-4 p-6 md:hidden">
+                  <FileText className="size-8 shrink-0 text-primary" strokeWidth={1.5} />
+                  <p className="text-sm text-muted-foreground">
+                    Abre el comunicado completo en tu dispositivo o descárgalo en PDF.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a
+                  href={noticia.pdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 bg-cta px-6 py-4 font-display text-xs font-extrabold tracking-[0.14em] text-cta-foreground uppercase lift hover:bg-ink"
+                >
+                  Abrir en una pestaña nueva
+                  <ExternalLink className="size-3.5" strokeWidth={1.5} />
+                </a>
+                <a
+                  href={noticia.pdf}
+                  download
+                  className="inline-flex items-center gap-2 border border-current px-6 py-4 font-display text-xs font-extrabold tracking-[0.14em] text-foreground uppercase lift hover:bg-foreground hover:text-background"
+                >
+                  Descargar PDF
+                  <Download className="size-3.5" strokeWidth={1.5} />
+                </a>
+              </div>
+            </div>
+          ) : null}
         </div>
 
         {media && media.gallery.length > 0 ? (
