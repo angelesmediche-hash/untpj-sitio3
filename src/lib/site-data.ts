@@ -693,6 +693,10 @@ export type Noticia = {
   fecha: string;
   resumen: string;
   cuerpo: string[];
+  /** Si es un comunicado oficial, se muestra con la etiqueta "Comunicado". */
+  tipo?: "Comunicado";
+  /** Ruta pública (carpeta public/) del documento íntegro en PDF, para verlo y descargarlo. */
+  pdf?: string;
 };
 
 export const NOTICIAS_RAW: Noticia[] = [
@@ -788,6 +792,25 @@ export const NOTICIAS_RAW: Noticia[] = [
       "Como sindicato del Poder Judicial, creemos que la mejor forma de representar a las personas trabajadoras es estar cerca de ellas: ir a los juzgados y tribunales, explicar quiénes somos, escuchar sus dudas laborales y dar a conocer cómo acompañamos a nuestras y nuestros agremiados, con defensa laboral, línea de atención 24/7, capacitación y convenios con descuentos.",
       "Agradecemos a quienes nos dedicaron unos minutos de su jornada para escucharnos y recibir la información que llevamos.",
       "Si trabajas en el Poder Judicial de la Federación y quieres saber cómo afiliarte al sindicato, consulta la sección Afíliate de este sitio. Seguimos cerca de ti en cada etapa.",
+    ],
+  },
+  {
+    slug: "postura-evaluacion-personal-carrera-judicial",
+    titulo: "Postura de la UNTPJ ante la evaluación del personal de Carrera Judicial",
+    fecha: "5 de noviembre de 2026",
+    tipo: "Comunicado",
+    pdf: "/comunicados/postura-evaluacion-carrera-judicial.pdf",
+    resumen:
+      "La UNTPJ, sindicato del Poder Judicial en México, expresa su preocupación por la falta de claridad del Acuerdo General que regula la evaluación del desempeño del personal de Carrera Judicial y se compromete a asesorar y defender a sus agremiadas y agremiados.",
+    cuerpo: [
+      "El 5 de noviembre de 2026, la Unión Nacional de Trabajadores del Poder Judicial (UNTPJ), sindicato del Poder Judicial de la Federación en México, dirigió el Oficio UNTPJ 12/2026 al Maestro Néstor Vargas Solano, Presidente del Órgano de Administración Judicial del Poder Judicial de la Federación. En él expone su postura sobre el Acuerdo General que regula el proceso de evaluación del desempeño del personal de Carrera Judicial, publicado ese día en el Diario Oficial de la Federación.",
+      "El sindicato manifiesta su preocupación y rechazo por la falta de claridad y precisión de diversos lineamientos del Acuerdo General. Señala que sus disposiciones dejan márgenes de discrecionalidad que pueden propiciar decisiones subjetivas y poner en riesgo la estabilidad laboral de las personas trabajadoras, y menciona de manera particular la intervención de las personas titulares de los órganos jurisdiccionales en los cuestionarios de evaluación.",
+      "La UNTPJ aclara que no se opone a la profesionalización ni a la mejora del servicio de impartición de justicia. Lo que rechaza es que, bajo esos objetivos, se establezca un mecanismo que vulnere derechos laborales, debilite la estabilidad en el empleo o permita separaciones sustentadas en criterios ambiguos, subjetivos o insuficientemente regulados.",
+      "El comunicado recuerda que el artículo 46 de la Ley Federal de los Trabajadores al Servicio del Estado no contempla expresamente la evaluación del desempeño como causal de cese, mientras que el artículo 38, fracción IV, de la Ley de Carrera Judicial incorpora la no acreditación de la evaluación entre las causas de separación sin responsabilidad para el Poder Judicial de la Federación. Sostiene que esta disposición no puede aplicarse de manera aislada ni como autorización para separar a trabajadoras y trabajadores al margen de las garantías constitucionales y los procedimientos laborales correspondientes.",
+      "También recuerda que el artículo Décimo Transitorio del decreto de reforma constitucional en materia del Poder Judicial, publicado el 15 de septiembre de 2024, establece que los derechos laborales de las personas trabajadoras serán respetados en su totalidad, y hace un llamado al Tribunal de Disciplina Judicial y, en particular, a la Comisión de Conflictos Laborales, para que ejerzan sus atribuciones con absoluta independencia e imparcialidad.",
+      "Para las personas afiliadas, la UNTPJ asume el compromiso de brindar asesoría, acompañamiento y representación jurídica durante los procedimientos de evaluación ordinaria y extraordinaria. Cuando existan irregularidades, resultados carentes de objetividad o incumplimiento de los parámetros y garantías del propio Acuerdo General, promoverá los recursos de revisión previstos en sus artículos 36 a 42 y los demás mecanismos legales de defensa que correspondan. Si una evaluación se utiliza para justificar la separación del servicio con vulneración de derechos laborales, acudirá a las instancias competentes para promover los conflictos individuales de trabajo.",
+      "El oficio está firmado por Sergio Gustavo Infante López, Presidente Nacional de la UNTPJ, y cierra con un mensaje: ¡Los derechos laborales no están sujetos a evaluación! Para contacto, el sindicato señala el teléfono 55 1293 5538 y el correo contacto@untpj.com.",
+      "Más abajo puedes leer el comunicado íntegro y descargarlo en PDF.",
     ],
   },
 ];
