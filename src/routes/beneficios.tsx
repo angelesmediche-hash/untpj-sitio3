@@ -36,6 +36,12 @@ import imgMokaOtono from "@/assets/convenio-moka-otono.jpg";
 import imgMokaEncerado from "@/assets/convenio-moka-encerado.jpg";
 import imgKarelRetrato from "@/assets/convenio-karel-del-angel-retrato.jpg";
 import imgKarelFiestas from "@/assets/convenio-karel-del-angel-fiestas.jpg";
+import imgMdkPuebla from "@/assets/convenio-mdk-puebla.jpg";
+import imgOrtodentalOrtodoncia from "@/assets/convenio-ortodental-ortodoncia.jpg";
+import imgOrtodentalResinas from "@/assets/convenio-ortodental-resinas.jpg";
+import imgOrtodentalLimpieza from "@/assets/convenio-ortodental-limpieza.jpg";
+import imgRosasYOrquideas from "@/assets/convenio-rosas-y-orquideas.jpg";
+import imgCalixtos from "@/assets/convenio-calixtos.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -72,6 +78,12 @@ const IMAGENES: Record<string, string> = {
   "moka-encerado": imgMokaEncerado,
   "karel-del-angel-retrato": imgKarelRetrato,
   "karel-del-angel-fiestas": imgKarelFiestas,
+  "mdk-puebla": imgMdkPuebla,
+  "ortodental-ortodoncia": imgOrtodentalOrtodoncia,
+  "ortodental-resinas": imgOrtodentalResinas,
+  "ortodental-limpieza": imgOrtodentalLimpieza,
+  "rosas-y-orquideas": imgRosasYOrquideas,
+  calixtos: imgCalixtos,
 };
 
 export const Route = createFileRoute("/beneficios")({
