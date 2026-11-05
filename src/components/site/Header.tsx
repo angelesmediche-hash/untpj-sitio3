@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { CONTACTO } from "@/lib/site-data";
 import logo from "@/assets/logo-untpj.png";
@@ -41,95 +41,11 @@ const NAV: NavItem[] = [
   { to: "/contacto", label: "Contacto" },
 ];
 
-// TODO: quitar este aviso después de octubre (mes de sensibilización sobre el
-// cáncer de mama). Se puede cerrar, pero solo durante la visita actual (usa
-// sessionStorage), así que vuelve a aparecer en la siguiente visita.
-const CANCER_MAMA_DISMISS_KEY = "untpj-aviso-cancer-mama-2026";
-
-// Listón de la campaña (dibujado, no emoji: el emoji sale amarillo en algunos
-// dispositivos y el símbolo del cáncer de mama es el listón rosa).
-function RibbonIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.4"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M6 22 L12 14 C14.5 10.5 16.5 8.5 16.5 6.5 A4.5 4.5 0 0 0 7.5 6.5 C7.5 8.5 9.5 10.5 12 14 L18 22" />
-    </svg>
-  );
-}
-
-function CancerMamaBanner() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    try {
-      if (window.sessionStorage.getItem(CANCER_MAMA_DISMISS_KEY)) return;
-    } catch {
-      // Algunos navegadores (modo privado, navegadores dentro de apps como
-      // Instagram o WhatsApp) bloquean el almacenamiento. En ese caso mostramos el
-      // aviso de todas formas.
-    }
-    setVisible(true);
-  }, []);
-
-  if (!visible) return null;
-
-  return (
-    <div className="bg-gradient-to-r from-pink-600 to-rose-500 text-white">
-      <div className="container-x flex items-center justify-between gap-3 py-2 text-[0.72rem]">
-        <Link
-          to="/beneficios"
-          hash="convenios"
-          className="flex min-w-0 items-center gap-2 font-semibold hover:underline"
-        >
-          <img
-            src={logo}
-            alt=""
-            aria-hidden="true"
-            className="size-4 shrink-0 rounded-sm object-contain"
-          />
-          <RibbonIcon className="size-4 shrink-0" />
-          <span className="hidden truncate sm:inline">
-            Octubre, mes de sensibilización sobre el cáncer de mama — conoce el convenio de Check
-            Up Ginecológico
-          </span>
-          <span className="truncate sm:hidden">
-            Octubre: prevención contra el cáncer de mama →
-          </span>
-        </Link>
-        <button
-          type="button"
-          onClick={() => {
-            try {
-              window.sessionStorage.setItem(CANCER_MAMA_DISMISS_KEY, "1");
-            } catch {
-              // Si no se puede guardar, igual lo cerramos en esta visita.
-            }
-            setVisible(false);
-          }}
-          aria-label="Cerrar aviso"
-          className="shrink-0 opacity-80 hover:opacity-100"
-        >
-          <X className="size-3.5" />
-        </button>
-      </div>
-    </div>
-  );
-}
-
 export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50">
-      <CancerMamaBanner />
       <div className="bg-ink text-ink-foreground">
         <div className="container-x flex flex-wrap items-center justify-between gap-2 py-2 text-[0.72rem]">
           <p className="text-ink-muted">

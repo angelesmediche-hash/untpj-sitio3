@@ -254,7 +254,10 @@ export type Convenio = {
     | "Viajes"
     | "Eventos"
     | "Plantas y regalos"
-    | "Educación y actividades";
+    | "Educación y actividades"
+    | "Automotriz y trámites"
+    | "Restaurantes y alimentos"
+    | "Hogar y servicios";
   resumen: string;
   descuento: string;
   contacto: string;
@@ -587,6 +590,72 @@ export const CONVENIOS_DETALLE: Convenio[] = [
     contacto:
       "WhatsApp 222 588 8832 · Instagram @kareldelangel · kareldelangel.com",
     imagen: "karel-del-angel-fiestas",
+  },
+  {
+    id: "mdk-puebla",
+    nombre: "MDK Puebla · Taekwondo tradicional y defensa personal",
+    categoria: "Educación y actividades",
+    resumen:
+      "Escuela de taekwondo tradicional (Moo Duk Kwan), defensa personal y entrenamiento profesional para niñas, niños, jóvenes y adultos.",
+    descuento: "Inscripción y uniforme gratis para todas las edades, exclusivo para personas afiliadas al sindicato",
+    contacto:
+      "WhatsApp 222 212 3541 · 17 sur 4321, C.P. 72430 · manuelcuellarpaz@hotmail.com",
+    imagen: "mdk-puebla",
+  },
+  {
+    id: "ortodental-studio-ortodoncia",
+    nombre: "OrtoDental Studio · Ortodoncia",
+    categoria: "Odontología",
+    resumen:
+      "Revisión y diagnóstico especializado de ortodoncia, plan de tratamiento personalizado, diversas opciones de brackets y alineadores, seguimiento y ajustes mensuales, y asesoría en retención dental.",
+    descuento: "20% de descuento en tu colocación",
+    contacto:
+      "WhatsApp 55 3266 2164 · Instagram @dra.lauraanavaa · Filadelfia 119, piso 2, número 201, Col. Nápoles, Benito Juárez",
+    imagen: "ortodental-ortodoncia",
+  },
+  {
+    id: "ortodental-studio-resinas",
+    nombre: "OrtoDental Studio · Resinas dentales estéticas",
+    categoria: "Odontología",
+    resumen:
+      "Evaluación dental completa, diagnóstico preciso con radiografías, remoción cuidadosa de caries, aplicación de resina composite de alta calidad, pulido y acabado natural.",
+    descuento: "15% de descuento en tus resinas dentales",
+    contacto:
+      "WhatsApp 55 3266 2164 · Instagram @dra.lauraanavaa · Filadelfia 119, piso 2, número 201, Col. Nápoles, Benito Juárez",
+    imagen: "ortodental-resinas",
+  },
+  {
+    id: "ortodental-studio-limpieza",
+    nombre: "OrtoDental Studio · Consulta dental y limpieza ultrasónica",
+    categoria: "Odontología",
+    resumen:
+      "Revisión bucal completa, detección de caries y problemas en encías, limpieza dental profesional con ultrasonido, eliminación de sarro y placa, y asesoría personalizada de tu salud bucal.",
+    descuento: "Consulta dental más limpieza ultrasónica por solo $799",
+    contacto:
+      "WhatsApp 55 3266 2164 · Instagram @dra.lauraanavaa · Filadelfia 119, piso 2, número 201, Col. Nápoles, Benito Juárez",
+    imagen: "ortodental-limpieza",
+  },
+  {
+    id: "rosas-y-orquideas",
+    nombre: "Rosas y Orquídeas · Jardín Pequeño",
+    categoria: "Eventos",
+    resumen:
+      "Jardín para eventos en Santa Clara Ocoyucan, Puebla. Contáctalos para cotizar tu evento y presenta tu credencial sindical para solicitar el descuento. Beneficio para fundadores, personas afiliadas e invitadas de la UNTPJ, sujeto a las condiciones del convenio.",
+    descuento: "10% de descuento en la realización de cualquier evento",
+    contacto:
+      "Tel. y WhatsApp 221 429 8276 · Instagram @rosasyorquideas__ · Calle Palmas No. 45, Santa Clara Ocoyucan, Puebla, C.P. 72830",
+    imagen: "rosas-y-orquideas",
+  },
+  {
+    id: "calixtos-restaurante",
+    nombre: "Calixto's Restaurante · Sea Grill",
+    categoria: "Restaurantes y alimentos",
+    resumen:
+      "Restaurante en Santa Clara Ocoyucan, Puebla. Acude, presenta tu credencial sindical y solicita el descuento. Beneficio para fundadores, personas afiliadas e invitadas de la UNTPJ, sujeto a las condiciones del convenio.",
+    descuento: "10% de descuento en el consumo total de tu cuenta",
+    contacto:
+      "Instagram @calixtosrestaurantemx · Calle Palmas No. 45, Santa Clara Ocoyucan, Puebla, C.P. 72830",
+    imagen: "calixtos",
   },
 ];
 
