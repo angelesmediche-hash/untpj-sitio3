@@ -15,6 +15,8 @@ import { Route as ApoyoRouteImport } from './routes/apoyo'
 import { Route as BeneficiosRouteImport } from './routes/beneficios'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as DerechosRouteImport } from './routes/derechos'
+import { Route as IniciativaCiudadanaRouteImport } from './routes/iniciativa-ciudadana'
+import { Route as ListadoNominalRouteImport } from './routes/listado-nominal'
 import { Route as NoticiasRouteImport } from './routes/noticias'
 import { Route as SindicatoRouteImport } from './routes/sindicato'
 import { Route as DerechosIndexRouteImport } from './routes/derechos.index'
@@ -55,6 +57,16 @@ const ContactoRoute = ContactoRouteImport.update({
 const DerechosRoute = DerechosRouteImport.update({
   id: '/derechos',
   path: '/derechos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IniciativaCiudadanaRoute = IniciativaCiudadanaRouteImport.update({
+  id: '/iniciativa-ciudadana',
+  path: '/iniciativa-ciudadana',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ListadoNominalRoute = ListadoNominalRouteImport.update({
+  id: '/listado-nominal',
+  path: '/listado-nominal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NoticiasRoute = NoticiasRouteImport.update({
@@ -123,6 +135,8 @@ export interface FileRoutesByFullPath {
   '/beneficios': typeof BeneficiosRoute
   '/contacto': typeof ContactoRoute
   '/derechos': typeof DerechosRouteWithChildren
+  '/iniciativa-ciudadana': typeof IniciativaCiudadanaRoute
+  '/listado-nominal': typeof ListadoNominalRoute
   '/noticias': typeof NoticiasRouteWithChildren
   '/sindicato': typeof SindicatoRouteWithChildren
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
@@ -141,6 +155,8 @@ export interface FileRoutesByTo {
   '/apoyo': typeof ApoyoRoute
   '/beneficios': typeof BeneficiosRoute
   '/contacto': typeof ContactoRoute
+  '/iniciativa-ciudadana': typeof IniciativaCiudadanaRoute
+  '/listado-nominal': typeof ListadoNominalRoute
   '/sindicato': typeof SindicatoRouteWithChildren
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
   '/derechos/personal-de-confianza': typeof DerechosPersonalDeConfianzaRoute
@@ -160,6 +176,8 @@ export interface FileRoutesById {
   '/beneficios': typeof BeneficiosRoute
   '/contacto': typeof ContactoRoute
   '/derechos': typeof DerechosRouteWithChildren
+  '/iniciativa-ciudadana': typeof IniciativaCiudadanaRoute
+  '/listado-nominal': typeof ListadoNominalRoute
   '/noticias': typeof NoticiasRouteWithChildren
   '/sindicato': typeof SindicatoRouteWithChildren
   '/derechos/condiciones-generales': typeof DerechosCondicionesGeneralesRoute
@@ -181,6 +199,8 @@ export interface FileRouteTypes {
     | '/beneficios'
     | '/contacto'
     | '/derechos'
+    | '/iniciativa-ciudadana'
+    | '/listado-nominal'
     | '/noticias'
     | '/sindicato'
     | '/derechos/condiciones-generales'
@@ -199,6 +219,8 @@ export interface FileRouteTypes {
     | '/apoyo'
     | '/beneficios'
     | '/contacto'
+    | '/iniciativa-ciudadana'
+    | '/listado-nominal'
     | '/sindicato'
     | '/derechos/condiciones-generales'
     | '/derechos/personal-de-confianza'
@@ -217,6 +239,8 @@ export interface FileRouteTypes {
     | '/beneficios'
     | '/contacto'
     | '/derechos'
+    | '/iniciativa-ciudadana'
+    | '/listado-nominal'
     | '/noticias'
     | '/sindicato'
     | '/derechos/condiciones-generales'
@@ -237,6 +261,8 @@ export interface RootRouteChildren {
   BeneficiosRoute: typeof BeneficiosRoute
   ContactoRoute: typeof ContactoRoute
   DerechosRoute: typeof DerechosRouteWithChildren
+  IniciativaCiudadanaRoute: typeof IniciativaCiudadanaRoute
+  ListadoNominalRoute: typeof ListadoNominalRoute
   NoticiasRoute: typeof NoticiasRouteWithChildren
   SindicatoRoute: typeof SindicatoRouteWithChildren
 }
@@ -283,6 +309,20 @@ declare module '@tanstack/react-router' {
       path: '/derechos'
       fullPath: '/derechos'
       preLoaderRoute: typeof DerechosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iniciativa-ciudadana': {
+      id: '/iniciativa-ciudadana'
+      path: '/iniciativa-ciudadana'
+      fullPath: '/iniciativa-ciudadana'
+      preLoaderRoute: typeof IniciativaCiudadanaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/listado-nominal': {
+      id: '/listado-nominal'
+      path: '/listado-nominal'
+      fullPath: '/listado-nominal'
+      preLoaderRoute: typeof ListadoNominalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/noticias': {
@@ -420,6 +460,8 @@ const rootRouteChildren: RootRouteChildren = {
   BeneficiosRoute: BeneficiosRoute,
   ContactoRoute: ContactoRoute,
   DerechosRoute: DerechosRouteWithChildren,
+  IniciativaCiudadanaRoute: IniciativaCiudadanaRoute,
+  ListadoNominalRoute: ListadoNominalRoute,
   NoticiasRoute: NoticiasRouteWithChildren,
   SindicatoRoute: SindicatoRouteWithChildren,
 }
