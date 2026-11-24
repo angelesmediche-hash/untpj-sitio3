@@ -657,6 +657,26 @@ export const CONVENIOS_DETALLE: Convenio[] = [
       "Instagram @calixtosrestaurantemx · Calle Palmas No. 45, Santa Clara Ocoyucan, Puebla, C.P. 72830",
     imagen: "calixtos",
   },
+  {
+    id: "salfer-seguro-auto",
+    nombre: "Salfer · Seguro de Auto",
+    categoria: "Automotriz y trámites",
+    resumen:
+      "Seguro de auto para personas afiliadas al sindicato, con cobertura amplia para tu vehículo y tu familia, protección ante imprevistos y atención personalizada. Trabajan con aseguradoras como Qualitas, AXA, GNP, Sura, Banorte, Chubb y Afirme.",
+    descuento: "Hasta 40% de descuento en tu seguro de auto",
+    contacto: "Cotiza por WhatsApp 56 6688 0036 · www.salfer.com.mx",
+    imagen: "salfer-seguro-auto",
+  },
+  {
+    id: "visas-lic-merino",
+    nombre: "Visas Lic. Merino · Abogado",
+    categoria: "Automotriz y trámites",
+    resumen:
+      "Trámites de visa y pasaporte a cargo del Lic. Merino, abogado: visa americana, visa canadiense, pasaporte mexicano, pasaporte americano, renovación de visas y perdón migratorio.",
+    descuento: "20% de descuento en todos sus servicios",
+    contacto: "WhatsApp 777 180 1440 · Facebook y TikTok: Visas Lic. Merino",
+    imagen: "visas-lic-merino",
+  },
 ];
 
 /**

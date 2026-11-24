@@ -42,6 +42,8 @@ import imgOrtodentalResinas from "@/assets/convenio-ortodental-resinas.jpg";
 import imgOrtodentalLimpieza from "@/assets/convenio-ortodental-limpieza.jpg";
 import imgRosasYOrquideas from "@/assets/convenio-rosas-y-orquideas.jpg";
 import imgCalixtos from "@/assets/convenio-calixtos.jpg";
+import imgSalferSeguroAuto from "@/assets/convenio-salfer-seguro-auto.jpg";
+import imgVisasLicMerino from "@/assets/convenio-visas-lic-merino.jpg";
 import guiaEstudioImg from "@/assets/guia-de-estudio.jpg";
 import beneficiosHeroImg from "@/assets/beneficios-escritorio.jpg";
 
@@ -84,6 +86,8 @@ const IMAGENES: Record<string, string> = {
   "ortodental-limpieza": imgOrtodentalLimpieza,
   "rosas-y-orquideas": imgRosasYOrquideas,
   calixtos: imgCalixtos,
+  "salfer-seguro-auto": imgSalferSeguroAuto,
+  "visas-lic-merino": imgVisasLicMerino,
 };
 
 export const Route = createFileRoute("/beneficios")({
