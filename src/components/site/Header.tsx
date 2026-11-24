@@ -56,7 +56,7 @@ export function Header() {
             className="inline-flex items-center gap-2 font-display font-bold tracking-wide text-accent transition-opacity hover:opacity-80"
           >
             <Phone className="size-3.5" aria-hidden="true" />
-            56 1991 5155
+            55 3513 2974
           </a>
         </div>
       </div>

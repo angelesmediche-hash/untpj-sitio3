@@ -73,7 +73,7 @@ export function Footer() {
                 <li>
                   <span className="block text-[0.7rem] tracking-wide uppercase">Información</span>
                   <a href={`tel:${CONTACTO.telGeneral}`} className="hover:text-ink-foreground">
-                    55 1293 5538
+                    55 1396 2099
                   </a>
                 </li>
                 <li>
@@ -81,13 +81,13 @@ export function Footer() {
                     Afiliaciones e invitados
                   </span>
                   <a href={`tel:${CONTACTO.telAfiliaciones}`} className="hover:text-ink-foreground">
-                    55 1321 2925
+                    55 6173 7055
                   </a>
                 </li>
                 <li>
                   <span className="block text-[0.7rem] tracking-wide uppercase">Línea 24/7</span>
                   <a href={`tel:${CONTACTO.tel247}`} className="hover:text-ink-foreground">
-                    56 1991 5155
+                    55 3513 2974
                   </a>
                 </li>
                 <li>

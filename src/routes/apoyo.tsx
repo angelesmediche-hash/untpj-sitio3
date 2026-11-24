@@ -53,7 +53,7 @@ function ApoyoPage() {
               className="mt-5 inline-flex items-center gap-3 bg-accent px-7 py-5 font-display text-xl font-extrabold tracking-tight text-accent-foreground lift hover:opacity-90"
             >
               <Phone className="size-5" aria-hidden="true" />
-              56 1991 5155
+              55 3513 2974
             </a>
             <p className="mt-6 max-w-2xl text-xs leading-relaxed text-muted-foreground">
               {NOTA_247}

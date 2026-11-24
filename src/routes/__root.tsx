@@ -119,7 +119,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description:
             "Sindicato del Poder Judicial de la Federación en México: defensa laboral, afiliación, convenios y representación para trabajadoras y trabajadores del Poder Judicial.",
           email: "contacto@untpj.com",
-          telephone: "+525512935538",
+          telephone: "+525513962099",
           address: {
             "@type": "PostalAddress",
             addressCountry: "MX",
